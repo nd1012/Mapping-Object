@@ -24,7 +24,7 @@
         /// <param name="source">Source object</param>
         public virtual void MapFrom(T source)
         {
-            foreach (Mapping map in Mappings.EnsureMapping(typeof(T), GetType())) map.MapFrom(source, this);
+            foreach (Mapping map in Mappings.EnsureMappings(typeof(T), GetType())) map.MapFrom(source, this);
         }
 
         /// <summary>
@@ -33,7 +33,7 @@
         /// <param name="source">Source object</param>
         public virtual void MapTo(T source)
         {
-            foreach (Mapping map in Mappings.EnsureMapping(typeof(T), GetType())) map.MapTo(this, source);
+            foreach (Mapping map in Mappings.EnsureMappings(typeof(T), GetType())) map.MapTo(this, source);
         }
     }
 }

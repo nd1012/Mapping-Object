@@ -3,7 +3,7 @@
 namespace wan24.MappingObject
 {
     /// <summary>
-    /// Mapping
+    /// Property mapping definition
     /// </summary>
     public class Mapping
     {
@@ -102,7 +102,7 @@ namespace wan24.MappingObject
         public Func<object, object, object?>? MainGetter { get; }
 
         /// <summary>
-        /// Map the source object value to the main object property (use the source object value converter)
+        /// Map the source object value to the main object property (use the source object value getter and converter, if any)
         /// </summary>
         /// <param name="source">Source object</param>
         /// <param name="main">Main object</param>
@@ -115,7 +115,7 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Map the main object value to the source object property (use the main object value converter; reverse mapping)
+        /// Map the main object value to the source object property (use the main object value converter and getter, if any; reverse mapping)
         /// </summary>
         /// <param name="main">Main object</param>
         /// <param name="source">Source object</param>
@@ -130,7 +130,7 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Get source and target properties
+        /// Get source and main properties
         /// </summary>
         /// <param name="source">Source object</param>
         /// <param name="main">Main object</param>

@@ -3,28 +3,30 @@
 namespace wan24.MappingObject
 {
     /// <summary>
-    /// Mappings
+    /// Automatted mappings
     /// </summary>
     public static class Mappings
     {
         /// <summary>
-        /// Mappings
+        /// Registered mappings
         /// </summary>
         private static readonly Dictionary<string, Mapping[]> _Mappings = new();
 
         /// <summary>
-        /// Types of registered mappings (the first type is the main type name, the second type is the source type name)
+        /// Types (keys) of registered mappings (the first type is the main type name, the second type is the source type name)
         /// </summary>
         public static IEnumerable<string> Types => _Mappings.Keys;
 
         /// <summary>
-        /// Add a mapping
+        /// Add a mapping (creating automatic mappings)
         /// </summary>
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
-        /// <param name="mappings">Mappings</param>
+        /// <param name="mappings">Overriding mappings (<see cref="Mapping.MainPropertyName"/> is used as the key)</param>
         public static void Add(Type source, Type main, params Mapping[] mappings)
         {
+            EnsureMapableType(source, nameof(source));
+            EnsureMapableType(main, nameof(main));
             Dictionary<string, Mapping> maps = new();
             MapAttribute? attr;
             foreach (PropertyInfo mpi in from mpi in main.GetProperties(BindingFlags.Instance | BindingFlags.Public)
@@ -51,13 +53,15 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Add a mapping (use only the given mappings)
+        /// Add a mapping (use only the given mappings, don't use automatics)
         /// </summary>
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
-        /// <param name="mappings">Mappings</param>
+        /// <param name="mappings">Mappings (skip to remove an existing mapping)</param>
         public static void AddExplicit(Type source, Type main, params Mapping[] mappings)
         {
+            EnsureMapableType(source, nameof(source));
+            EnsureMapableType(main, nameof(main));
             string key = $"{main} - {source}";
             if (mappings.Length > 0)
             {
@@ -70,25 +74,29 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Get mappings
+        /// Get mappings for a source/main object mapping
         /// </summary>
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
         /// <returns>Mappings or <see langword="null"/>, if not found</returns>
         public static Mapping[]? Get(Type source, Type main)
         {
+            EnsureMapableType(source, nameof(source));
+            EnsureMapableType(main, nameof(main));
             string types = $"{main} - {source}";
             return _Mappings.ContainsKey(types) ? _Mappings[types] : null;
         }
 
         /// <summary>
-        /// Ensure a mapping
+        /// Ensure registered source/main object mapping definitions (will create an automatic mapping, if not exists)
         /// </summary>
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
         /// <returns>Mappings</returns>
-        public static Mapping[] EnsureMapping(Type source, Type main)
+        public static Mapping[] EnsureMappings(Type source, Type main)
         {
+            EnsureMapableType(source, nameof(source));
+            EnsureMapableType(main, nameof(main));
             Mapping[]? res = Get(source, main);
             if (res != null) return res;
             Add(source, main);
@@ -96,7 +104,7 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Map a source object to a main object
+        /// Map a source object to a main object instance
         /// </summary>
         /// <typeparam name="tSource">Source object type</typeparam>
         /// <typeparam name="tMain">Main object type</typeparam>
@@ -106,26 +114,37 @@ namespace wan24.MappingObject
             where tSource : class
             where tMain : class
         {
-            if (main is MappingObjectBase<tSource> mappingObject)
+            try
             {
-                mappingObject.MapFrom(source);
+                if (main is MappingObjectBase<tSource> mappingObject)
+                {
+                    mappingObject.MapFrom(source);
+                }
+                else
+                {
+                    foreach (Mapping map in EnsureMappings(source.GetType(), main.GetType())) map.MapFrom(source, main);
+                    if (main is IMappingObject<tSource> genericMappingObjectType)
+                    {
+                        genericMappingObjectType.MapFrom(source, applyDefaultMappings: false);
+                    }
+                    else if (main is IMappingObject mappingObjectType)
+                    {
+                        mappingObjectType.MapFrom(source, applyDefaultMappings: false);
+                    }
+                }
             }
-            else
+            catch (MappingException)
             {
-                foreach (Mapping map in EnsureMapping(source.GetType(), main.GetType())) map.MapFrom(source, main);
-                if(main is IMappingObject<tSource> genericMappingObjectType)
-                {
-                    genericMappingObjectType.MapFrom(source, applyDefaultMappings: false);
-                }
-                else if (main is IMappingObject mappingObjectType)
-                {
-                    mappingObjectType.MapFrom(source, applyDefaultMappings: false);
-                }
+                throw;
+            }
+            catch(Exception ex)
+            {
+                throw new MappingException(message: null, ex);
             }
         }
 
         /// <summary>
-        /// Map a main object to a source object (apply reverse mapping)
+        /// Map a main object to a source object instance (apply reverse mapping)
         /// </summary>
         /// <typeparam name="tMain">Main object type</typeparam>
         /// <typeparam name="tSource">Source object type</typeparam>
@@ -135,21 +154,32 @@ namespace wan24.MappingObject
             where tMain : class
             where tSource : class
         {
-            if (main is MappingObjectBase<tSource> mappingObject)
+            try
             {
-                mappingObject.MapTo(source);
+                if (main is MappingObjectBase<tSource> mappingObject)
+                {
+                    mappingObject.MapTo(source);
+                }
+                else
+                {
+                    foreach (Mapping map in EnsureMappings(source.GetType(), main.GetType())) map.MapTo(main, source);
+                    if (main is IMappingObject<tSource> genericMappingObjectType)
+                    {
+                        genericMappingObjectType.MapTo(source, applyDefaultMappings: false);
+                    }
+                    else if (main is IMappingObject mappingObjectType)
+                    {
+                        mappingObjectType.MapTo(source, applyDefaultMappings: false);
+                    }
+                }
             }
-            else
+            catch (MappingException)
             {
-                foreach (Mapping map in EnsureMapping(source.GetType(), main.GetType())) map.MapTo(main, source);
-                if (main is IMappingObject<tSource> genericMappingObjectType)
-                {
-                    genericMappingObjectType.MapTo(source, applyDefaultMappings: false);
-                }
-                else if (main is IMappingObject mappingObjectType)
-                {
-                    mappingObjectType.MapTo(source, applyDefaultMappings: false);
-                }
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new MappingException(message: null, ex);
             }
         }
 
@@ -216,7 +246,7 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Map a list of main/source objects
+        /// Map a list of main/source objects (reverse mapping)
         /// </summary>
         /// <typeparam name="tMain">Main object type</typeparam>
         /// <typeparam name="tSource">Source object type</typeparam>
@@ -231,6 +261,23 @@ namespace wan24.MappingObject
                 MapTo(pair.Key, pair.Value);
                 yield return pair;
             }
+        }
+
+        /// <summary>
+        /// Determine if a type can be mapped (non-abstract class type is required)
+        /// </summary>
+        /// <param name="type">Type</param>
+        /// <returns>Can be mapped?</returns>
+        public static bool CanMap(Type type) => !type.IsValueType && !type.IsInterface && !type.IsAbstract;
+
+        /// <summary>
+        /// Ensure a mapable type
+        /// </summary>
+        /// <param name="type">Type</param>
+        /// <param name="argumentName">Argument name</param>
+        private static void EnsureMapableType(Type type, string argumentName)
+        {
+            if (!CanMap(type)) throw new ArgumentException("Non-abstract class type required", argumentName);
         }
     }
 }

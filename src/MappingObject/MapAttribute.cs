@@ -1,7 +1,7 @@
 ﻿namespace wan24.MappingObject
 {
     /// <summary>
-    /// Attribute for overriding the property mapping
+    /// Attribute for overriding the automatic property mapping behavior
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class MapAttribute : Attribute
