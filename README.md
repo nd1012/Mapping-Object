@@ -46,7 +46,7 @@ Mappings.MapFrom(sourceType, mainType);
 Or the reverse mapping:
 
 ```cs
-// Map mainType propert values back to sourceType properties
+// Map mainType property values back to sourceType properties
 Mappings.MapTo(mainType, sourceType);
 ```
 
@@ -71,7 +71,8 @@ public class SourceType
 }
 ```
 
-**NOTE**: The mapping configuration needs to be done in the main type, only.
+**NOTE**: The mapping configuration needs to be done in the main type, only. 
+Any mapping configuration in the source type doesn't have any effect.
 
 You want to map `SourceType` to `MainType`, so you may register the mapping 
 (which is optional and can be done automatic, if no customizations are being 
@@ -127,7 +128,7 @@ public class SourceType
 	public bool MappedProperty2 { get; set; } = true;
 }
 
-Mappings.Add(typeof(SourceType), typeof(MainType));// Optional - can be done automatic
+Mappings.Add(typeof(SourceType), typeof(MainType));// Optional - can still be done automatic
 
 MainType main = new();
 Mappings.MapFrom(new SourceType(), main);
@@ -148,7 +149,7 @@ Mappings.Add(
 ```
 
 **NOTE**: If a main type property wasn't found in the source type (during the 
-automated mapping registration), it won't be mapped.
+automated mapping registration), it won't be mapped automatic.
 
 ### Convert the mapped value
 
@@ -271,6 +272,16 @@ implement custom mapping logic as required. The mappings will be created
 automatic for this type as for any other type which is being used as the main 
 type for a mapping. To avoid that, you can register a custom mapping in the 
 static constructor of your implementing type, for example.
+
+### The `IMappingObject` interface
+
+The `IMappingObject` comes as generic and as non-generic type. Usually you 
+want to use the generic interface, but you could also implement only the non-
+generic interface, also.
+
+For the implementation and the usage please have a look at the `TestType4.cs` 
+code in the tests project. You can use the interface for objects that can't 
+extend the `MappingObjectBase` type.
 
 ### Enumerable mapping extensions
 

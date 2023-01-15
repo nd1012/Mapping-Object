@@ -108,5 +108,57 @@ namespace MappingObject_Tests
             Assert.AreEqual(false.ToString(), source.Converted);
             Assert.AreEqual("TYPE3", source.Case);
         }
+
+        [TestMethod]
+        public void IMappingObject_Test()
+        {
+            TestType4 main = new();
+            Mappings.MapFrom(new TestType2(), main);
+            Assert.IsTrue(main.Skipped);
+            Assert.IsFalse(main.NotMapped);
+            Assert.IsFalse(main.Mapped);
+            Assert.IsFalse(main.AlsoMapped);
+            Assert.IsTrue(main.Converted);
+            Assert.AreEqual("type2", main.Case);
+        }
+
+        [TestMethod]
+        public void Reverse_IMappingObject_Test()
+        {
+            TestType2 source = new();
+            Mappings.MapTo(new TestType4(), source);
+            Assert.IsFalse(source.Skipped2);
+            Assert.IsTrue(source.NotMapped);
+            Assert.IsTrue(source.Mapped);
+            Assert.IsTrue(source.AlsoMapped2);
+            Assert.AreEqual(false.ToString(), source.Converted);
+            Assert.AreEqual("TYPE4", source.Case);
+        }
+
+        [TestMethod]
+        public void IMappingObject_Direct_Test()
+        {
+            TestType4 main = new();
+            main.MapFrom(new TestType2());
+            Assert.IsTrue(main.Skipped);
+            Assert.IsFalse(main.NotMapped);
+            Assert.IsFalse(main.Mapped);
+            Assert.IsFalse(main.AlsoMapped);
+            Assert.IsTrue(main.Converted);
+            Assert.AreEqual("type2", main.Case);
+        }
+
+        [TestMethod]
+        public void Reverse_IMappingObject_Direct_Test()
+        {
+            TestType2 source = new();
+            new TestType4().MapTo(source);
+            Assert.IsFalse(source.Skipped2);
+            Assert.IsTrue(source.NotMapped);
+            Assert.IsTrue(source.Mapped);
+            Assert.IsTrue(source.AlsoMapped2);
+            Assert.AreEqual(false.ToString(), source.Converted);
+            Assert.AreEqual("TYPE4", source.Case);
+        }
     }
 }

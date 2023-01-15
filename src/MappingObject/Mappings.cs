@@ -113,6 +113,14 @@ namespace wan24.MappingObject
             else
             {
                 foreach (Mapping map in EnsureMapping(source.GetType(), main.GetType())) map.MapFrom(source, main);
+                if(main is IMappingObject<tSource> genericMappingObjectType)
+                {
+                    genericMappingObjectType.MapFrom(source, applyDefaultMappings: false);
+                }
+                else if (main is IMappingObject mappingObjectType)
+                {
+                    mappingObjectType.MapFrom(source, applyDefaultMappings: false);
+                }
             }
         }
 
@@ -134,6 +142,14 @@ namespace wan24.MappingObject
             else
             {
                 foreach (Mapping map in EnsureMapping(source.GetType(), main.GetType())) map.MapTo(main, source);
+                if (main is IMappingObject<tSource> genericMappingObjectType)
+                {
+                    genericMappingObjectType.MapTo(source, applyDefaultMappings: false);
+                }
+                else if (main is IMappingObject mappingObjectType)
+                {
+                    mappingObjectType.MapTo(source, applyDefaultMappings: false);
+                }
             }
         }
 
