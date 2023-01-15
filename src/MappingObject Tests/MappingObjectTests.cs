@@ -160,5 +160,17 @@ namespace MappingObject_Tests
             Assert.AreEqual(false.ToString(), source.Converted);
             Assert.AreEqual("TYPE4", source.Case);
         }
+
+        [TestMethod]
+        public void Casting_Test()
+        {
+            TestType5 main = (TestType5)new TestType2();
+            Assert.IsTrue(main.Skipped);
+            Assert.IsFalse(main.NotMapped);
+            Assert.IsFalse(main.Mapped);
+            Assert.IsFalse(main.AlsoMapped);
+            Assert.IsTrue(main.Converted);
+            Assert.AreEqual("type2", main.Case);
+        }
     }
 }

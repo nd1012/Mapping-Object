@@ -273,6 +273,18 @@ automatic for this type as for any other type which is being used as the main
 type for a mapping. To avoid that, you can register a custom mapping in the 
 static constructor of your implementing type, for example.
 
+The same functionality including casting you'll get using the 
+`MappingObjectCastableBase` base class. Then you could cast like this:
+
+```cs
+public sealed class MainType : MappingObjectCastableBase<SourceType, MainType>
+{
+	...
+}
+
+MainType main = (MainType)source;// One explicit cast is still required :(
+```
+
 ### The `IMappingObject` interface
 
 The `IMappingObject` comes as generic and as non-generic type. Usually you 

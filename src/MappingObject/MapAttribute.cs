@@ -15,6 +15,6 @@
         /// <summary>
         /// Source object property name
         /// </summary>
-        public string? Source { get; }
+        public string Source { get; }
     }
 }
