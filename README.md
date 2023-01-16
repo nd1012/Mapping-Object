@@ -33,6 +33,7 @@ Please use the command line:
 
 ```bash
 dotnet add package Mapping-Object --version 1.0.0
+dotnet add package Mapping-Object-Async --version 1.0.0
 ```
 
 ## Usage
