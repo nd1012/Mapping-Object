@@ -7,6 +7,21 @@
     <AssemblyName>MappingObject</AssemblyName>
     <RootNamespace>wan24.MappingObject</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageId>Mapping-Object</PackageId>
+    <Title>Mapping-Object</Title>
+    <Version>1.0.0</Version>
+    <Authors>nd1012</Authors>
+    <Company>Andreas Zimmermann, WAN Solutions</Company>
+    <Product>Mapping-Object</Product>
+    <Description>Slender object mapping library</Description>
+    <Copyright>(c)2023 Andreas Zimmermann, WAN Solutions</Copyright>
+    <PackageProjectUrl>https://github.com/nd1012/Mapping-Object</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nd1012/Mapping-Object</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>object mapping;mapping;dto</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -16,5 +31,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LICENSE" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <XamlAppDef Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </XamlAppDef>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

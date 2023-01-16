@@ -27,7 +27,7 @@
         /// <returns>This type</returns>
         public static implicit operator MappingObjectCastableBase<tSource, tFinal>(tSource source)
         {
-            tFinal res = new();
+            tFinal res = new();// Not using the constructor which takes the source object, because we don't know it was implemented public
             res.MapFrom(source);
             return res;
         }

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Concurrent;
+using System.Reflection;
 
 namespace wan24.MappingObject
 {
@@ -10,7 +11,7 @@ namespace wan24.MappingObject
         /// <summary>
         /// Registered mappings
         /// </summary>
-        private static readonly Dictionary<string, Mapping[]> _Mappings = new();
+        private static readonly ConcurrentDictionary<string, MappingConfig> _Mappings = new();
 
         /// <summary>
         /// Types (keys) of registered mappings (the first type is the main type name, the second type is the source type name)
@@ -18,16 +19,14 @@ namespace wan24.MappingObject
         public static IEnumerable<string> Types => _Mappings.Keys;
 
         /// <summary>
-        /// Add a mapping (creating automatic mappings)
+        /// Create automatic mappings
         /// </summary>
-        /// <param name="source">Source type</param>
-        /// <param name="main">Main type</param>
-        /// <param name="mappings">Overriding mappings (<see cref="Mapping.MainPropertyName"/> is used as the key)</param>
-        public static void Add(Type source, Type main, params Mapping[] mappings)
+        /// <param name="source">Source object type</param>
+        /// <param name="main">Main object type</param>
+        /// <returns>Mappings</returns>
+        public static Dictionary<string, Mapping> Create(Type source, Type main)
         {
-            EnsureMapableType(source, nameof(source));
-            EnsureMapableType(main, nameof(main));
-            Dictionary<string, Mapping> maps = new();
+            Dictionary<string, Mapping> res = new();
             MapAttribute? attr;
             foreach (PropertyInfo mpi in from mpi in main.GetProperties(BindingFlags.Instance | BindingFlags.Public)
                                          where (mpi.GetMethod?.IsPublic ?? false) &&
@@ -46,31 +45,44 @@ namespace wan24.MappingObject
                     if (attr?.Source != null) throw new MappingException($"Property {source}.{spi.Name} needs a public getter");
                     continue;
                 }
-                maps[mpi.Name] = new(mpi.Name, attr?.Source);
+                res[mpi.Name] = new(mpi.Name, attr?.Source);
             }
-            foreach (Mapping map in mappings) maps[map.MainPropertyName] = map;
-            _Mappings[$"{main} - {source}"] = maps.Values.ToArray();
+            return res;
         }
 
         /// <summary>
-        /// Add a mapping (use only the given mappings, don't use automatics)
+        /// Add a mapping (creating automatic mappings)
         /// </summary>
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
-        /// <param name="mappings">Mappings (skip to remove an existing mapping)</param>
-        public static void AddExplicit(Type source, Type main, params Mapping[] mappings)
+        /// <param name="mappings">Overriding mappings (<see cref="Mapping.MainPropertyName"/> is used as the key)</param>
+        /// <returns>Registered mapping configuration</returns>
+        public static MappingConfig Add(Type source, Type main, params Mapping[] mappings)
         {
-            EnsureMapableType(source, nameof(source));
-            EnsureMapableType(main, nameof(main));
-            string key = $"{main} - {source}";
-            if (mappings.Length > 0)
+            Dictionary<string, Mapping> maps = Create(source, main);
+            foreach (Mapping map in mappings) maps[map.MainPropertyName] = map;
+            MappingConfig res = new(source, main, maps.Values.ToArray());
+            _Mappings[$"{main} - {source}"] = res;
+            return res;
+        }
+
+        /// <summary>
+        /// Add a complete mapping configuration
+        /// </summary>
+        /// <param name="config">Mapping configuration (without any mappings to remove an existing mapping configuration)</param>
+        /// <returns>(Un)Registered mapping configuration</returns>
+        public static MappingConfig Add(MappingConfig config)
+        {
+            string key = $"{config.MainType} - {config.SourceType}";
+            if (config.Mappings.Length < 1)
             {
-                _Mappings[key] = mappings;
+                _Mappings.TryRemove(key, out _);
             }
-            else if (_Mappings.ContainsKey(key))
+            else
             {
-                _Mappings.Remove(key);
+                _Mappings[key] = config;
             }
+            return config;
         }
 
         /// <summary>
@@ -79,12 +91,10 @@ namespace wan24.MappingObject
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
         /// <returns>Mappings or <see langword="null"/>, if not found</returns>
-        public static Mapping[]? Get(Type source, Type main)
+        public static MappingConfig? Get(Type source, Type main)
         {
-            EnsureMapableType(source, nameof(source));
-            EnsureMapableType(main, nameof(main));
-            string types = $"{main} - {source}";
-            return _Mappings.ContainsKey(types) ? _Mappings[types] : null;
+            _Mappings.TryGetValue($"{main} - {source}", out MappingConfig? res);
+            return res;
         }
 
         /// <summary>
@@ -92,16 +102,28 @@ namespace wan24.MappingObject
         /// </summary>
         /// <param name="source">Source type</param>
         /// <param name="main">Main type</param>
-        /// <returns>Mappings</returns>
-        public static Mapping[] EnsureMappings(Type source, Type main)
-        {
-            EnsureMapableType(source, nameof(source));
-            EnsureMapableType(main, nameof(main));
-            Mapping[]? res = Get(source, main);
-            if (res != null) return res;
-            Add(source, main);
-            return Get(source, main)!;
-        }
+        /// <returns>Mappings (the final <see cref="Mappings.Find(Type, Type)"/> return value)</returns>
+        public static MappingConfig EnsureMappings(Type source, Type main) => Find(source, main) is MappingConfig res ? res : Add(source, main);
+
+        /// <summary>
+        /// Find an existing mapping
+        /// </summary>
+        /// <param name="source">Source object type</param>
+        /// <param name="main">Main object type</param>
+        /// <returns>Mapping or <see langword="null"/>, if not found</returns>
+        public static MappingConfig? Find(Type source, Type main)
+            => (from config in _Mappings.Values
+                where config.SourceType.IsAssignableFrom(source) &&
+                config.MainType.IsAssignableFrom(main)
+                select config)
+            .OrderByDescending(config => config.MainType == main)
+            .ThenByDescending(config => config.SourceType == source)
+            .FirstOrDefault();
+
+        /// <summary>
+        /// Clear all registered mappings
+        /// </summary>
+        public static void Clear() => _Mappings.Clear();
 
         /// <summary>
         /// Map a source object to a main object instance
@@ -110,7 +132,9 @@ namespace wan24.MappingObject
         /// <typeparam name="tMain">Main object type</typeparam>
         /// <param name="source">Source object</param>
         /// <param name="main">Main object</param>
-        public static void MapFrom<tSource, tMain>(tSource source, tMain main)
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Main object</returns>
+        public static tMain MapFrom<tSource, tMain>(tSource source, tMain main, MappingConfig? config = null)
             where tSource : class
             where tMain : class
         {
@@ -122,7 +146,9 @@ namespace wan24.MappingObject
                 }
                 else
                 {
-                    foreach (Mapping map in EnsureMappings(source.GetType(), main.GetType())) map.MapFrom(source, main);
+                    config ??= EnsureMappings(source.GetType(), main.GetType());
+                    config.BeforeMapping?.Invoke(source, main, config);
+                    foreach (Mapping map in config.Mappings) map.MapFrom(source, main);
                     if (main is IMappingObject<tSource> genericMappingObjectType)
                     {
                         genericMappingObjectType.MapFrom(source, applyDefaultMappings: false);
@@ -131,6 +157,7 @@ namespace wan24.MappingObject
                     {
                         mappingObjectType.MapFrom(source, applyDefaultMappings: false);
                     }
+                    config.AfterMapping?.Invoke(source, main, config);
                 }
             }
             catch (MappingException)
@@ -141,6 +168,7 @@ namespace wan24.MappingObject
             {
                 throw new MappingException(message: null, ex);
             }
+            return main;
         }
 
         /// <summary>
@@ -150,7 +178,9 @@ namespace wan24.MappingObject
         /// <typeparam name="tSource">Source object type</typeparam>
         /// <param name="main">Main object</param>
         /// <param name="source">Source object</param>
-        public static void MapTo<tMain, tSource>(tMain main, tSource source)
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Source object</returns>
+        public static tSource MapTo<tMain, tSource>(tMain main, tSource source, MappingConfig? config = null)
             where tMain : class
             where tSource : class
         {
@@ -162,7 +192,9 @@ namespace wan24.MappingObject
                 }
                 else
                 {
-                    foreach (Mapping map in EnsureMappings(source.GetType(), main.GetType())) map.MapTo(main, source);
+                    config ??= EnsureMappings(source.GetType(), main.GetType());
+                    config.BeforeReverseMapping?.Invoke(source, main, config);
+                    foreach (Mapping map in config.Mappings) map.MapTo(main, source);
                     if (main is IMappingObject<tSource> genericMappingObjectType)
                     {
                         genericMappingObjectType.MapTo(source, applyDefaultMappings: false);
@@ -171,6 +203,7 @@ namespace wan24.MappingObject
                     {
                         mappingObjectType.MapTo(source, applyDefaultMappings: false);
                     }
+                    config.AfterReverseMapping?.Invoke(source, main, config);
                 }
             }
             catch (MappingException)
@@ -181,6 +214,7 @@ namespace wan24.MappingObject
             {
                 throw new MappingException(message: null, ex);
             }
+            return source;
         }
 
         /// <summary>
@@ -190,19 +224,47 @@ namespace wan24.MappingObject
         /// <typeparam name="tMain">Main type</typeparam>
         /// <param name="sources">Source objects</param>
         /// <param name="mainInstanceFactory">Main object instance factory</param>
+        /// <param name="config">Default mapping configuration to use</param>
         /// <returns>Main objects</returns>
-        public static IEnumerable<tMain> MapAllFrom<tSource, tMain>(this IEnumerable<tSource> sources, Func<tSource, tMain>? mainInstanceFactory = null)
+        public static IEnumerable<tMain> MapAllFrom<tSource, tMain>(this IEnumerable<tSource> sources, Func<tSource, tMain>? mainInstanceFactory = null, MappingConfig? config = null)
             where tSource : class
             where tMain : class
         {
             mainInstanceFactory ??= (source) => (tMain)(Activator.CreateInstance(typeof(tMain)) ?? throw new MappingException($"Failed to instance {typeof(tMain)}"));
-            tMain main;
-            foreach (tSource source in sources)
-            {
-                main = mainInstanceFactory(source);
-                MapFrom(source, main);
-                yield return main;
-            }
+            config ??= EnsureMappings(typeof(tSource), typeof(tMain));
+            foreach (tSource source in sources) yield return MapFrom(source, mainInstanceFactory(source), config);
+        }
+
+        /// <summary>
+        /// Map a list of source objects to a list of main objects
+        /// </summary>
+        /// <typeparam name="tSource">Source type</typeparam>
+        /// <typeparam name="tMain">Main type</typeparam>
+        /// <param name="sources">Source objects</param>
+        /// <param name="mainInstanceFactory">Main object instance factory</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Main objects</returns>
+        public static IEnumerable<tMain> MapAllFrom<tSource, tMain>(this IQueryable<tSource> sources, Func<tSource, tMain>? mainInstanceFactory = null, MappingConfig? config = null)
+            where tSource : class
+            where tMain : class
+            => sources.AsEnumerable().MapAllFrom(mainInstanceFactory, config);
+
+        /// <summary>
+        /// Map a list of main objects to a list of source objects (reverse mapping)
+        /// </summary>
+        /// <typeparam name="tMain">Main type</typeparam>
+        /// <typeparam name="tSource">Source type</typeparam>
+        /// <param name="mainObjects">Main objects</param>
+        /// <param name="sourceInstanceFactory">Source object instance factory</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Source objects</returns>
+        public static IEnumerable<tSource> MapAllTo<tMain, tSource>(this IEnumerable<tMain> mainObjects, Func<tMain, tSource>? sourceInstanceFactory = null, MappingConfig? config = null)
+            where tMain : class
+            where tSource : class
+        {
+            sourceInstanceFactory ??= (source) => (tSource)(Activator.CreateInstance(typeof(tSource)) ?? throw new MappingException($"Failed to instance {typeof(tSource)}"));
+            config ??= EnsureMappings(typeof(tSource), typeof(tMain));
+            foreach (tMain main in mainObjects) yield return MapTo(main, sourceInstanceFactory(main), config);
         }
 
         /// <summary>
@@ -212,18 +274,30 @@ namespace wan24.MappingObject
         /// <typeparam name="tSource">Source type</typeparam>
         /// <param name="mainObjects">Main objects</param>
         /// <param name="sourceInstanceFactory">Source object instance factory</param>
+        /// <param name="config">Default mapping configuration to use</param>
         /// <returns>Source objects</returns>
-        public static IEnumerable<tSource> MapAllTo<tMain, tSource>(this IEnumerable<tMain> mainObjects, Func<tMain, tSource>? sourceInstanceFactory = null)
+        public static IEnumerable<tSource> MapAllTo<tMain, tSource>(this IQueryable<tMain> mainObjects, Func<tMain, tSource>? sourceInstanceFactory = null, MappingConfig? config = null)
+            where tMain : class
+            where tSource : class
+            => mainObjects.AsEnumerable().MapAllTo(sourceInstanceFactory, config);
+
+        /// <summary>
+        /// Map a list of source/main objects
+        /// </summary>
+        /// <typeparam name="tSource">Source object type</typeparam>
+        /// <typeparam name="tMain">Main object type</typeparam>
+        /// <param name="pairs">Source/main objects</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Mapped source/main objects</returns>
+        public static IEnumerable<KeyValuePair<tSource, tMain>> MapAllFrom<tSource, tMain>(this IEnumerable<KeyValuePair<tSource, tMain>> pairs, MappingConfig? config = null)
             where tMain : class
             where tSource : class
         {
-            sourceInstanceFactory ??= (source) => (tSource)(Activator.CreateInstance(typeof(tSource)) ?? throw new MappingException($"Failed to instance {typeof(tSource)}"));
-            tSource source;
-            foreach (tMain main in mainObjects)
+            config ??= EnsureMappings(typeof(tSource), typeof(tMain));
+            foreach (KeyValuePair<tSource,tMain> pair in pairs)
             {
-                source = sourceInstanceFactory(main);
-                MapTo(main, source);
-                yield return source;
+                MapFrom(pair.Key, pair.Value, config);
+                yield return pair;
             }
         }
 
@@ -233,14 +307,29 @@ namespace wan24.MappingObject
         /// <typeparam name="tSource">Source object type</typeparam>
         /// <typeparam name="tMain">Main object type</typeparam>
         /// <param name="pairs">Source/main objects</param>
+        /// <param name="config">Default mapping configuration to use</param>
         /// <returns>Mapped source/main objects</returns>
-        public static IEnumerable<KeyValuePair<tSource, tMain>> MapAllFrom<tSource, tMain>(this IEnumerable<KeyValuePair<tSource, tMain>> pairs)
+        public static IEnumerable<KeyValuePair<tSource, tMain>> MapAllFrom<tSource, tMain>(this IQueryable<KeyValuePair<tSource, tMain>> pairs, MappingConfig? config = null)
             where tMain : class
             where tSource : class
+            => pairs.AsEnumerable().MapAllFrom(config);
+
+        /// <summary>
+        /// Map a list of main/source objects (reverse mapping)
+        /// </summary>
+        /// <typeparam name="tMain">Main object type</typeparam>
+        /// <typeparam name="tSource">Source object type</typeparam>
+        /// <param name="pairs">Main/source objects</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Mapped main/source objects</returns>
+        public static IEnumerable<KeyValuePair<tMain, tSource>> MapAllTo<tMain, tSource>(this IEnumerable<KeyValuePair<tMain, tSource>> pairs, MappingConfig? config = null)
+            where tSource : class
+            where tMain : class
         {
-            foreach (KeyValuePair<tSource,tMain> pair in pairs)
+            config ??= EnsureMappings(typeof(tSource), typeof(tMain));
+            foreach (KeyValuePair<tMain, tSource> pair in pairs)
             {
-                MapFrom(pair.Key, pair.Value);
+                MapTo(pair.Key, pair.Value, config);
                 yield return pair;
             }
         }
@@ -251,33 +340,11 @@ namespace wan24.MappingObject
         /// <typeparam name="tMain">Main object type</typeparam>
         /// <typeparam name="tSource">Source object type</typeparam>
         /// <param name="pairs">Main/source objects</param>
+        /// <param name="config">Default mapping configuration to use</param>
         /// <returns>Mapped main/source objects</returns>
-        public static IEnumerable<KeyValuePair<tMain, tSource>> MapAllTo<tMain, tSource>(this IEnumerable<KeyValuePair<tMain, tSource>> pairs)
+        public static IEnumerable<KeyValuePair<tMain, tSource>> MapAllTo<tMain, tSource>(this IQueryable<KeyValuePair<tMain, tSource>> pairs, MappingConfig? config = null)
             where tSource : class
             where tMain : class
-        {
-            foreach (KeyValuePair<tMain, tSource> pair in pairs)
-            {
-                MapTo(pair.Key, pair.Value);
-                yield return pair;
-            }
-        }
-
-        /// <summary>
-        /// Determine if a type can be mapped (non-abstract class type is required)
-        /// </summary>
-        /// <param name="type">Type</param>
-        /// <returns>Can be mapped?</returns>
-        public static bool CanMap(Type type) => !type.IsValueType && !type.IsInterface && !type.IsAbstract;
-
-        /// <summary>
-        /// Ensure a mapable type
-        /// </summary>
-        /// <param name="type">Type</param>
-        /// <param name="argumentName">Argument name</param>
-        private static void EnsureMapableType(Type type, string argumentName)
-        {
-            if (!CanMap(type)) throw new ArgumentException("Non-abstract class type required", argumentName);
-        }
+            => pairs.AsEnumerable().MapAllTo(config);
     }
 }

@@ -9,11 +9,11 @@
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="source">Source object property name (use <code>nameof</code> here!)</param>
+        /// <param name="source">Source object property name to use (use <code>nameof</code> here!)</param>
         public MapAttribute(string source) : base() => Source = source;
 
         /// <summary>
-        /// Source object property name
+        /// Source object property name to use
         /// </summary>
         public string Source { get; }
     }

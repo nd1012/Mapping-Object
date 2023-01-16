@@ -12,7 +12,7 @@
         /// <param name="applyDefaultMappings">Apply default mappings, too? (used internal; <see langword="false"/>, if called from <code>Mappings.Map*</code>)</param>
         void MapFrom(object source, bool applyDefaultMappings = true);
         /// <summary>
-        /// Map this instance to a source object
+        /// Map this instance to a source object (reverse mapping)
         /// </summary>
         /// <param name="source">Source object</param>
         /// <param name="applyDefaultMappings">Apply default mappings, too? (used internal; <see langword="false"/>, if called from <code>Mappings.Map*</code>)</param>
@@ -33,7 +33,7 @@
         /// <param name="applyDefaultMappings">Apply default mappings, too? (used internal; <see langword="false"/>, if called from <code>Mappings.Map*</code>)</param>
         void MapFrom(T source, bool applyDefaultMappings = true);
         /// <summary>
-        /// Map this instance to a source object
+        /// Map this instance to a source object (reverse mapping)
         /// </summary>
         /// <param name="source">Source object</param>
         /// <param name="applyDefaultMappings">Apply default mappings, too? (used internal; <see langword="false"/>, if called from <code>Mappings.Map*</code>)</param>

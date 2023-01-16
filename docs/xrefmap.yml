@@ -1,0 +1,1387 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: wan24.MappingObject
+  name: wan24.MappingObject
+  href: api/wan24.MappingObject.html
+  commentId: N:wan24.MappingObject
+  fullName: wan24.MappingObject
+  nameWithType: wan24.MappingObject
+- uid: wan24.MappingObject.AsyncMapping
+  name: AsyncMapping
+  href: api/wan24.MappingObject.AsyncMapping.html
+  commentId: T:wan24.MappingObject.AsyncMapping
+  fullName: wan24.MappingObject.AsyncMapping
+  nameWithType: AsyncMapping
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  name: AsyncMapping(String, String, AsyncMapping.AsyncSourceGetter_Delegate, AsyncMapping.AsyncMainGetter_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_System_String_wan24_MappingObject_AsyncMapping_AsyncSourceGetter_Delegate_wan24_MappingObject_AsyncMapping_AsyncMainGetter_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, System.String, wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate, wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, String, AsyncMapping.AsyncSourceGetter_Delegate, AsyncMapping.AsyncMainGetter_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  name: AsyncMapping(String, String, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncSourceGetter_Delegate, AsyncMapping.AsyncMainGetter_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_System_String_wan24_MappingObject_AsyncMapping_AsyncValueConverter_Delegate_wan24_MappingObject_AsyncMapping_AsyncValueConverter_Delegate_wan24_MappingObject_AsyncMapping_AsyncSourceGetter_Delegate_wan24_MappingObject_AsyncMapping_AsyncMainGetter_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, System.String, wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate, wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate, wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate, wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, String, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncSourceGetter_Delegate, AsyncMapping.AsyncMainGetter_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  name: AsyncMapping(String, String, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_System_String_wan24_MappingObject_Mapping_SourceGetter_Delegate_wan24_MappingObject_Mapping_MainGetter_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, System.String, wan24.MappingObject.Mapping.SourceGetter_Delegate, wan24.MappingObject.Mapping.MainGetter_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, String, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  name: AsyncMapping(String, String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_System_String_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_SourceGetter_Delegate_wan24_MappingObject_Mapping_MainGetter_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, System.String, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.SourceGetter_Delegate, wan24.MappingObject.Mapping.MainGetter_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate)
+  name: AsyncMapping(String, AsyncMapping.AsyncSourceMapper_Delegate, AsyncMapping.AsyncMainMapper_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_wan24_MappingObject_AsyncMapping_AsyncSourceMapper_Delegate_wan24_MappingObject_AsyncMapping_AsyncMainMapper_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate, wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, AsyncMapping.AsyncSourceMapper_Delegate, AsyncMapping.AsyncMainMapper_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  name: AsyncMapping(String, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncSourceGetter_Delegate, AsyncMapping.AsyncMainGetter_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_wan24_MappingObject_AsyncMapping_AsyncValueConverter_Delegate_wan24_MappingObject_AsyncMapping_AsyncValueConverter_Delegate_wan24_MappingObject_AsyncMapping_AsyncSourceGetter_Delegate_wan24_MappingObject_AsyncMapping_AsyncMainGetter_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate,wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate,wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate, wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate, wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate, wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncValueConverter_Delegate, AsyncMapping.AsyncSourceGetter_Delegate, AsyncMapping.AsyncMainGetter_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.Mapping.SourceMapper_Delegate,wan24.MappingObject.Mapping.MainMapper_Delegate)
+  name: AsyncMapping(String, Mapping.SourceMapper_Delegate, Mapping.MainMapper_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_wan24_MappingObject_Mapping_SourceMapper_Delegate_wan24_MappingObject_Mapping_MainMapper_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.Mapping.SourceMapper_Delegate,wan24.MappingObject.Mapping.MainMapper_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, wan24.MappingObject.Mapping.SourceMapper_Delegate, wan24.MappingObject.Mapping.MainMapper_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, Mapping.SourceMapper_Delegate, Mapping.MainMapper_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  name: AsyncMapping(String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_System_String_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_SourceGetter_Delegate_wan24_MappingObject_Mapping_MainGetter_Delegate_
+  commentId: M:wan24.MappingObject.AsyncMapping.#ctor(System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping(System.String, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.SourceGetter_Delegate, wan24.MappingObject.Mapping.MainGetter_Delegate)
+  nameWithType: AsyncMapping.AsyncMapping(String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+- uid: wan24.MappingObject.AsyncMapping.#ctor*
+  name: AsyncMapping
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping__ctor_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMapping
+  nameWithType: AsyncMapping.AsyncMapping
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainConverter
+  name: AsyncMainConverter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncMainConverter
+  commentId: P:wan24.MappingObject.AsyncMapping.AsyncMainConverter
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainConverter
+  nameWithType: AsyncMapping.AsyncMainConverter
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainConverter*
+  name: AsyncMainConverter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncMainConverter_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.AsyncMainConverter
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainConverter
+  nameWithType: AsyncMapping.AsyncMainConverter
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainGetter
+  name: AsyncMainGetter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncMainGetter
+  commentId: P:wan24.MappingObject.AsyncMapping.AsyncMainGetter
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainGetter
+  nameWithType: AsyncMapping.AsyncMainGetter
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainGetter*
+  name: AsyncMainGetter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncMainGetter_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.AsyncMainGetter
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainGetter
+  nameWithType: AsyncMapping.AsyncMainGetter
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate
+  name: AsyncMapping.AsyncMainGetter_Delegate
+  href: api/wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate.html
+  commentId: T:wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate
+  nameWithType: AsyncMapping.AsyncMainGetter_Delegate
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainMapper
+  name: AsyncMainMapper
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncMainMapper
+  commentId: P:wan24.MappingObject.AsyncMapping.AsyncMainMapper
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainMapper
+  nameWithType: AsyncMapping.AsyncMainMapper
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainMapper*
+  name: AsyncMainMapper
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncMainMapper_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.AsyncMainMapper
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainMapper
+  nameWithType: AsyncMapping.AsyncMainMapper
+- uid: wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate
+  name: AsyncMapping.AsyncMainMapper_Delegate
+  href: api/wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate.html
+  commentId: T:wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate
+  fullName: wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate
+  nameWithType: AsyncMapping.AsyncMainMapper_Delegate
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceConverter
+  name: AsyncSourceConverter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncSourceConverter
+  commentId: P:wan24.MappingObject.AsyncMapping.AsyncSourceConverter
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceConverter
+  nameWithType: AsyncMapping.AsyncSourceConverter
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceConverter*
+  name: AsyncSourceConverter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncSourceConverter_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.AsyncSourceConverter
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceConverter
+  nameWithType: AsyncMapping.AsyncSourceConverter
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceGetter
+  name: AsyncSourceGetter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncSourceGetter
+  commentId: P:wan24.MappingObject.AsyncMapping.AsyncSourceGetter
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceGetter
+  nameWithType: AsyncMapping.AsyncSourceGetter
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceGetter*
+  name: AsyncSourceGetter
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncSourceGetter_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.AsyncSourceGetter
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceGetter
+  nameWithType: AsyncMapping.AsyncSourceGetter
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate
+  name: AsyncMapping.AsyncSourceGetter_Delegate
+  href: api/wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate.html
+  commentId: T:wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate
+  nameWithType: AsyncMapping.AsyncSourceGetter_Delegate
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceMapper
+  name: AsyncSourceMapper
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncSourceMapper
+  commentId: P:wan24.MappingObject.AsyncMapping.AsyncSourceMapper
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceMapper
+  nameWithType: AsyncMapping.AsyncSourceMapper
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceMapper*
+  name: AsyncSourceMapper
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_AsyncSourceMapper_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.AsyncSourceMapper
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceMapper
+  nameWithType: AsyncMapping.AsyncSourceMapper
+- uid: wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate
+  name: AsyncMapping.AsyncSourceMapper_Delegate
+  href: api/wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate.html
+  commentId: T:wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate
+  fullName: wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate
+  nameWithType: AsyncMapping.AsyncSourceMapper_Delegate
+- uid: wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate
+  name: AsyncMapping.AsyncValueConverter_Delegate
+  href: api/wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate.html
+  commentId: T:wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate
+  fullName: wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate
+  nameWithType: AsyncMapping.AsyncValueConverter_Delegate
+- uid: wan24.MappingObject.AsyncMapping.MapFrom(System.Object,System.Object)
+  name: MapFrom(Object, Object)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapFrom_System_Object_System_Object_
+  commentId: M:wan24.MappingObject.AsyncMapping.MapFrom(System.Object,System.Object)
+  fullName: wan24.MappingObject.AsyncMapping.MapFrom(System.Object, System.Object)
+  nameWithType: AsyncMapping.MapFrom(Object, Object)
+- uid: wan24.MappingObject.AsyncMapping.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapFrom_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.MapFrom
+  nameWithType: AsyncMapping.MapFrom
+- uid: wan24.MappingObject.AsyncMapping.MapFromAsync(System.Object,System.Object,CancellationToken)
+  name: MapFromAsync(Object, Object, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapFromAsync_System_Object_System_Object_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMapping.MapFromAsync(System.Object,System.Object,CancellationToken)
+  fullName: wan24.MappingObject.AsyncMapping.MapFromAsync(System.Object, System.Object, CancellationToken)
+  nameWithType: AsyncMapping.MapFromAsync(Object, Object, CancellationToken)
+- uid: wan24.MappingObject.AsyncMapping.MapFromAsync*
+  name: MapFromAsync
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapFromAsync_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.MapFromAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.MapFromAsync
+  nameWithType: AsyncMapping.MapFromAsync
+- uid: wan24.MappingObject.AsyncMapping.MapTo(System.Object,System.Object)
+  name: MapTo(Object, Object)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapTo_System_Object_System_Object_
+  commentId: M:wan24.MappingObject.AsyncMapping.MapTo(System.Object,System.Object)
+  fullName: wan24.MappingObject.AsyncMapping.MapTo(System.Object, System.Object)
+  nameWithType: AsyncMapping.MapTo(Object, Object)
+- uid: wan24.MappingObject.AsyncMapping.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapTo_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.MapTo
+  nameWithType: AsyncMapping.MapTo
+- uid: wan24.MappingObject.AsyncMapping.MapToAsync(System.Object,System.Object,CancellationToken)
+  name: MapToAsync(Object, Object, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapToAsync_System_Object_System_Object_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMapping.MapToAsync(System.Object,System.Object,CancellationToken)
+  fullName: wan24.MappingObject.AsyncMapping.MapToAsync(System.Object, System.Object, CancellationToken)
+  nameWithType: AsyncMapping.MapToAsync(Object, Object, CancellationToken)
+- uid: wan24.MappingObject.AsyncMapping.MapToAsync*
+  name: MapToAsync
+  href: api/wan24.MappingObject.AsyncMapping.html#wan24_MappingObject_AsyncMapping_MapToAsync_
+  commentId: Overload:wan24.MappingObject.AsyncMapping.MapToAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMapping.MapToAsync
+  nameWithType: AsyncMapping.MapToAsync
+- uid: wan24.MappingObject.AsyncMappings
+  name: AsyncMappings
+  href: api/wan24.MappingObject.AsyncMappings.html
+  commentId: T:wan24.MappingObject.AsyncMappings
+  fullName: wan24.MappingObject.AsyncMappings
+  nameWithType: AsyncMappings
+- uid: wan24.MappingObject.AsyncMappings.MapAllFromAsync*
+  name: MapAllFromAsync
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllFromAsync_
+  commentId: Overload:wan24.MappingObject.AsyncMappings.MapAllFromAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMappings.MapAllFromAsync
+  nameWithType: AsyncMappings.MapAllFromAsync
+- uid: wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IAsyncEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllFromAsync<tSource, tMain>(IAsyncEnumerable<tSource>, Nullable<Func<tSource, tMain>>, Nullable<Func<tSource, CancellationToken, Task<tMain>>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IAsyncEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IAsyncEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllFromAsync(Of tSource, tMain)(IAsyncEnumerable(Of tSource), Nullable(Of Func(Of tSource, tMain)), Nullable(Of Func(Of tSource, CancellationToken, Task(Of tMain))), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllFromAsync<tSource, tMain>(IAsyncEnumerable<tSource>, System.Nullable<Func<tSource, tMain>>, System.Nullable<Func<tSource, CancellationToken, Task<tMain>>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IAsyncEnumerable(Of tSource), System.Nullable(Of Func(Of tSource, tMain)), System.Nullable(Of Func(Of tSource, CancellationToken, Task(Of tMain))), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllFromAsync<tSource, tMain>(IAsyncEnumerable<tSource>, Nullable<Func<tSource, tMain>>, Nullable<Func<tSource, CancellationToken, Task<tMain>>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IAsyncEnumerable(Of tSource), Nullable(Of Func(Of tSource, tMain)), Nullable(Of Func(Of tSource, CancellationToken, Task(Of tMain))), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IAsyncEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllFromAsync<tSource, tMain>(IAsyncEnumerable<KeyValuePair<tSource, tMain>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IAsyncEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IAsyncEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllFromAsync(Of tSource, tMain)(IAsyncEnumerable(Of KeyValuePair(Of tSource, tMain)), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllFromAsync<tSource, tMain>(IAsyncEnumerable<KeyValuePair<tSource, tMain>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IAsyncEnumerable(Of KeyValuePair(Of tSource, tMain)), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllFromAsync<tSource, tMain>(IAsyncEnumerable<KeyValuePair<tSource, tMain>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IAsyncEnumerable(Of KeyValuePair(Of tSource, tMain)), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllFromAsync<tSource, tMain>(IEnumerable<tSource>, Nullable<Func<tSource, tMain>>, Nullable<Func<tSource, CancellationToken, Task<tMain>>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllFromAsync(Of tSource, tMain)(IEnumerable(Of tSource), Nullable(Of Func(Of tSource, tMain)), Nullable(Of Func(Of tSource, CancellationToken, Task(Of tMain))), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllFromAsync<tSource, tMain>(IEnumerable<tSource>, System.Nullable<Func<tSource, tMain>>, System.Nullable<Func<tSource, CancellationToken, Task<tMain>>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IEnumerable(Of tSource), System.Nullable(Of Func(Of tSource, tMain)), System.Nullable(Of Func(Of tSource, CancellationToken, Task(Of tMain))), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllFromAsync<tSource, tMain>(IEnumerable<tSource>, Nullable<Func<tSource, tMain>>, Nullable<Func<tSource, CancellationToken, Task<tMain>>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IEnumerable(Of tSource), Nullable(Of Func(Of tSource, tMain)), Nullable(Of Func(Of tSource, CancellationToken, Task(Of tMain))), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllFromAsync<tSource, tMain>(IEnumerable<KeyValuePair<tSource, tMain>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllFromAsync(Of tSource, tMain)(IEnumerable(Of KeyValuePair(Of tSource, tMain)), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllFromAsync<tSource, tMain>(IEnumerable<KeyValuePair<tSource, tMain>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IEnumerable(Of KeyValuePair(Of tSource, tMain)), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllFromAsync<tSource, tMain>(IEnumerable<KeyValuePair<tSource, tMain>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllFromAsync(Of tSource, tMain)(IEnumerable(Of KeyValuePair(Of tSource, tMain)), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllToAsync*
+  name: MapAllToAsync
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllToAsync_
+  commentId: Overload:wan24.MappingObject.AsyncMappings.MapAllToAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMappings.MapAllToAsync
+  nameWithType: AsyncMappings.MapAllToAsync
+- uid: wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IAsyncEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllToAsync<tMain, tSource>(IAsyncEnumerable<tMain>, Nullable<Func<tMain, tSource>>, Nullable<Func<tMain, CancellationToken, Task<tSource>>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IAsyncEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IAsyncEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllToAsync(Of tMain, tSource)(IAsyncEnumerable(Of tMain), Nullable(Of Func(Of tMain, tSource)), Nullable(Of Func(Of tMain, CancellationToken, Task(Of tSource))), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllToAsync<tMain, tSource>(IAsyncEnumerable<tMain>, System.Nullable<Func<tMain, tSource>>, System.Nullable<Func<tMain, CancellationToken, Task<tSource>>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllToAsync(Of tMain, tSource)(IAsyncEnumerable(Of tMain), System.Nullable(Of Func(Of tMain, tSource)), System.Nullable(Of Func(Of tMain, CancellationToken, Task(Of tSource))), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllToAsync<tMain, tSource>(IAsyncEnumerable<tMain>, Nullable<Func<tMain, tSource>>, Nullable<Func<tMain, CancellationToken, Task<tSource>>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllToAsync(Of tMain, tSource)(IAsyncEnumerable(Of tMain), Nullable(Of Func(Of tMain, tSource)), Nullable(Of Func(Of tMain, CancellationToken, Task(Of tSource))), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IAsyncEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllToAsync<tMain, tSource>(IAsyncEnumerable<KeyValuePair<tMain, tSource>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IAsyncEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IAsyncEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllToAsync(Of tMain, tSource)(IAsyncEnumerable(Of KeyValuePair(Of tMain, tSource)), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllToAsync<tMain, tSource>(IAsyncEnumerable<KeyValuePair<tMain, tSource>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllToAsync(Of tMain, tSource)(IAsyncEnumerable(Of KeyValuePair(Of tMain, tSource)), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllToAsync<tMain, tSource>(IAsyncEnumerable<KeyValuePair<tMain, tSource>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllToAsync(Of tMain, tSource)(IAsyncEnumerable(Of KeyValuePair(Of tMain, tSource)), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllToAsync<tMain, tSource>(IEnumerable<tMain>, Nullable<Func<tMain, tSource>>, Nullable<Func<tMain, CancellationToken, Task<tSource>>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllToAsync(Of tMain, tSource)(IEnumerable(Of tMain), Nullable(Of Func(Of tMain, tSource)), Nullable(Of Func(Of tMain, CancellationToken, Task(Of tSource))), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllToAsync<tMain, tSource>(IEnumerable<tMain>, System.Nullable<Func<tMain, tSource>>, System.Nullable<Func<tMain, CancellationToken, Task<tSource>>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllToAsync(Of tMain, tSource)(IEnumerable(Of tMain), System.Nullable(Of Func(Of tMain, tSource)), System.Nullable(Of Func(Of tMain, CancellationToken, Task(Of tSource))), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllToAsync<tMain, tSource>(IEnumerable<tMain>, Nullable<Func<tMain, tSource>>, Nullable<Func<tMain, CancellationToken, Task<tSource>>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllToAsync(Of tMain, tSource)(IEnumerable(Of tMain), Nullable(Of Func(Of tMain, tSource)), Nullable(Of Func(Of tMain, CancellationToken, Task(Of tSource))), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapAllToAsync<tMain, tSource>(IEnumerable<KeyValuePair<tMain, tSource>>, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapAllToAsync(Of tMain, tSource)(IEnumerable(Of KeyValuePair(Of tMain, tSource)), MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapAllToAsync<tMain, tSource>(IEnumerable<KeyValuePair<tMain, tSource>>, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapAllToAsync(Of tMain, tSource)(IEnumerable(Of KeyValuePair(Of tMain, tSource)), wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapAllToAsync<tMain, tSource>(IEnumerable<KeyValuePair<tMain, tSource>>, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapAllToAsync(Of tMain, tSource)(IEnumerable(Of KeyValuePair(Of tMain, tSource)), MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapFromAsync*
+  name: MapFromAsync
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapFromAsync_
+  commentId: Overload:wan24.MappingObject.AsyncMappings.MapFromAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMappings.MapFromAsync
+  nameWithType: AsyncMappings.MapFromAsync
+- uid: wan24.MappingObject.AsyncMappings.MapFromAsync``2(``0,``1,wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapFromAsync<tSource, tMain>(tSource, tMain, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapFromAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapFromAsync``2(``0,``1,wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapFromAsync(Of tSource, tMain)(tSource, tMain, MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapFromAsync<tSource, tMain>(tSource, tMain, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapFromAsync(Of tSource, tMain)(tSource, tMain, wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapFromAsync<tSource, tMain>(tSource, tMain, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapFromAsync(Of tSource, tMain)(tSource, tMain, MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.AsyncMappings.MapToAsync*
+  name: MapToAsync
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapToAsync_
+  commentId: Overload:wan24.MappingObject.AsyncMappings.MapToAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.AsyncMappings.MapToAsync
+  nameWithType: AsyncMappings.MapToAsync
+- uid: wan24.MappingObject.AsyncMappings.MapToAsync``2(``0,``1,wan24.MappingObject.MappingConfig,CancellationToken)
+  name: MapToAsync<tMain, tSource>(tMain, tSource, MappingConfig, CancellationToken)
+  href: api/wan24.MappingObject.AsyncMappings.html#wan24_MappingObject_AsyncMappings_MapToAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_
+  commentId: M:wan24.MappingObject.AsyncMappings.MapToAsync``2(``0,``1,wan24.MappingObject.MappingConfig,CancellationToken)
+  name.vb: MapToAsync(Of tMain, tSource)(tMain, tSource, MappingConfig, CancellationToken)
+  fullName: wan24.MappingObject.AsyncMappings.MapToAsync<tMain, tSource>(tMain, tSource, wan24.MappingObject.MappingConfig, CancellationToken)
+  fullName.vb: wan24.MappingObject.AsyncMappings.MapToAsync(Of tMain, tSource)(tMain, tSource, wan24.MappingObject.MappingConfig, CancellationToken)
+  nameWithType: AsyncMappings.MapToAsync<tMain, tSource>(tMain, tSource, MappingConfig, CancellationToken)
+  nameWithType.vb: AsyncMappings.MapToAsync(Of tMain, tSource)(tMain, tSource, MappingConfig, CancellationToken)
+- uid: wan24.MappingObject.IMappingObject
+  name: IMappingObject
+  href: api/wan24.MappingObject.IMappingObject.html
+  commentId: T:wan24.MappingObject.IMappingObject
+  fullName: wan24.MappingObject.IMappingObject
+  nameWithType: IMappingObject
+- uid: wan24.MappingObject.IMappingObject.MapFrom(System.Object,System.Boolean)
+  name: MapFrom(Object, Boolean)
+  href: api/wan24.MappingObject.IMappingObject.html#wan24_MappingObject_IMappingObject_MapFrom_System_Object_System_Boolean_
+  commentId: M:wan24.MappingObject.IMappingObject.MapFrom(System.Object,System.Boolean)
+  fullName: wan24.MappingObject.IMappingObject.MapFrom(System.Object, System.Boolean)
+  nameWithType: IMappingObject.MapFrom(Object, Boolean)
+- uid: wan24.MappingObject.IMappingObject.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.IMappingObject.html#wan24_MappingObject_IMappingObject_MapFrom_
+  commentId: Overload:wan24.MappingObject.IMappingObject.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObject.MapFrom
+  nameWithType: IMappingObject.MapFrom
+- uid: wan24.MappingObject.IMappingObject.MapTo(System.Object,System.Boolean)
+  name: MapTo(Object, Boolean)
+  href: api/wan24.MappingObject.IMappingObject.html#wan24_MappingObject_IMappingObject_MapTo_System_Object_System_Boolean_
+  commentId: M:wan24.MappingObject.IMappingObject.MapTo(System.Object,System.Boolean)
+  fullName: wan24.MappingObject.IMappingObject.MapTo(System.Object, System.Boolean)
+  nameWithType: IMappingObject.MapTo(Object, Boolean)
+- uid: wan24.MappingObject.IMappingObject.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.IMappingObject.html#wan24_MappingObject_IMappingObject_MapTo_
+  commentId: Overload:wan24.MappingObject.IMappingObject.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObject.MapTo
+  nameWithType: IMappingObject.MapTo
+- uid: wan24.MappingObject.IMappingObject`1
+  name: IMappingObject<T>
+  href: api/wan24.MappingObject.IMappingObject-1.html
+  commentId: T:wan24.MappingObject.IMappingObject`1
+  name.vb: IMappingObject(Of T)
+  fullName: wan24.MappingObject.IMappingObject<T>
+  fullName.vb: wan24.MappingObject.IMappingObject(Of T)
+  nameWithType: IMappingObject<T>
+  nameWithType.vb: IMappingObject(Of T)
+- uid: wan24.MappingObject.IMappingObject`1.MapFrom(`0,System.Boolean)
+  name: MapFrom(T, Boolean)
+  href: api/wan24.MappingObject.IMappingObject-1.html#wan24_MappingObject_IMappingObject_1_MapFrom__0_System_Boolean_
+  commentId: M:wan24.MappingObject.IMappingObject`1.MapFrom(`0,System.Boolean)
+  fullName: wan24.MappingObject.IMappingObject<T>.MapFrom(T, System.Boolean)
+  fullName.vb: wan24.MappingObject.IMappingObject(Of T).MapFrom(T, System.Boolean)
+  nameWithType: IMappingObject<T>.MapFrom(T, Boolean)
+  nameWithType.vb: IMappingObject(Of T).MapFrom(T, Boolean)
+- uid: wan24.MappingObject.IMappingObject`1.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.IMappingObject-1.html#wan24_MappingObject_IMappingObject_1_MapFrom_
+  commentId: Overload:wan24.MappingObject.IMappingObject`1.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObject<T>.MapFrom
+  fullName.vb: wan24.MappingObject.IMappingObject(Of T).MapFrom
+  nameWithType: IMappingObject<T>.MapFrom
+  nameWithType.vb: IMappingObject(Of T).MapFrom
+- uid: wan24.MappingObject.IMappingObject`1.MapTo(`0,System.Boolean)
+  name: MapTo(T, Boolean)
+  href: api/wan24.MappingObject.IMappingObject-1.html#wan24_MappingObject_IMappingObject_1_MapTo__0_System_Boolean_
+  commentId: M:wan24.MappingObject.IMappingObject`1.MapTo(`0,System.Boolean)
+  fullName: wan24.MappingObject.IMappingObject<T>.MapTo(T, System.Boolean)
+  fullName.vb: wan24.MappingObject.IMappingObject(Of T).MapTo(T, System.Boolean)
+  nameWithType: IMappingObject<T>.MapTo(T, Boolean)
+  nameWithType.vb: IMappingObject(Of T).MapTo(T, Boolean)
+- uid: wan24.MappingObject.IMappingObject`1.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.IMappingObject-1.html#wan24_MappingObject_IMappingObject_1_MapTo_
+  commentId: Overload:wan24.MappingObject.IMappingObject`1.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObject<T>.MapTo
+  fullName.vb: wan24.MappingObject.IMappingObject(Of T).MapTo
+  nameWithType: IMappingObject<T>.MapTo
+  nameWithType.vb: IMappingObject(Of T).MapTo
+- uid: wan24.MappingObject.IMappingObjectAsync
+  name: IMappingObjectAsync
+  href: api/wan24.MappingObject.IMappingObjectAsync.html
+  commentId: T:wan24.MappingObject.IMappingObjectAsync
+  fullName: wan24.MappingObject.IMappingObjectAsync
+  nameWithType: IMappingObjectAsync
+- uid: wan24.MappingObject.IMappingObjectAsync.MapFromAsync(System.Object,System.Boolean,CancellationToken)
+  name: MapFromAsync(Object, Boolean, CancellationToken)
+  href: api/wan24.MappingObject.IMappingObjectAsync.html#wan24_MappingObject_IMappingObjectAsync_MapFromAsync_System_Object_System_Boolean_CancellationToken_
+  commentId: M:wan24.MappingObject.IMappingObjectAsync.MapFromAsync(System.Object,System.Boolean,CancellationToken)
+  fullName: wan24.MappingObject.IMappingObjectAsync.MapFromAsync(System.Object, System.Boolean, CancellationToken)
+  nameWithType: IMappingObjectAsync.MapFromAsync(Object, Boolean, CancellationToken)
+- uid: wan24.MappingObject.IMappingObjectAsync.MapFromAsync*
+  name: MapFromAsync
+  href: api/wan24.MappingObject.IMappingObjectAsync.html#wan24_MappingObject_IMappingObjectAsync_MapFromAsync_
+  commentId: Overload:wan24.MappingObject.IMappingObjectAsync.MapFromAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObjectAsync.MapFromAsync
+  nameWithType: IMappingObjectAsync.MapFromAsync
+- uid: wan24.MappingObject.IMappingObjectAsync.MapToAsync(System.Object,System.Boolean,CancellationToken)
+  name: MapToAsync(Object, Boolean, CancellationToken)
+  href: api/wan24.MappingObject.IMappingObjectAsync.html#wan24_MappingObject_IMappingObjectAsync_MapToAsync_System_Object_System_Boolean_CancellationToken_
+  commentId: M:wan24.MappingObject.IMappingObjectAsync.MapToAsync(System.Object,System.Boolean,CancellationToken)
+  fullName: wan24.MappingObject.IMappingObjectAsync.MapToAsync(System.Object, System.Boolean, CancellationToken)
+  nameWithType: IMappingObjectAsync.MapToAsync(Object, Boolean, CancellationToken)
+- uid: wan24.MappingObject.IMappingObjectAsync.MapToAsync*
+  name: MapToAsync
+  href: api/wan24.MappingObject.IMappingObjectAsync.html#wan24_MappingObject_IMappingObjectAsync_MapToAsync_
+  commentId: Overload:wan24.MappingObject.IMappingObjectAsync.MapToAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObjectAsync.MapToAsync
+  nameWithType: IMappingObjectAsync.MapToAsync
+- uid: wan24.MappingObject.IMappingObjectAsync`1
+  name: IMappingObjectAsync<T>
+  href: api/wan24.MappingObject.IMappingObjectAsync-1.html
+  commentId: T:wan24.MappingObject.IMappingObjectAsync`1
+  name.vb: IMappingObjectAsync(Of T)
+  fullName: wan24.MappingObject.IMappingObjectAsync<T>
+  fullName.vb: wan24.MappingObject.IMappingObjectAsync(Of T)
+  nameWithType: IMappingObjectAsync<T>
+  nameWithType.vb: IMappingObjectAsync(Of T)
+- uid: wan24.MappingObject.IMappingObjectAsync`1.MapFromAsync(`0,System.Boolean,CancellationToken)
+  name: MapFromAsync(T, Boolean, CancellationToken)
+  href: api/wan24.MappingObject.IMappingObjectAsync-1.html#wan24_MappingObject_IMappingObjectAsync_1_MapFromAsync__0_System_Boolean_CancellationToken_
+  commentId: M:wan24.MappingObject.IMappingObjectAsync`1.MapFromAsync(`0,System.Boolean,CancellationToken)
+  fullName: wan24.MappingObject.IMappingObjectAsync<T>.MapFromAsync(T, System.Boolean, CancellationToken)
+  fullName.vb: wan24.MappingObject.IMappingObjectAsync(Of T).MapFromAsync(T, System.Boolean, CancellationToken)
+  nameWithType: IMappingObjectAsync<T>.MapFromAsync(T, Boolean, CancellationToken)
+  nameWithType.vb: IMappingObjectAsync(Of T).MapFromAsync(T, Boolean, CancellationToken)
+- uid: wan24.MappingObject.IMappingObjectAsync`1.MapFromAsync*
+  name: MapFromAsync
+  href: api/wan24.MappingObject.IMappingObjectAsync-1.html#wan24_MappingObject_IMappingObjectAsync_1_MapFromAsync_
+  commentId: Overload:wan24.MappingObject.IMappingObjectAsync`1.MapFromAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObjectAsync<T>.MapFromAsync
+  fullName.vb: wan24.MappingObject.IMappingObjectAsync(Of T).MapFromAsync
+  nameWithType: IMappingObjectAsync<T>.MapFromAsync
+  nameWithType.vb: IMappingObjectAsync(Of T).MapFromAsync
+- uid: wan24.MappingObject.IMappingObjectAsync`1.MapToAsync(`0,System.Boolean,CancellationToken)
+  name: MapToAsync(T, Boolean, CancellationToken)
+  href: api/wan24.MappingObject.IMappingObjectAsync-1.html#wan24_MappingObject_IMappingObjectAsync_1_MapToAsync__0_System_Boolean_CancellationToken_
+  commentId: M:wan24.MappingObject.IMappingObjectAsync`1.MapToAsync(`0,System.Boolean,CancellationToken)
+  fullName: wan24.MappingObject.IMappingObjectAsync<T>.MapToAsync(T, System.Boolean, CancellationToken)
+  fullName.vb: wan24.MappingObject.IMappingObjectAsync(Of T).MapToAsync(T, System.Boolean, CancellationToken)
+  nameWithType: IMappingObjectAsync<T>.MapToAsync(T, Boolean, CancellationToken)
+  nameWithType.vb: IMappingObjectAsync(Of T).MapToAsync(T, Boolean, CancellationToken)
+- uid: wan24.MappingObject.IMappingObjectAsync`1.MapToAsync*
+  name: MapToAsync
+  href: api/wan24.MappingObject.IMappingObjectAsync-1.html#wan24_MappingObject_IMappingObjectAsync_1_MapToAsync_
+  commentId: Overload:wan24.MappingObject.IMappingObjectAsync`1.MapToAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.IMappingObjectAsync<T>.MapToAsync
+  fullName.vb: wan24.MappingObject.IMappingObjectAsync(Of T).MapToAsync
+  nameWithType: IMappingObjectAsync<T>.MapToAsync
+  nameWithType.vb: IMappingObjectAsync(Of T).MapToAsync
+- uid: wan24.MappingObject.MapAttribute
+  name: MapAttribute
+  href: api/wan24.MappingObject.MapAttribute.html
+  commentId: T:wan24.MappingObject.MapAttribute
+  fullName: wan24.MappingObject.MapAttribute
+  nameWithType: MapAttribute
+- uid: wan24.MappingObject.MapAttribute.#ctor(System.String)
+  name: MapAttribute(String)
+  href: api/wan24.MappingObject.MapAttribute.html#wan24_MappingObject_MapAttribute__ctor_System_String_
+  commentId: M:wan24.MappingObject.MapAttribute.#ctor(System.String)
+  fullName: wan24.MappingObject.MapAttribute.MapAttribute(System.String)
+  nameWithType: MapAttribute.MapAttribute(String)
+- uid: wan24.MappingObject.MapAttribute.#ctor*
+  name: MapAttribute
+  href: api/wan24.MappingObject.MapAttribute.html#wan24_MappingObject_MapAttribute__ctor_
+  commentId: Overload:wan24.MappingObject.MapAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.MapAttribute.MapAttribute
+  nameWithType: MapAttribute.MapAttribute
+- uid: wan24.MappingObject.MapAttribute.Source
+  name: Source
+  href: api/wan24.MappingObject.MapAttribute.html#wan24_MappingObject_MapAttribute_Source
+  commentId: P:wan24.MappingObject.MapAttribute.Source
+  fullName: wan24.MappingObject.MapAttribute.Source
+  nameWithType: MapAttribute.Source
+- uid: wan24.MappingObject.MapAttribute.Source*
+  name: Source
+  href: api/wan24.MappingObject.MapAttribute.html#wan24_MappingObject_MapAttribute_Source_
+  commentId: Overload:wan24.MappingObject.MapAttribute.Source
+  isSpec: "True"
+  fullName: wan24.MappingObject.MapAttribute.Source
+  nameWithType: MapAttribute.Source
+- uid: wan24.MappingObject.Mapping
+  name: Mapping
+  href: api/wan24.MappingObject.Mapping.html
+  commentId: T:wan24.MappingObject.Mapping
+  fullName: wan24.MappingObject.Mapping
+  nameWithType: Mapping
+- uid: wan24.MappingObject.Mapping.#ctor
+  name: Mapping()
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor
+  commentId: M:wan24.MappingObject.Mapping.#ctor
+  fullName: wan24.MappingObject.Mapping.Mapping()
+  nameWithType: Mapping.Mapping()
+- uid: wan24.MappingObject.Mapping.#ctor(System.String,System.String)
+  name: Mapping(String, String)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor_System_String_System_String_
+  commentId: M:wan24.MappingObject.Mapping.#ctor(System.String,System.String)
+  fullName: wan24.MappingObject.Mapping.Mapping(System.String, System.String)
+  nameWithType: Mapping.Mapping(String, String)
+- uid: wan24.MappingObject.Mapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  name: Mapping(String, String, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor_System_String_System_String_wan24_MappingObject_Mapping_SourceGetter_Delegate_wan24_MappingObject_Mapping_MainGetter_Delegate_
+  commentId: M:wan24.MappingObject.Mapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  fullName: wan24.MappingObject.Mapping.Mapping(System.String, System.String, wan24.MappingObject.Mapping.SourceGetter_Delegate, wan24.MappingObject.Mapping.MainGetter_Delegate)
+  nameWithType: Mapping.Mapping(String, String, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+- uid: wan24.MappingObject.Mapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  name: Mapping(String, String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor_System_String_System_String_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_SourceGetter_Delegate_wan24_MappingObject_Mapping_MainGetter_Delegate_
+  commentId: M:wan24.MappingObject.Mapping.#ctor(System.String,System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  fullName: wan24.MappingObject.Mapping.Mapping(System.String, System.String, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.SourceGetter_Delegate, wan24.MappingObject.Mapping.MainGetter_Delegate)
+  nameWithType: Mapping.Mapping(String, String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+- uid: wan24.MappingObject.Mapping.#ctor(System.String,wan24.MappingObject.Mapping.SourceMapper_Delegate,wan24.MappingObject.Mapping.MainMapper_Delegate)
+  name: Mapping(String, Mapping.SourceMapper_Delegate, Mapping.MainMapper_Delegate)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor_System_String_wan24_MappingObject_Mapping_SourceMapper_Delegate_wan24_MappingObject_Mapping_MainMapper_Delegate_
+  commentId: M:wan24.MappingObject.Mapping.#ctor(System.String,wan24.MappingObject.Mapping.SourceMapper_Delegate,wan24.MappingObject.Mapping.MainMapper_Delegate)
+  fullName: wan24.MappingObject.Mapping.Mapping(System.String, wan24.MappingObject.Mapping.SourceMapper_Delegate, wan24.MappingObject.Mapping.MainMapper_Delegate)
+  nameWithType: Mapping.Mapping(String, Mapping.SourceMapper_Delegate, Mapping.MainMapper_Delegate)
+- uid: wan24.MappingObject.Mapping.#ctor(System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  name: Mapping(String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor_System_String_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_ValueConverter_Delegate_wan24_MappingObject_Mapping_SourceGetter_Delegate_wan24_MappingObject_Mapping_MainGetter_Delegate_
+  commentId: M:wan24.MappingObject.Mapping.#ctor(System.String,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.ValueConverter_Delegate,wan24.MappingObject.Mapping.SourceGetter_Delegate,wan24.MappingObject.Mapping.MainGetter_Delegate)
+  fullName: wan24.MappingObject.Mapping.Mapping(System.String, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.ValueConverter_Delegate, wan24.MappingObject.Mapping.SourceGetter_Delegate, wan24.MappingObject.Mapping.MainGetter_Delegate)
+  nameWithType: Mapping.Mapping(String, Mapping.ValueConverter_Delegate, Mapping.ValueConverter_Delegate, Mapping.SourceGetter_Delegate, Mapping.MainGetter_Delegate)
+- uid: wan24.MappingObject.Mapping.#ctor*
+  name: Mapping
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping__ctor_
+  commentId: Overload:wan24.MappingObject.Mapping.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.Mapping
+  nameWithType: Mapping.Mapping
+- uid: wan24.MappingObject.Mapping.GetProperties(System.Object,System.Object)
+  name: GetProperties(Object, Object)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_GetProperties_System_Object_System_Object_
+  commentId: M:wan24.MappingObject.Mapping.GetProperties(System.Object,System.Object)
+  fullName: wan24.MappingObject.Mapping.GetProperties(System.Object, System.Object)
+  nameWithType: Mapping.GetProperties(Object, Object)
+- uid: wan24.MappingObject.Mapping.GetProperties*
+  name: GetProperties
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_GetProperties_
+  commentId: Overload:wan24.MappingObject.Mapping.GetProperties
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.GetProperties
+  nameWithType: Mapping.GetProperties
+- uid: wan24.MappingObject.Mapping.MainConverter
+  name: MainConverter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainConverter
+  commentId: P:wan24.MappingObject.Mapping.MainConverter
+  fullName: wan24.MappingObject.Mapping.MainConverter
+  nameWithType: Mapping.MainConverter
+- uid: wan24.MappingObject.Mapping.MainConverter*
+  name: MainConverter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainConverter_
+  commentId: Overload:wan24.MappingObject.Mapping.MainConverter
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MainConverter
+  nameWithType: Mapping.MainConverter
+- uid: wan24.MappingObject.Mapping.MainGetter
+  name: MainGetter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainGetter
+  commentId: P:wan24.MappingObject.Mapping.MainGetter
+  fullName: wan24.MappingObject.Mapping.MainGetter
+  nameWithType: Mapping.MainGetter
+- uid: wan24.MappingObject.Mapping.MainGetter*
+  name: MainGetter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainGetter_
+  commentId: Overload:wan24.MappingObject.Mapping.MainGetter
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MainGetter
+  nameWithType: Mapping.MainGetter
+- uid: wan24.MappingObject.Mapping.MainGetter_Delegate
+  name: Mapping.MainGetter_Delegate
+  href: api/wan24.MappingObject.Mapping.MainGetter_Delegate.html
+  commentId: T:wan24.MappingObject.Mapping.MainGetter_Delegate
+  fullName: wan24.MappingObject.Mapping.MainGetter_Delegate
+  nameWithType: Mapping.MainGetter_Delegate
+- uid: wan24.MappingObject.Mapping.MainMapper
+  name: MainMapper
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainMapper
+  commentId: P:wan24.MappingObject.Mapping.MainMapper
+  fullName: wan24.MappingObject.Mapping.MainMapper
+  nameWithType: Mapping.MainMapper
+- uid: wan24.MappingObject.Mapping.MainMapper*
+  name: MainMapper
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainMapper_
+  commentId: Overload:wan24.MappingObject.Mapping.MainMapper
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MainMapper
+  nameWithType: Mapping.MainMapper
+- uid: wan24.MappingObject.Mapping.MainMapper_Delegate
+  name: Mapping.MainMapper_Delegate
+  href: api/wan24.MappingObject.Mapping.MainMapper_Delegate.html
+  commentId: T:wan24.MappingObject.Mapping.MainMapper_Delegate
+  fullName: wan24.MappingObject.Mapping.MainMapper_Delegate
+  nameWithType: Mapping.MainMapper_Delegate
+- uid: wan24.MappingObject.Mapping.MainPropertyName
+  name: MainPropertyName
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainPropertyName
+  commentId: P:wan24.MappingObject.Mapping.MainPropertyName
+  fullName: wan24.MappingObject.Mapping.MainPropertyName
+  nameWithType: Mapping.MainPropertyName
+- uid: wan24.MappingObject.Mapping.MainPropertyName*
+  name: MainPropertyName
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MainPropertyName_
+  commentId: Overload:wan24.MappingObject.Mapping.MainPropertyName
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MainPropertyName
+  nameWithType: Mapping.MainPropertyName
+- uid: wan24.MappingObject.Mapping.MapFrom(System.Object,System.Object)
+  name: MapFrom(Object, Object)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapFrom_System_Object_System_Object_
+  commentId: M:wan24.MappingObject.Mapping.MapFrom(System.Object,System.Object)
+  fullName: wan24.MappingObject.Mapping.MapFrom(System.Object, System.Object)
+  nameWithType: Mapping.MapFrom(Object, Object)
+- uid: wan24.MappingObject.Mapping.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapFrom_
+  commentId: Overload:wan24.MappingObject.Mapping.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MapFrom
+  nameWithType: Mapping.MapFrom
+- uid: wan24.MappingObject.Mapping.MapTo(System.Object,System.Object)
+  name: MapTo(Object, Object)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapTo_System_Object_System_Object_
+  commentId: M:wan24.MappingObject.Mapping.MapTo(System.Object,System.Object)
+  fullName: wan24.MappingObject.Mapping.MapTo(System.Object, System.Object)
+  nameWithType: Mapping.MapTo(Object, Object)
+- uid: wan24.MappingObject.Mapping.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapTo_
+  commentId: Overload:wan24.MappingObject.Mapping.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MapTo
+  nameWithType: Mapping.MapTo
+- uid: wan24.MappingObject.Mapping.SourceConverter
+  name: SourceConverter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourceConverter
+  commentId: P:wan24.MappingObject.Mapping.SourceConverter
+  fullName: wan24.MappingObject.Mapping.SourceConverter
+  nameWithType: Mapping.SourceConverter
+- uid: wan24.MappingObject.Mapping.SourceConverter*
+  name: SourceConverter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourceConverter_
+  commentId: Overload:wan24.MappingObject.Mapping.SourceConverter
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.SourceConverter
+  nameWithType: Mapping.SourceConverter
+- uid: wan24.MappingObject.Mapping.SourceGetter
+  name: SourceGetter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourceGetter
+  commentId: P:wan24.MappingObject.Mapping.SourceGetter
+  fullName: wan24.MappingObject.Mapping.SourceGetter
+  nameWithType: Mapping.SourceGetter
+- uid: wan24.MappingObject.Mapping.SourceGetter*
+  name: SourceGetter
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourceGetter_
+  commentId: Overload:wan24.MappingObject.Mapping.SourceGetter
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.SourceGetter
+  nameWithType: Mapping.SourceGetter
+- uid: wan24.MappingObject.Mapping.SourceGetter_Delegate
+  name: Mapping.SourceGetter_Delegate
+  href: api/wan24.MappingObject.Mapping.SourceGetter_Delegate.html
+  commentId: T:wan24.MappingObject.Mapping.SourceGetter_Delegate
+  fullName: wan24.MappingObject.Mapping.SourceGetter_Delegate
+  nameWithType: Mapping.SourceGetter_Delegate
+- uid: wan24.MappingObject.Mapping.SourceMapper
+  name: SourceMapper
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourceMapper
+  commentId: P:wan24.MappingObject.Mapping.SourceMapper
+  fullName: wan24.MappingObject.Mapping.SourceMapper
+  nameWithType: Mapping.SourceMapper
+- uid: wan24.MappingObject.Mapping.SourceMapper*
+  name: SourceMapper
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourceMapper_
+  commentId: Overload:wan24.MappingObject.Mapping.SourceMapper
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.SourceMapper
+  nameWithType: Mapping.SourceMapper
+- uid: wan24.MappingObject.Mapping.SourceMapper_Delegate
+  name: Mapping.SourceMapper_Delegate
+  href: api/wan24.MappingObject.Mapping.SourceMapper_Delegate.html
+  commentId: T:wan24.MappingObject.Mapping.SourceMapper_Delegate
+  fullName: wan24.MappingObject.Mapping.SourceMapper_Delegate
+  nameWithType: Mapping.SourceMapper_Delegate
+- uid: wan24.MappingObject.Mapping.SourcePropertyName
+  name: SourcePropertyName
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourcePropertyName
+  commentId: P:wan24.MappingObject.Mapping.SourcePropertyName
+  fullName: wan24.MappingObject.Mapping.SourcePropertyName
+  nameWithType: Mapping.SourcePropertyName
+- uid: wan24.MappingObject.Mapping.SourcePropertyName*
+  name: SourcePropertyName
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_SourcePropertyName_
+  commentId: Overload:wan24.MappingObject.Mapping.SourcePropertyName
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.SourcePropertyName
+  nameWithType: Mapping.SourcePropertyName
+- uid: wan24.MappingObject.Mapping.ValueConverter_Delegate
+  name: Mapping.ValueConverter_Delegate
+  href: api/wan24.MappingObject.Mapping.ValueConverter_Delegate.html
+  commentId: T:wan24.MappingObject.Mapping.ValueConverter_Delegate
+  fullName: wan24.MappingObject.Mapping.ValueConverter_Delegate
+  nameWithType: Mapping.ValueConverter_Delegate
+- uid: wan24.MappingObject.MappingConfig
+  name: MappingConfig
+  href: api/wan24.MappingObject.MappingConfig.html
+  commentId: T:wan24.MappingObject.MappingConfig
+  fullName: wan24.MappingObject.MappingConfig
+  nameWithType: MappingConfig
+- uid: wan24.MappingObject.MappingConfig.#ctor(Type,Type,wan24.MappingObject.Mapping[])
+  name: MappingConfig(Type, Type, Mapping[])
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig__ctor_Type_Type_wan24_MappingObject_Mapping___
+  commentId: M:wan24.MappingObject.MappingConfig.#ctor(Type,Type,wan24.MappingObject.Mapping[])
+  name.vb: MappingConfig(Type, Type, Mapping())
+  fullName: wan24.MappingObject.MappingConfig.MappingConfig(Type, Type, wan24.MappingObject.Mapping[])
+  fullName.vb: wan24.MappingObject.MappingConfig.MappingConfig(Type, Type, wan24.MappingObject.Mapping())
+  nameWithType: MappingConfig.MappingConfig(Type, Type, Mapping[])
+  nameWithType.vb: MappingConfig.MappingConfig(Type, Type, Mapping())
+- uid: wan24.MappingObject.MappingConfig.#ctor*
+  name: MappingConfig
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig__ctor_
+  commentId: Overload:wan24.MappingObject.MappingConfig.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.MappingConfig
+  nameWithType: MappingConfig.MappingConfig
+- uid: wan24.MappingObject.MappingConfig.AfterMapping
+  name: AfterMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_AfterMapping
+  commentId: P:wan24.MappingObject.MappingConfig.AfterMapping
+  fullName: wan24.MappingObject.MappingConfig.AfterMapping
+  nameWithType: MappingConfig.AfterMapping
+- uid: wan24.MappingObject.MappingConfig.AfterMapping*
+  name: AfterMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_AfterMapping_
+  commentId: Overload:wan24.MappingObject.MappingConfig.AfterMapping
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.AfterMapping
+  nameWithType: MappingConfig.AfterMapping
+- uid: wan24.MappingObject.MappingConfig.AfterReverseMapping
+  name: AfterReverseMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_AfterReverseMapping
+  commentId: P:wan24.MappingObject.MappingConfig.AfterReverseMapping
+  fullName: wan24.MappingObject.MappingConfig.AfterReverseMapping
+  nameWithType: MappingConfig.AfterReverseMapping
+- uid: wan24.MappingObject.MappingConfig.AfterReverseMapping*
+  name: AfterReverseMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_AfterReverseMapping_
+  commentId: Overload:wan24.MappingObject.MappingConfig.AfterReverseMapping
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.AfterReverseMapping
+  nameWithType: MappingConfig.AfterReverseMapping
+- uid: wan24.MappingObject.MappingConfig.BeforeMapping
+  name: BeforeMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_BeforeMapping
+  commentId: P:wan24.MappingObject.MappingConfig.BeforeMapping
+  fullName: wan24.MappingObject.MappingConfig.BeforeMapping
+  nameWithType: MappingConfig.BeforeMapping
+- uid: wan24.MappingObject.MappingConfig.BeforeMapping*
+  name: BeforeMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_BeforeMapping_
+  commentId: Overload:wan24.MappingObject.MappingConfig.BeforeMapping
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.BeforeMapping
+  nameWithType: MappingConfig.BeforeMapping
+- uid: wan24.MappingObject.MappingConfig.BeforeReverseMapping
+  name: BeforeReverseMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_BeforeReverseMapping
+  commentId: P:wan24.MappingObject.MappingConfig.BeforeReverseMapping
+  fullName: wan24.MappingObject.MappingConfig.BeforeReverseMapping
+  nameWithType: MappingConfig.BeforeReverseMapping
+- uid: wan24.MappingObject.MappingConfig.BeforeReverseMapping*
+  name: BeforeReverseMapping
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_BeforeReverseMapping_
+  commentId: Overload:wan24.MappingObject.MappingConfig.BeforeReverseMapping
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.BeforeReverseMapping
+  nameWithType: MappingConfig.BeforeReverseMapping
+- uid: wan24.MappingObject.MappingConfig.Clone
+  name: Clone()
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_Clone
+  commentId: M:wan24.MappingObject.MappingConfig.Clone
+  fullName: wan24.MappingObject.MappingConfig.Clone()
+  nameWithType: MappingConfig.Clone()
+- uid: wan24.MappingObject.MappingConfig.Clone*
+  name: Clone
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_Clone_
+  commentId: Overload:wan24.MappingObject.MappingConfig.Clone
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.Clone
+  nameWithType: MappingConfig.Clone
+- uid: wan24.MappingObject.MappingConfig.MainType
+  name: MainType
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_MainType
+  commentId: P:wan24.MappingObject.MappingConfig.MainType
+  fullName: wan24.MappingObject.MappingConfig.MainType
+  nameWithType: MappingConfig.MainType
+- uid: wan24.MappingObject.MappingConfig.MainType*
+  name: MainType
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_MainType_
+  commentId: Overload:wan24.MappingObject.MappingConfig.MainType
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.MainType
+  nameWithType: MappingConfig.MainType
+- uid: wan24.MappingObject.MappingConfig.Mapping_Delegate
+  name: MappingConfig.Mapping_Delegate
+  href: api/wan24.MappingObject.MappingConfig.Mapping_Delegate.html
+  commentId: T:wan24.MappingObject.MappingConfig.Mapping_Delegate
+  fullName: wan24.MappingObject.MappingConfig.Mapping_Delegate
+  nameWithType: MappingConfig.Mapping_Delegate
+- uid: wan24.MappingObject.MappingConfig.Mappings
+  name: Mappings
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_Mappings
+  commentId: P:wan24.MappingObject.MappingConfig.Mappings
+  fullName: wan24.MappingObject.MappingConfig.Mappings
+  nameWithType: MappingConfig.Mappings
+- uid: wan24.MappingObject.MappingConfig.Mappings*
+  name: Mappings
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_Mappings_
+  commentId: Overload:wan24.MappingObject.MappingConfig.Mappings
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.Mappings
+  nameWithType: MappingConfig.Mappings
+- uid: wan24.MappingObject.MappingConfig.SourceType
+  name: SourceType
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_SourceType
+  commentId: P:wan24.MappingObject.MappingConfig.SourceType
+  fullName: wan24.MappingObject.MappingConfig.SourceType
+  nameWithType: MappingConfig.SourceType
+- uid: wan24.MappingObject.MappingConfig.SourceType*
+  name: SourceType
+  href: api/wan24.MappingObject.MappingConfig.html#wan24_MappingObject_MappingConfig_SourceType_
+  commentId: Overload:wan24.MappingObject.MappingConfig.SourceType
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingConfig.SourceType
+  nameWithType: MappingConfig.SourceType
+- uid: wan24.MappingObject.MappingException
+  name: MappingException
+  href: api/wan24.MappingObject.MappingException.html
+  commentId: T:wan24.MappingObject.MappingException
+  fullName: wan24.MappingObject.MappingException
+  nameWithType: MappingException
+- uid: wan24.MappingObject.MappingException.#ctor
+  name: MappingException()
+  href: api/wan24.MappingObject.MappingException.html#wan24_MappingObject_MappingException__ctor
+  commentId: M:wan24.MappingObject.MappingException.#ctor
+  fullName: wan24.MappingObject.MappingException.MappingException()
+  nameWithType: MappingException.MappingException()
+- uid: wan24.MappingObject.MappingException.#ctor(System.String)
+  name: MappingException(String)
+  href: api/wan24.MappingObject.MappingException.html#wan24_MappingObject_MappingException__ctor_System_String_
+  commentId: M:wan24.MappingObject.MappingException.#ctor(System.String)
+  fullName: wan24.MappingObject.MappingException.MappingException(System.String)
+  nameWithType: MappingException.MappingException(String)
+- uid: wan24.MappingObject.MappingException.#ctor(System.String,Exception)
+  name: MappingException(String, Exception)
+  href: api/wan24.MappingObject.MappingException.html#wan24_MappingObject_MappingException__ctor_System_String_Exception_
+  commentId: M:wan24.MappingObject.MappingException.#ctor(System.String,Exception)
+  fullName: wan24.MappingObject.MappingException.MappingException(System.String, Exception)
+  nameWithType: MappingException.MappingException(String, Exception)
+- uid: wan24.MappingObject.MappingException.#ctor*
+  name: MappingException
+  href: api/wan24.MappingObject.MappingException.html#wan24_MappingObject_MappingException__ctor_
+  commentId: Overload:wan24.MappingObject.MappingException.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingException.MappingException
+  nameWithType: MappingException.MappingException
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1
+  name: MappingObjectAsyncBase<T>
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html
+  commentId: T:wan24.MappingObject.MappingObjectAsyncBase`1
+  name.vb: MappingObjectAsyncBase(Of T)
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T)
+  nameWithType: MappingObjectAsyncBase<T>
+  nameWithType.vb: MappingObjectAsyncBase(Of T)
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.#ctor
+  name: MappingObjectAsyncBase()
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1__ctor
+  commentId: M:wan24.MappingObject.MappingObjectAsyncBase`1.#ctor
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MappingObjectAsyncBase()
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MappingObjectAsyncBase()
+  nameWithType: MappingObjectAsyncBase<T>.MappingObjectAsyncBase()
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MappingObjectAsyncBase()
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.#ctor(`0)
+  name: MappingObjectAsyncBase(T)
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1__ctor__0_
+  commentId: M:wan24.MappingObject.MappingObjectAsyncBase`1.#ctor(`0)
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MappingObjectAsyncBase(T)
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MappingObjectAsyncBase(T)
+  nameWithType: MappingObjectAsyncBase<T>.MappingObjectAsyncBase(T)
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MappingObjectAsyncBase(T)
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.#ctor*
+  name: MappingObjectAsyncBase
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1__ctor_
+  commentId: Overload:wan24.MappingObject.MappingObjectAsyncBase`1.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MappingObjectAsyncBase
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MappingObjectAsyncBase
+  nameWithType: MappingObjectAsyncBase<T>.MappingObjectAsyncBase
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MappingObjectAsyncBase
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapFrom(`0)
+  name: MapFrom(T)
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapFrom__0_
+  commentId: M:wan24.MappingObject.MappingObjectAsyncBase`1.MapFrom(`0)
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapFrom(T)
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapFrom(T)
+  nameWithType: MappingObjectAsyncBase<T>.MapFrom(T)
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapFrom(T)
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapFrom_
+  commentId: Overload:wan24.MappingObject.MappingObjectAsyncBase`1.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapFrom
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapFrom
+  nameWithType: MappingObjectAsyncBase<T>.MapFrom
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapFrom
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapFromAsync(`0,CancellationToken)
+  name: MapFromAsync(T, CancellationToken)
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapFromAsync__0_CancellationToken_
+  commentId: M:wan24.MappingObject.MappingObjectAsyncBase`1.MapFromAsync(`0,CancellationToken)
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapFromAsync(T, CancellationToken)
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapFromAsync(T, CancellationToken)
+  nameWithType: MappingObjectAsyncBase<T>.MapFromAsync(T, CancellationToken)
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapFromAsync(T, CancellationToken)
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapFromAsync*
+  name: MapFromAsync
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapFromAsync_
+  commentId: Overload:wan24.MappingObject.MappingObjectAsyncBase`1.MapFromAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapFromAsync
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapFromAsync
+  nameWithType: MappingObjectAsyncBase<T>.MapFromAsync
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapFromAsync
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapTo(`0)
+  name: MapTo(T)
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapTo__0_
+  commentId: M:wan24.MappingObject.MappingObjectAsyncBase`1.MapTo(`0)
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapTo(T)
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapTo(T)
+  nameWithType: MappingObjectAsyncBase<T>.MapTo(T)
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapTo(T)
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapTo_
+  commentId: Overload:wan24.MappingObject.MappingObjectAsyncBase`1.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapTo
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapTo
+  nameWithType: MappingObjectAsyncBase<T>.MapTo
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapTo
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapToAsync(`0,CancellationToken)
+  name: MapToAsync(T, CancellationToken)
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapToAsync__0_CancellationToken_
+  commentId: M:wan24.MappingObject.MappingObjectAsyncBase`1.MapToAsync(`0,CancellationToken)
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapToAsync(T, CancellationToken)
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapToAsync(T, CancellationToken)
+  nameWithType: MappingObjectAsyncBase<T>.MapToAsync(T, CancellationToken)
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapToAsync(T, CancellationToken)
+- uid: wan24.MappingObject.MappingObjectAsyncBase`1.MapToAsync*
+  name: MapToAsync
+  href: api/wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapToAsync_
+  commentId: Overload:wan24.MappingObject.MappingObjectAsyncBase`1.MapToAsync
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectAsyncBase<T>.MapToAsync
+  fullName.vb: wan24.MappingObject.MappingObjectAsyncBase(Of T).MapToAsync
+  nameWithType: MappingObjectAsyncBase<T>.MapToAsync
+  nameWithType.vb: MappingObjectAsyncBase(Of T).MapToAsync
+- uid: wan24.MappingObject.MappingObjectBase`1
+  name: MappingObjectBase<T>
+  href: api/wan24.MappingObject.MappingObjectBase-1.html
+  commentId: T:wan24.MappingObject.MappingObjectBase`1
+  name.vb: MappingObjectBase(Of T)
+  fullName: wan24.MappingObject.MappingObjectBase<T>
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T)
+  nameWithType: MappingObjectBase<T>
+  nameWithType.vb: MappingObjectBase(Of T)
+- uid: wan24.MappingObject.MappingObjectBase`1.#ctor
+  name: MappingObjectBase()
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1__ctor
+  commentId: M:wan24.MappingObject.MappingObjectBase`1.#ctor
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MappingObjectBase()
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MappingObjectBase()
+  nameWithType: MappingObjectBase<T>.MappingObjectBase()
+  nameWithType.vb: MappingObjectBase(Of T).MappingObjectBase()
+- uid: wan24.MappingObject.MappingObjectBase`1.#ctor(`0)
+  name: MappingObjectBase(T)
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1__ctor__0_
+  commentId: M:wan24.MappingObject.MappingObjectBase`1.#ctor(`0)
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MappingObjectBase(T)
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MappingObjectBase(T)
+  nameWithType: MappingObjectBase<T>.MappingObjectBase(T)
+  nameWithType.vb: MappingObjectBase(Of T).MappingObjectBase(T)
+- uid: wan24.MappingObject.MappingObjectBase`1.#ctor*
+  name: MappingObjectBase
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1__ctor_
+  commentId: Overload:wan24.MappingObject.MappingObjectBase`1.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MappingObjectBase
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MappingObjectBase
+  nameWithType: MappingObjectBase<T>.MappingObjectBase
+  nameWithType.vb: MappingObjectBase(Of T).MappingObjectBase
+- uid: wan24.MappingObject.MappingObjectBase`1.MapFrom(`0)
+  name: MapFrom(T)
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1_MapFrom__0_
+  commentId: M:wan24.MappingObject.MappingObjectBase`1.MapFrom(`0)
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MapFrom(T)
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MapFrom(T)
+  nameWithType: MappingObjectBase<T>.MapFrom(T)
+  nameWithType.vb: MappingObjectBase(Of T).MapFrom(T)
+- uid: wan24.MappingObject.MappingObjectBase`1.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1_MapFrom_
+  commentId: Overload:wan24.MappingObject.MappingObjectBase`1.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MapFrom
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MapFrom
+  nameWithType: MappingObjectBase<T>.MapFrom
+  nameWithType.vb: MappingObjectBase(Of T).MapFrom
+- uid: wan24.MappingObject.MappingObjectBase`1.MapTo(`0)
+  name: MapTo(T)
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1_MapTo__0_
+  commentId: M:wan24.MappingObject.MappingObjectBase`1.MapTo(`0)
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MapTo(T)
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MapTo(T)
+  nameWithType: MappingObjectBase<T>.MapTo(T)
+  nameWithType.vb: MappingObjectBase(Of T).MapTo(T)
+- uid: wan24.MappingObject.MappingObjectBase`1.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.MappingObjectBase-1.html#wan24_MappingObject_MappingObjectBase_1_MapTo_
+  commentId: Overload:wan24.MappingObject.MappingObjectBase`1.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectBase<T>.MapTo
+  fullName.vb: wan24.MappingObject.MappingObjectBase(Of T).MapTo
+  nameWithType: MappingObjectBase<T>.MapTo
+  nameWithType.vb: MappingObjectBase(Of T).MapTo
+- uid: wan24.MappingObject.MappingObjectCastableBase`2
+  name: MappingObjectCastableBase<tSource, tFinal>
+  href: api/wan24.MappingObject.MappingObjectCastableBase-2.html
+  commentId: T:wan24.MappingObject.MappingObjectCastableBase`2
+  name.vb: MappingObjectCastableBase(Of tSource, tFinal)
+  fullName: wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>
+  fullName.vb: wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal)
+  nameWithType: MappingObjectCastableBase<tSource, tFinal>
+  nameWithType.vb: MappingObjectCastableBase(Of tSource, tFinal)
+- uid: wan24.MappingObject.MappingObjectCastableBase`2.#ctor
+  name: MappingObjectCastableBase()
+  href: api/wan24.MappingObject.MappingObjectCastableBase-2.html#wan24_MappingObject_MappingObjectCastableBase_2__ctor
+  commentId: M:wan24.MappingObject.MappingObjectCastableBase`2.#ctor
+  fullName: wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>.MappingObjectCastableBase()
+  fullName.vb: wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal).MappingObjectCastableBase()
+  nameWithType: MappingObjectCastableBase<tSource, tFinal>.MappingObjectCastableBase()
+  nameWithType.vb: MappingObjectCastableBase(Of tSource, tFinal).MappingObjectCastableBase()
+- uid: wan24.MappingObject.MappingObjectCastableBase`2.#ctor(`0)
+  name: MappingObjectCastableBase(tSource)
+  href: api/wan24.MappingObject.MappingObjectCastableBase-2.html#wan24_MappingObject_MappingObjectCastableBase_2__ctor__0_
+  commentId: M:wan24.MappingObject.MappingObjectCastableBase`2.#ctor(`0)
+  fullName: wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>.MappingObjectCastableBase(tSource)
+  fullName.vb: wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal).MappingObjectCastableBase(tSource)
+  nameWithType: MappingObjectCastableBase<tSource, tFinal>.MappingObjectCastableBase(tSource)
+  nameWithType.vb: MappingObjectCastableBase(Of tSource, tFinal).MappingObjectCastableBase(tSource)
+- uid: wan24.MappingObject.MappingObjectCastableBase`2.#ctor*
+  name: MappingObjectCastableBase
+  href: api/wan24.MappingObject.MappingObjectCastableBase-2.html#wan24_MappingObject_MappingObjectCastableBase_2__ctor_
+  commentId: Overload:wan24.MappingObject.MappingObjectCastableBase`2.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>.MappingObjectCastableBase
+  fullName.vb: wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal).MappingObjectCastableBase
+  nameWithType: MappingObjectCastableBase<tSource, tFinal>.MappingObjectCastableBase
+  nameWithType.vb: MappingObjectCastableBase(Of tSource, tFinal).MappingObjectCastableBase
+- uid: wan24.MappingObject.MappingObjectCastableBase`2.op_Implicit(`0)~wan24.MappingObject.MappingObjectCastableBase{`0,`1}
+  name: Implicit(tSource to MappingObjectCastableBase<tSource, tFinal>)
+  href: api/wan24.MappingObject.MappingObjectCastableBase-2.html#wan24_MappingObject_MappingObjectCastableBase_2_op_Implicit__0__wan24_MappingObject_MappingObjectCastableBase__0__1_
+  commentId: M:wan24.MappingObject.MappingObjectCastableBase`2.op_Implicit(`0)~wan24.MappingObject.MappingObjectCastableBase{`0,`1}
+  name.vb: Widening(tSource to MappingObjectCastableBase(Of tSource, tFinal))
+  fullName: wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>.Implicit(tSource to wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>)
+  fullName.vb: wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal).Widening(tSource to wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal))
+  nameWithType: MappingObjectCastableBase<tSource, tFinal>.Implicit(tSource to MappingObjectCastableBase<tSource, tFinal>)
+  nameWithType.vb: MappingObjectCastableBase(Of tSource, tFinal).Widening(tSource to MappingObjectCastableBase(Of tSource, tFinal))
+- uid: wan24.MappingObject.MappingObjectCastableBase`2.op_Implicit*
+  name: Implicit
+  href: api/wan24.MappingObject.MappingObjectCastableBase-2.html#wan24_MappingObject_MappingObjectCastableBase_2_op_Implicit_
+  commentId: Overload:wan24.MappingObject.MappingObjectCastableBase`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: wan24.MappingObject.MappingObjectCastableBase<tSource, tFinal>.Implicit
+  fullName.vb: wan24.MappingObject.MappingObjectCastableBase(Of tSource, tFinal).Widening
+  nameWithType: MappingObjectCastableBase<tSource, tFinal>.Implicit
+  nameWithType.vb: MappingObjectCastableBase(Of tSource, tFinal).Widening
+- uid: wan24.MappingObject.Mappings
+  name: Mappings
+  href: api/wan24.MappingObject.Mappings.html
+  commentId: T:wan24.MappingObject.Mappings
+  fullName: wan24.MappingObject.Mappings
+  nameWithType: Mappings
+- uid: wan24.MappingObject.Mappings.Add(Type,Type,wan24.MappingObject.Mapping[])
+  name: Add(Type, Type, Mapping[])
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Add_Type_Type_wan24_MappingObject_Mapping___
+  commentId: M:wan24.MappingObject.Mappings.Add(Type,Type,wan24.MappingObject.Mapping[])
+  name.vb: Add(Type, Type, Mapping())
+  fullName: wan24.MappingObject.Mappings.Add(Type, Type, wan24.MappingObject.Mapping[])
+  fullName.vb: wan24.MappingObject.Mappings.Add(Type, Type, wan24.MappingObject.Mapping())
+  nameWithType: Mappings.Add(Type, Type, Mapping[])
+  nameWithType.vb: Mappings.Add(Type, Type, Mapping())
+- uid: wan24.MappingObject.Mappings.Add(wan24.MappingObject.MappingConfig)
+  name: Add(MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Add_wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.Add(wan24.MappingObject.MappingConfig)
+  fullName: wan24.MappingObject.Mappings.Add(wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.Add(MappingConfig)
+- uid: wan24.MappingObject.Mappings.Add*
+  name: Add
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Add_
+  commentId: Overload:wan24.MappingObject.Mappings.Add
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.Add
+  nameWithType: Mappings.Add
+- uid: wan24.MappingObject.Mappings.Clear
+  name: Clear()
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Clear
+  commentId: M:wan24.MappingObject.Mappings.Clear
+  fullName: wan24.MappingObject.Mappings.Clear()
+  nameWithType: Mappings.Clear()
+- uid: wan24.MappingObject.Mappings.Clear*
+  name: Clear
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Clear_
+  commentId: Overload:wan24.MappingObject.Mappings.Clear
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.Clear
+  nameWithType: Mappings.Clear
+- uid: wan24.MappingObject.Mappings.Create(Type,Type)
+  name: Create(Type, Type)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Create_Type_Type_
+  commentId: M:wan24.MappingObject.Mappings.Create(Type,Type)
+  fullName: wan24.MappingObject.Mappings.Create(Type, Type)
+  nameWithType: Mappings.Create(Type, Type)
+- uid: wan24.MappingObject.Mappings.Create*
+  name: Create
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Create_
+  commentId: Overload:wan24.MappingObject.Mappings.Create
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.Create
+  nameWithType: Mappings.Create
+- uid: wan24.MappingObject.Mappings.EnsureMappings(Type,Type)
+  name: EnsureMappings(Type, Type)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_EnsureMappings_Type_Type_
+  commentId: M:wan24.MappingObject.Mappings.EnsureMappings(Type,Type)
+  fullName: wan24.MappingObject.Mappings.EnsureMappings(Type, Type)
+  nameWithType: Mappings.EnsureMappings(Type, Type)
+- uid: wan24.MappingObject.Mappings.EnsureMappings*
+  name: EnsureMappings
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_EnsureMappings_
+  commentId: Overload:wan24.MappingObject.Mappings.EnsureMappings
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.EnsureMappings
+  nameWithType: Mappings.EnsureMappings
+- uid: wan24.MappingObject.Mappings.Find(Type,Type)
+  name: Find(Type, Type)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Find_Type_Type_
+  commentId: M:wan24.MappingObject.Mappings.Find(Type,Type)
+  fullName: wan24.MappingObject.Mappings.Find(Type, Type)
+  nameWithType: Mappings.Find(Type, Type)
+- uid: wan24.MappingObject.Mappings.Find*
+  name: Find
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Find_
+  commentId: Overload:wan24.MappingObject.Mappings.Find
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.Find
+  nameWithType: Mappings.Find
+- uid: wan24.MappingObject.Mappings.Get(Type,Type)
+  name: Get(Type, Type)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Get_Type_Type_
+  commentId: M:wan24.MappingObject.Mappings.Get(Type,Type)
+  fullName: wan24.MappingObject.Mappings.Get(Type, Type)
+  nameWithType: Mappings.Get(Type, Type)
+- uid: wan24.MappingObject.Mappings.Get*
+  name: Get
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Get_
+  commentId: Overload:wan24.MappingObject.Mappings.Get
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.Get
+  nameWithType: Mappings.Get
+- uid: wan24.MappingObject.Mappings.MapAllFrom*
+  name: MapAllFrom
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllFrom_
+  commentId: Overload:wan24.MappingObject.Mappings.MapAllFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.MapAllFrom
+  nameWithType: Mappings.MapAllFrom
+- uid: wan24.MappingObject.Mappings.MapAllFrom``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllFrom<tSource, tMain>(IEnumerable<tSource>, Nullable<Func<tSource, tMain>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllFrom__2_IEnumerable___0__System_Nullable_Func___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllFrom``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllFrom(Of tSource, tMain)(IEnumerable(Of tSource), Nullable(Of Func(Of tSource, tMain)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllFrom<tSource, tMain>(IEnumerable<tSource>, System.Nullable<Func<tSource, tMain>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllFrom(Of tSource, tMain)(IEnumerable(Of tSource), System.Nullable(Of Func(Of tSource, tMain)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllFrom<tSource, tMain>(IEnumerable<tSource>, Nullable<Func<tSource, tMain>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllFrom(Of tSource, tMain)(IEnumerable(Of tSource), Nullable(Of Func(Of tSource, tMain)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllFrom``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllFrom<tSource, tMain>(IEnumerable<KeyValuePair<tSource, tMain>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllFrom__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllFrom``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllFrom(Of tSource, tMain)(IEnumerable(Of KeyValuePair(Of tSource, tMain)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllFrom<tSource, tMain>(IEnumerable<KeyValuePair<tSource, tMain>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllFrom(Of tSource, tMain)(IEnumerable(Of KeyValuePair(Of tSource, tMain)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllFrom<tSource, tMain>(IEnumerable<KeyValuePair<tSource, tMain>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllFrom(Of tSource, tMain)(IEnumerable(Of KeyValuePair(Of tSource, tMain)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllFrom``2(IQueryable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllFrom<tSource, tMain>(IQueryable<tSource>, Nullable<Func<tSource, tMain>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllFrom__2_IQueryable___0__System_Nullable_Func___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllFrom``2(IQueryable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllFrom(Of tSource, tMain)(IQueryable(Of tSource), Nullable(Of Func(Of tSource, tMain)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllFrom<tSource, tMain>(IQueryable<tSource>, System.Nullable<Func<tSource, tMain>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllFrom(Of tSource, tMain)(IQueryable(Of tSource), System.Nullable(Of Func(Of tSource, tMain)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllFrom<tSource, tMain>(IQueryable<tSource>, Nullable<Func<tSource, tMain>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllFrom(Of tSource, tMain)(IQueryable(Of tSource), Nullable(Of Func(Of tSource, tMain)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllFrom``2(IQueryable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllFrom<tSource, tMain>(IQueryable<KeyValuePair<tSource, tMain>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllFrom__2_IQueryable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllFrom``2(IQueryable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllFrom(Of tSource, tMain)(IQueryable(Of KeyValuePair(Of tSource, tMain)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllFrom<tSource, tMain>(IQueryable<KeyValuePair<tSource, tMain>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllFrom(Of tSource, tMain)(IQueryable(Of KeyValuePair(Of tSource, tMain)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllFrom<tSource, tMain>(IQueryable<KeyValuePair<tSource, tMain>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllFrom(Of tSource, tMain)(IQueryable(Of KeyValuePair(Of tSource, tMain)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllTo*
+  name: MapAllTo
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllTo_
+  commentId: Overload:wan24.MappingObject.Mappings.MapAllTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.MapAllTo
+  nameWithType: Mappings.MapAllTo
+- uid: wan24.MappingObject.Mappings.MapAllTo``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllTo<tMain, tSource>(IEnumerable<tMain>, Nullable<Func<tMain, tSource>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllTo__2_IEnumerable___0__System_Nullable_Func___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllTo``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllTo(Of tMain, tSource)(IEnumerable(Of tMain), Nullable(Of Func(Of tMain, tSource)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllTo<tMain, tSource>(IEnumerable<tMain>, System.Nullable<Func<tMain, tSource>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllTo(Of tMain, tSource)(IEnumerable(Of tMain), System.Nullable(Of Func(Of tMain, tSource)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllTo<tMain, tSource>(IEnumerable<tMain>, Nullable<Func<tMain, tSource>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllTo(Of tMain, tSource)(IEnumerable(Of tMain), Nullable(Of Func(Of tMain, tSource)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllTo``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllTo<tMain, tSource>(IEnumerable<KeyValuePair<tMain, tSource>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllTo__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllTo``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllTo(Of tMain, tSource)(IEnumerable(Of KeyValuePair(Of tMain, tSource)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllTo<tMain, tSource>(IEnumerable<KeyValuePair<tMain, tSource>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllTo(Of tMain, tSource)(IEnumerable(Of KeyValuePair(Of tMain, tSource)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllTo<tMain, tSource>(IEnumerable<KeyValuePair<tMain, tSource>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllTo(Of tMain, tSource)(IEnumerable(Of KeyValuePair(Of tMain, tSource)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllTo``2(IQueryable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllTo<tMain, tSource>(IQueryable<tMain>, Nullable<Func<tMain, tSource>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllTo__2_IQueryable___0__System_Nullable_Func___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllTo``2(IQueryable{``0},System.Nullable{Func{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllTo(Of tMain, tSource)(IQueryable(Of tMain), Nullable(Of Func(Of tMain, tSource)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllTo<tMain, tSource>(IQueryable<tMain>, System.Nullable<Func<tMain, tSource>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllTo(Of tMain, tSource)(IQueryable(Of tMain), System.Nullable(Of Func(Of tMain, tSource)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllTo<tMain, tSource>(IQueryable<tMain>, Nullable<Func<tMain, tSource>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllTo(Of tMain, tSource)(IQueryable(Of tMain), Nullable(Of Func(Of tMain, tSource)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapAllTo``2(IQueryable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name: MapAllTo<tMain, tSource>(IQueryable<KeyValuePair<tMain, tSource>>, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapAllTo__2_IQueryable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapAllTo``2(IQueryable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig)
+  name.vb: MapAllTo(Of tMain, tSource)(IQueryable(Of KeyValuePair(Of tMain, tSource)), MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapAllTo<tMain, tSource>(IQueryable<KeyValuePair<tMain, tSource>>, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapAllTo(Of tMain, tSource)(IQueryable(Of KeyValuePair(Of tMain, tSource)), wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapAllTo<tMain, tSource>(IQueryable<KeyValuePair<tMain, tSource>>, MappingConfig)
+  nameWithType.vb: Mappings.MapAllTo(Of tMain, tSource)(IQueryable(Of KeyValuePair(Of tMain, tSource)), MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapFrom*
+  name: MapFrom
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapFrom_
+  commentId: Overload:wan24.MappingObject.Mappings.MapFrom
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.MapFrom
+  nameWithType: Mappings.MapFrom
+- uid: wan24.MappingObject.Mappings.MapFrom``2(``0,``1,wan24.MappingObject.MappingConfig)
+  name: MapFrom<tSource, tMain>(tSource, tMain, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapFrom__2___0___1_wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapFrom``2(``0,``1,wan24.MappingObject.MappingConfig)
+  name.vb: MapFrom(Of tSource, tMain)(tSource, tMain, MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapFrom<tSource, tMain>(tSource, tMain, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapFrom(Of tSource, tMain)(tSource, tMain, wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapFrom<tSource, tMain>(tSource, tMain, MappingConfig)
+  nameWithType.vb: Mappings.MapFrom(Of tSource, tMain)(tSource, tMain, MappingConfig)
+- uid: wan24.MappingObject.Mappings.MapTo*
+  name: MapTo
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapTo_
+  commentId: Overload:wan24.MappingObject.Mappings.MapTo
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.MapTo
+  nameWithType: Mappings.MapTo
+- uid: wan24.MappingObject.Mappings.MapTo``2(``0,``1,wan24.MappingObject.MappingConfig)
+  name: MapTo<tMain, tSource>(tMain, tSource, MappingConfig)
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_MapTo__2___0___1_wan24_MappingObject_MappingConfig_
+  commentId: M:wan24.MappingObject.Mappings.MapTo``2(``0,``1,wan24.MappingObject.MappingConfig)
+  name.vb: MapTo(Of tMain, tSource)(tMain, tSource, MappingConfig)
+  fullName: wan24.MappingObject.Mappings.MapTo<tMain, tSource>(tMain, tSource, wan24.MappingObject.MappingConfig)
+  fullName.vb: wan24.MappingObject.Mappings.MapTo(Of tMain, tSource)(tMain, tSource, wan24.MappingObject.MappingConfig)
+  nameWithType: Mappings.MapTo<tMain, tSource>(tMain, tSource, MappingConfig)
+  nameWithType.vb: Mappings.MapTo(Of tMain, tSource)(tMain, tSource, MappingConfig)
+- uid: wan24.MappingObject.Mappings.Types
+  name: Types
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Types
+  commentId: P:wan24.MappingObject.Mappings.Types
+  fullName: wan24.MappingObject.Mappings.Types
+  nameWithType: Mappings.Types
+- uid: wan24.MappingObject.Mappings.Types*
+  name: Types
+  href: api/wan24.MappingObject.Mappings.html#wan24_MappingObject_Mappings_Types_
+  commentId: Overload:wan24.MappingObject.Mappings.Types
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mappings.Types
+  nameWithType: Mappings.Types
+- uid: wan24.MappingObject.SkipMappingAttribute
+  name: SkipMappingAttribute
+  href: api/wan24.MappingObject.SkipMappingAttribute.html
+  commentId: T:wan24.MappingObject.SkipMappingAttribute
+  fullName: wan24.MappingObject.SkipMappingAttribute
+  nameWithType: SkipMappingAttribute
+- uid: wan24.MappingObject.SkipMappingAttribute.#ctor
+  name: SkipMappingAttribute()
+  href: api/wan24.MappingObject.SkipMappingAttribute.html#wan24_MappingObject_SkipMappingAttribute__ctor
+  commentId: M:wan24.MappingObject.SkipMappingAttribute.#ctor
+  fullName: wan24.MappingObject.SkipMappingAttribute.SkipMappingAttribute()
+  nameWithType: SkipMappingAttribute.SkipMappingAttribute()
+- uid: wan24.MappingObject.SkipMappingAttribute.#ctor*
+  name: SkipMappingAttribute
+  href: api/wan24.MappingObject.SkipMappingAttribute.html#wan24_MappingObject_SkipMappingAttribute__ctor_
+  commentId: Overload:wan24.MappingObject.SkipMappingAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.MappingObject.SkipMappingAttribute.SkipMappingAttribute
+  nameWithType: SkipMappingAttribute.SkipMappingAttribute

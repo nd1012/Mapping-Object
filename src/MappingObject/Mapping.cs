@@ -14,10 +14,9 @@ namespace wan24.MappingObject
         /// <param name="sourcePropertyName">Source object property name</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
-        public Mapping(string mainPropertyName, string? sourcePropertyName = null, Func<object, object, object?>? sourceGetter = null, Func<object, object, object?>? mainGetter = null)
+        public Mapping(string mainPropertyName, string? sourcePropertyName = null, SourceGetter_Delegate? sourceGetter = null, MainGetter_Delegate? mainGetter = null)
+            : this(mainPropertyName, sourcePropertyName)
         {
-            MainPropertyName = mainPropertyName;
-            SourcePropertyName = sourcePropertyName ?? mainPropertyName;
             SourceGetter = sourceGetter;
             MainGetter = mainGetter;
         }
@@ -32,13 +31,13 @@ namespace wan24.MappingObject
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
         public Mapping(
             string mainPropertyName,
-            Func<object?, object?> sourceConverter,
-            Func<object?, object?>? mainConverter = null,
-            Func<object, object, object?>? sourceGetter = null,
-            Func<object, object, object?>? mainGetter = null
+            ValueConverter_Delegate sourceConverter,
+            ValueConverter_Delegate? mainConverter = null,
+            SourceGetter_Delegate? sourceGetter = null,
+            MainGetter_Delegate? mainGetter = null
             )
+            : this(mainPropertyName, sourcePropertyName: null)
         {
-            MainPropertyName = SourcePropertyName = mainPropertyName;
             SourceConverter = sourceConverter;
             MainConverter = mainConverter;
             SourceGetter = sourceGetter;
@@ -56,15 +55,14 @@ namespace wan24.MappingObject
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
         public Mapping(
             string mainPropertyName,
-            string sourcePropertyName,
-            Func<object?, object?> sourceConverter,
-            Func<object?, object?>? mainConverter = null,
-            Func<object, object, object?>? sourceGetter = null,
-            Func<object, object, object?>? mainGetter = null
+            string? sourcePropertyName,
+            ValueConverter_Delegate sourceConverter,
+            ValueConverter_Delegate? mainConverter = null,
+            SourceGetter_Delegate? sourceGetter = null,
+            MainGetter_Delegate? mainGetter = null
             )
+            : this(mainPropertyName, sourcePropertyName)
         {
-            MainPropertyName = mainPropertyName;
-            SourcePropertyName = sourcePropertyName;
             SourceConverter = sourceConverter;
             MainConverter = mainConverter;
             SourceGetter = sourceGetter;
@@ -72,34 +70,72 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
+        /// Constructr
+        /// </summary>
+        /// <param name="id">Mapping ID</param>
+        /// <param name="sourceMapper">Maps a source object value to the main object</param>
+        /// <param name="mainMapper">Maps a main object value to the source object</param>
+        public Mapping(string id, SourceMapper_Delegate sourceMapper, MainMapper_Delegate mainMapper) : this(id, sourcePropertyName: null)
+        {
+            SourceMapper = sourceMapper;
+            MainMapper = mainMapper;
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        protected Mapping() { }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="mainPropertyName">Main object property name</param>
+        /// <param name="sourcePropertyName">Source object property name</param>
+        protected Mapping(string mainPropertyName, string? sourcePropertyName)
+        {
+            MainPropertyName = mainPropertyName;
+            SourcePropertyName = sourcePropertyName ?? mainPropertyName;
+        }
+
+        /// <summary>
         /// Main object property name
         /// </summary>
-        public string MainPropertyName { get; }
+        public string MainPropertyName { get; } = null!;
 
         /// <summary>
         /// Source object property name
         /// </summary>
-        public string SourcePropertyName { get; }
+        public string SourcePropertyName { get; } = null!;
 
         /// <summary>
         /// Source object value converter (convert the value of the source object for setting to the main object property)
         /// </summary>
-        public Func<object?, object?>? SourceConverter { get; }
+        public ValueConverter_Delegate? SourceConverter { get; }
 
         /// <summary>
         /// Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)
         /// </summary>
-        public Func<object?, object?>? MainConverter { get; }
+        public ValueConverter_Delegate? MainConverter { get; }
 
         /// <summary>
         /// Source object property getter (get the value of the source object for setting the main object property value)
         /// </summary>
-        public Func<object, object, object?>? SourceGetter { get; }
+        public SourceGetter_Delegate? SourceGetter { get; }
 
         /// <summary>
         /// Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)
         /// </summary>
-        public Func<object, object, object?>? MainGetter { get; }
+        public MainGetter_Delegate? MainGetter { get; }
+
+        /// <summary>
+        /// Maps a source object value to the main object
+        /// </summary>
+        public SourceMapper_Delegate? SourceMapper { get; }
+
+        /// <summary>
+        /// Maps a main object value to the source object
+        /// </summary>
+        public MainMapper_Delegate? MainMapper { get; }
 
         /// <summary>
         /// Map the source object value to the main object property (use the source object value getter and converter, if any)
@@ -108,6 +144,11 @@ namespace wan24.MappingObject
         /// <param name="main">Main object</param>
         public virtual void MapFrom(object source, object main)
         {
+            if (SourceMapper != null)
+            {
+                SourceMapper(source, main);
+                return;
+            }
             var (SourceProperty, MainProperty) = GetProperties(source, main);
             object? value = SourceGetter == null ? SourceProperty.GetValue(source) : SourceGetter(source, main);
             if (SourceConverter != null) value = SourceConverter(value);
@@ -121,6 +162,11 @@ namespace wan24.MappingObject
         /// <param name="source">Source object</param>
         public virtual void MapTo(object main, object source)
         {
+            if (MainMapper != null)
+            {
+                MainMapper(main, source);
+                return;
+            }
             var (SourceProperty, MainProperty) = GetProperties(source, main);
             if (!(SourceProperty.SetMethod?.IsPublic ?? false))
                 throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public setter");
@@ -146,5 +192,42 @@ namespace wan24.MappingObject
             if (!(mpi.SetMethod?.IsPublic ?? false)) throw new MappingException($"Main property {main.GetType()}.{MainPropertyName} needs a public setter");
             return (spi, mpi);
         }
+
+        /// <summary>
+        /// Delegte for a value converter
+        /// </summary>
+        /// <param name="value">Value to convert</param>
+        /// <returns>Converted value</returns>
+        public delegate object? ValueConverter_Delegate(object? value);
+
+        /// <summary>
+        /// Delegate for a source value getter
+        /// </summary>
+        /// <param name="source">Source object</param>
+        /// <param name="main">Main object</param>
+        /// <returns>Value of the source object to set to the main object</returns>
+        public delegate object? SourceGetter_Delegate(object source, object main);
+
+        /// <summary>
+        /// Delegate for a main value getter
+        /// </summary>
+        /// <param name="main">Main object</param>
+        /// <param name="source">Source object</param>
+        /// <returns>Value of the main object to set to the source object</returns>
+        public delegate object? MainGetter_Delegate(object main, object source);
+
+        /// <summary>
+        /// Delegate for a source object mapper (needs to set the value of the source object to the main object)
+        /// </summary>
+        /// <param name="source">Source object</param>
+        /// <param name="main">Main object</param>
+        public delegate void SourceMapper_Delegate(object source, object main);
+
+        /// <summary>
+        /// Delegate for a main object mapper (needs to set the value of the main object to the source object)
+        /// </summary>
+        /// <param name="main">Main object</param>
+        /// <param name="source">Source object</param>
+        public delegate void MainMapper_Delegate(object main, object source);
     }
 }

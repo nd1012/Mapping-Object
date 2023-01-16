@@ -1,0 +1,452 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/P/Mapping-Object/src/MappingObject Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "PchH0xwTUg2Y0NTLAjY9q2wUQlze48vajo1iwZzaw4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "KoCK3W38ig5MDqlEpUaDEQ5bpkD4uV7ZwhULRfsQfIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate.html",
+          "hash": "HNa26BWnyFSACc1mX6Rg6/IpJ0jPDEYWypXanSf6/nY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate.html",
+          "hash": "wUfghLYZ7b8bCFWNcU+WQIoLxkWIOMR0xYgb1I9kZnY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate.html",
+          "hash": "s65St0FXwcxXNtwQEtu2Sxmgd7Msqe/LA4nxpVz23Ts="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate.html",
+          "hash": "TUPY8XHBw6KoECmNGStC0lBTWQzHhg81ZUOQXpzS304="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate.html",
+          "hash": "CY2GVtfLc+6jk8IVt7fkdhnFhe2F46Yi+lDTzrzzlxE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.html",
+          "hash": "VnTzBmeAMEYwgDytau0Iokis0vvow5tyPLOz8uD4mwg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMappings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMappings.html",
+          "hash": "7eJGnDwa/umTXCHgikS+HoN+PZlzz04UDsU3Oaoxsxg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.IMappingObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.IMappingObject-1.html",
+          "hash": "VD7ZajrpZVAUP04R58KFEMk1nlTJ7TPLQT2c3xZNOl8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.IMappingObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.IMappingObject.html",
+          "hash": "iMnDBEf0wTuSy0sNweW9h7I1xrVRZ77NC20KkuPQA78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.IMappingObjectAsync-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.IMappingObjectAsync-1.html",
+          "hash": "sa7QxjFtRPXfXzZlihws+0hUaNAuUIThh/YFJTsmugY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.IMappingObjectAsync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.IMappingObjectAsync.html",
+          "hash": "pTyfmsgsOmYLIw47KrTlfvkW82v8z6PQhA2SAwRPQyg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MapAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MapAttribute.html",
+          "hash": "LwXYgMk4JrtOhnN4aSYXIWzN5gWrByXBcyAs8J1x/ec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.MainGetter_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.MainGetter_Delegate.html",
+          "hash": "bm341k8Z64V2DdA/lUHZYihxKA11EGdm6xhmJUeVxHc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.MainMapper_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.MainMapper_Delegate.html",
+          "hash": "hn4ukBpKFt8tgqrZUPA5z1VQVwT71ajW2EtAlfXyUeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.SourceGetter_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.SourceGetter_Delegate.html",
+          "hash": "3Ldz9PD3QA1jWUpvtDU+RJfKrPndeSt9dpOrtY/oQJ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.SourceMapper_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.SourceMapper_Delegate.html",
+          "hash": "Qx3O8hP9SI0DZIBJKDc3NS1xxXHwS/1vutQNYgIagDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.ValueConverter_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.ValueConverter_Delegate.html",
+          "hash": "TebGh6IqIRfzcjNl20CXT/Cvpt/KgMSSugL4hPe3SsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.html",
+          "hash": "6JwyY5RHnownBXcQufXGuX5LJ+Ie3SNXg5krmLPfJqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingConfig.Mapping_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingConfig.Mapping_Delegate.html",
+          "hash": "poaRHz2fC/WtM0MQ6piKBpToBraf5Fgw6BGv8RmfZ2w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingConfig.html",
+          "hash": "bPOB3prgPC1Mhh9nzE7pCuiz9TWZ6nRSFmNAb1IY4Ko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingException.html",
+          "hash": "lH7bWqo6WYBa7XecmfkdU+Lz9LX4exsmZueh+Are6+k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingObjectAsyncBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingObjectAsyncBase-1.html",
+          "hash": "seN+J+H5NCfgGbq0FyNYksTl7DFt6KrZM3OX386qJnA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingObjectBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingObjectBase-1.html",
+          "hash": "KGF/H9bNyUPQvSnF14tHY1flzluN7ZPgW1VQPD78Auo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingObjectCastableBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingObjectCastableBase-2.html",
+          "hash": "6qIWGMgjt0k7SnGCjo5qGKNkvBmd5kSwwBxpMy1yO28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mappings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mappings.html",
+          "hash": "jMPzIJgu45OE97kfRmlhikAqJca1FyhYqBb6Gw29HTs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.SkipMappingAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.SkipMappingAttribute.html",
+          "hash": "rW76KEyEzLjijTjyqsTxJVeQIZvuhsJFK1lEZZ9jFbk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.html",
+          "hash": "NQMr+cpDLmyNNDH9HwtaFCQ0FDG3rdOnZnd/sn0U0fQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "eVkgAq9Hww1PSJDE4Fhix17RGSp/PJ/S+Bx+vx1dKKM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "K4vUOfjvnm9AoEY6GTS5IJNZMKWeQ6lntLM889YyHI8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "s+UecGKJLe11K3w4+MJjx6QoiqktkO8teeQG06lk8L0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 27,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

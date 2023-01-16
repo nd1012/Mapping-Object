@@ -24,16 +24,22 @@
         /// <param name="source">Source object</param>
         public virtual void MapFrom(T source)
         {
-            foreach (Mapping map in Mappings.EnsureMappings(typeof(T), GetType())) map.MapFrom(source, this);
+            MappingConfig config = Mappings.EnsureMappings(typeof(T), GetType());
+            config.BeforeMapping?.Invoke(source, this, config);
+            foreach (Mapping map in config.Mappings) map.MapFrom(source, this);
+            config.AfterMapping?.Invoke(source, this, config);
         }
 
         /// <summary>
-        /// Map this instance to a source object
+        /// Map this instance to a source object (reverse mapping)
         /// </summary>
         /// <param name="source">Source object</param>
         public virtual void MapTo(T source)
         {
-            foreach (Mapping map in Mappings.EnsureMappings(typeof(T), GetType())) map.MapTo(this, source);
+            MappingConfig config = Mappings.EnsureMappings(typeof(T), GetType());
+            config.BeforeReverseMapping?.Invoke(source, this, config);
+            foreach (Mapping map in config.Mappings) map.MapTo(this, source);
+            config.AfterReverseMapping?.Invoke(source, this, config);
         }
     }
 }

@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>wan24.MappingObject</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MappingObjectAsync</AssemblyName>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageId>Mapping-Object-Async</PackageId>
+    <Title>Mapping-Object-Async</Title>
+    <Version>1.0.0</Version>
+    <Authors>nd1012</Authors>
+    <Company>Andreas Zimmermann, WAN Solutions</Company>
+    <Product>Mapping-Object</Product>
+    <Description>Asynchronous extensions for the Mapping-Object</Description>
+    <Copyright>(c)2023 Andreas Zimmermann, WAN Solutions</Copyright>
+    <PackageProjectUrl>https://github.com/nd1012/Mapping-Object</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nd1012/Mapping-Object</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>object mapping;mapping;dto</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MappingObject\MappingObject.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
