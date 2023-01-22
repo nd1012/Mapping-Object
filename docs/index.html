@@ -84,9 +84,14 @@ in the future.</p>
 Object Async library depends on the Mapping Object library. You may also
 include the source files into your project and compile them within your app.</p>
 <h3 id="install-the-nuget-package">Install the NuGet package</h3>
-<p>Please use the command line:</p>
-<pre><code class="lang-bash">dotnet add package Mapping-Object --version 1.0.0
+<pre><code class="lang-bash">dotnet nuget add source &quot;https://nuget.pkg.github.com/nd1012/index.json&quot; --name &quot;GitHub nd1012&quot; --username &quot;nd1012&quot; --password &quot;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&quot;
+dotnet add package Mapping-Object
+dotnet add package Mapping-Object-Async
 </code></pre>
+<p><strong>NOTE</strong>: The public read-only access token for my GitHub NuGet package source
+may change in the future and has to be updated in your NuGet configuration
+then in order to be able to receive package updates.</p>
+<p>For more details and help, please refer to the <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package">GitHub documentation</a>.</p>
 <h2 id="usage">Usage</h2>
 <p><strong>NOTE</strong>: The main properties need a public getter/setter, while the source
 object properties need only a public getter (if you don't use reverse mapping,
