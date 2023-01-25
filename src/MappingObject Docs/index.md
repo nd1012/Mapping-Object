@@ -29,17 +29,20 @@ include the source files into your project and compile them within your app.
 
 ### Install the NuGet package
 
+You'll need to create a personal read-only access token for your GitHub 
+account in order to be able to authenticate against the GitHub NuGet package 
+source (add the `read:packages` scope for the token). Then you can execute 
+these commands (replace `USERNAME` and `TOKEN` with your GitHub username and 
+your personal read-only access token):
+
 ```bash
-dotnet nuget add source "https://nuget.pkg.github.com/nd1012/index.json" --name "GitHub nd1012" --username "nd1012" --password "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"
+dotnet nuget add source "https://nuget.pkg.github.com/nd1012/index.json" --name "GitHub nd1012" --username "USERNAME" --password "TOKEN"
 dotnet add package Mapping-Object
 dotnet add package Mapping-Object-Async
 ```
 
-**NOTE**: The public read-only access token for my GitHub NuGet package source 
-may change in the future and has to be updated in your NuGet configuration 
-then in order to be able to receive package updates.
-
-For more details and help, please refer to the [GitHub documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package).
+For more details and help, please refer to the [GitHub documentation for installing a package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package) 
+and the [GitHub documentation for creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ## Usage
 
