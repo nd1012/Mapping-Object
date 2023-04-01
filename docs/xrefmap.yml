@@ -673,6 +673,19 @@ references:
   isSpec: "True"
   fullName: wan24.MappingObject.Mapping.MapFrom
   nameWithType: Mapping.MapFrom
+- uid: wan24.MappingObject.Mapping.MapList(System.Object,System.Reflection.PropertyInfo)
+  name: MapList(Object, PropertyInfo)
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapList_System_Object_System_Reflection_PropertyInfo_
+  commentId: M:wan24.MappingObject.Mapping.MapList(System.Object,System.Reflection.PropertyInfo)
+  fullName: wan24.MappingObject.Mapping.MapList(System.Object, System.Reflection.PropertyInfo)
+  nameWithType: Mapping.MapList(Object, PropertyInfo)
+- uid: wan24.MappingObject.Mapping.MapList*
+  name: MapList
+  href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapList_
+  commentId: Overload:wan24.MappingObject.Mapping.MapList
+  isSpec: "True"
+  fullName: wan24.MappingObject.Mapping.MapList
+  nameWithType: Mapping.MapList
 - uid: wan24.MappingObject.Mapping.MapTo(System.Object,System.Object)
   name: MapTo(Object, Object)
   href: api/wan24.MappingObject.Mapping.html#wan24_MappingObject_Mapping_MapTo_System_Object_System_Object_

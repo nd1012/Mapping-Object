@@ -4,7 +4,7 @@ using System.Reflection;
 namespace wan24.MappingObject
 {
     /// <summary>
-    /// Automatted mappings
+    /// Automated mappings
     /// </summary>
     public static class Mappings
     {
@@ -12,6 +12,24 @@ namespace wan24.MappingObject
         /// Registered mappings
         /// </summary>
         private static readonly ConcurrentDictionary<string, MappingConfig> _Mappings = new();
+        /// <summary>
+        /// <c>MapFrom</c> method
+        /// </summary>
+        private static readonly MethodInfo MapFromMethod;
+        /// <summary>
+        /// <c>MapTo</c> method
+        /// </summary>
+        private static readonly MethodInfo MapToMethod;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        static Mappings()
+        {
+            Type type = typeof(Mappings);
+            MapFromMethod = type.GetMethod("MapFrom", BindingFlags.Public | BindingFlags.Static) ?? throw new TypeLoadException("Failed to reflect the MapFrom method");
+            MapToMethod = type.GetMethod("MapTo", BindingFlags.Public | BindingFlags.Static) ?? throw new TypeLoadException("Failed to reflect the MapTo method");
+        }
 
         /// <summary>
         /// Types (keys) of registered mappings (the first type is the main type name, the second type is the source type name)
@@ -172,6 +190,17 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
+        /// Map a source object to a main object instance
+        /// </summary>
+        /// <param name="source">Source object</param>
+        /// <param name="main">Main object</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Main object</returns>
+        public static object MapFromObject(object source, object main, MappingConfig? config = null)
+            => MapFromMethod.MakeGenericMethod(source.GetType(), main.GetType()).Invoke(obj: null, new object?[] { source, main, config })
+            ?? throw new MappingException("MapFrom returned NULL");
+
+        /// <summary>
         /// Map a main object to a source object instance (apply reverse mapping)
         /// </summary>
         /// <typeparam name="tMain">Main object type</typeparam>
@@ -216,6 +245,17 @@ namespace wan24.MappingObject
             }
             return source;
         }
+
+        /// <summary>
+        /// Map a main object to a source object instance (apply reverse mapping)
+        /// </summary>
+        /// <param name="main">Main object</param>
+        /// <param name="source">Source object</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <returns>Source object</returns>
+        public static object MapToObject(object main, object source, MappingConfig? config = null)
+            => MapToMethod.MakeGenericMethod(main.GetType(), source.GetType()).Invoke(obj: null, new object?[] { main, source, config })
+            ?? throw new MappingException("MapTo returned NULL");
 
         /// <summary>
         /// Map a list of source objects to a list of main objects

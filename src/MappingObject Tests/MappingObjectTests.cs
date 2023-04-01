@@ -267,5 +267,12 @@ namespace MappingObject_Tests
             Assert.AreEqual(1, beforeReverseMapping);
             Assert.AreEqual(1, afterReverseMapping);
         }
+
+        [TestMethod]
+        public void Nesting_Test()
+        {
+            TestType7 main = Mappings.MapFrom(new TestType8(), new TestType7());
+            Assert.IsNotNull(main.Value1);
+        }
     }
 }

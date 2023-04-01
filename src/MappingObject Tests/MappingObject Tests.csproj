@@ -20,4 +20,8 @@
     <ProjectReference Include="..\MappingObject\MappingObject.csproj" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy /Y &quot;$(ProjectDir)..\..\README.md&quot; &quot;$(ProjectDir)index.md&quot;&#xD;&#xA;" />
+  </Target>
+
 </Project>

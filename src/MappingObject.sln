@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject", "MappingObject.csproj", "{4C2B711B-4F51-4EE2-AF5F-34F931017EB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Tests", "MappingObject Tests\MappingObject Tests.csproj", "{4725E411-4403-4E5F-86ED-D425E7F4EBDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Tests", "..\MappingObject Tests\MappingObject Tests.csproj", "{4725E411-4403-4E5F-86ED-D425E7F4EBDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Async", "MappingObject Async\MappingObject Async.csproj", "{584732B9-627C-479A-B322-9B6F57D1F081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObject Async", "..\MappingObject Async\MappingObject Async.csproj", "{584732B9-627C-479A-B322-9B6F57D1F081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Async Tests", "MappingObject Async Tests\MappingObject Async Tests.csproj", "{59CB9ECF-72E7-4ABF-982E-827D7B3B2163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObject Async Tests", "..\MappingObject Async Tests\MappingObject Async Tests.csproj", "{59CB9ECF-72E7-4ABF-982E-827D7B3B2163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Docs", "MappingObject Docs\MappingObject Docs.csproj", "{C0575DF2-1D62-4C08-BF70-642F9055FB60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObject Docs", "..\MappingObject Docs\MappingObject Docs.csproj", "{C0575DF2-1D62-4C08-BF70-642F9055FB60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObject", "MappingObject\MappingObject.csproj", "{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C2B711B-4F51-4EE2-AF5F-34F931017EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C2B711B-4F51-4EE2-AF5F-34F931017EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C2B711B-4F51-4EE2-AF5F-34F931017EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C2B711B-4F51-4EE2-AF5F-34F931017EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4725E411-4403-4E5F-86ED-D425E7F4EBDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4725E411-4403-4E5F-86ED-D425E7F4EBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4725E411-4403-4E5F-86ED-D425E7F4EBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

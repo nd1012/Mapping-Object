@@ -12,7 +12,7 @@
           "hash": "PchH0xwTUg2Y0NTLAjY9q2wUQlze48vajo1iwZzaw4k="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "HNa26BWnyFSACc1mX6Rg6/IpJ0jPDEYWypXanSf6/nY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "wUfghLYZ7b8bCFWNcU+WQIoLxkWIOMR0xYgb1I9kZnY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -60,7 +60,7 @@
           "hash": "s65St0FXwcxXNtwQEtu2Sxmgd7Msqe/LA4nxpVz23Ts="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "TUPY8XHBw6KoECmNGStC0lBTWQzHhg81ZUOQXpzS304="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "CY2GVtfLc+6jk8IVt7fkdhnFhe2F46Yi+lDTzrzzlxE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.IMappingObject-1.html",
-          "hash": "VD7ZajrpZVAUP04R58KFEMk1nlTJ7TPLQT2c3xZNOl8="
+          "hash": "U/WrVWSPHpC316d3921sAWEBap6yWvhkKMna4RiRIC4="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.IMappingObject.html",
-          "hash": "iMnDBEf0wTuSy0sNweW9h7I1xrVRZ77NC20KkuPQA78="
+          "hash": "absjQUfngvm5+eVBMEdRG73XkiBWOkJ+bjINVf3X2AE="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MapAttribute.html",
-          "hash": "LwXYgMk4JrtOhnN4aSYXIWzN5gWrByXBcyAs8J1x/ec="
+          "hash": "iFv2LeXlAdAh1sycxRSS4kW3/qP+R7kIDMKai+QVG/o="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.MainGetter_Delegate.html",
-          "hash": "bm341k8Z64V2DdA/lUHZYihxKA11EGdm6xhmJUeVxHc="
+          "hash": "u9zxwclZFub5pygoygOpmOHtQHrorxsuQVdqDq3kKg0="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.MainMapper_Delegate.html",
-          "hash": "hn4ukBpKFt8tgqrZUPA5z1VQVwT71ajW2EtAlfXyUeQ="
+          "hash": "7kGOtPWIZ83Th4AHlZYP96bf4OjcKlPRU/KANljUueE="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.SourceGetter_Delegate.html",
-          "hash": "3Ldz9PD3QA1jWUpvtDU+RJfKrPndeSt9dpOrtY/oQJ4="
+          "hash": "epLZZre4je72KPNNfymVqBnYPuQTBb7IeZyNCR2f/t0="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.SourceMapper_Delegate.html",
-          "hash": "Qx3O8hP9SI0DZIBJKDc3NS1xxXHwS/1vutQNYgIagDU="
+          "hash": "jjCH858uorsjlsEucbxEP7WVgw80fhezjRvXmwokSJw="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.ValueConverter_Delegate.html",
-          "hash": "TebGh6IqIRfzcjNl20CXT/Cvpt/KgMSSugL4hPe3SsI="
+          "hash": "/P8axoFh1yM5137RZzqWrNW14ZkNIUaWVVl7bFnqnP4="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.html",
-          "hash": "6JwyY5RHnownBXcQufXGuX5LJ+Ie3SNXg5krmLPfJqo="
+          "hash": "7TIii6sdbZ3viCgKBzbwscxqetF5La7UYf1WMU/vXzY="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingConfig.Mapping_Delegate.html",
-          "hash": "poaRHz2fC/WtM0MQ6piKBpToBraf5Fgw6BGv8RmfZ2w="
+          "hash": "9KF2fBRs6EbisgWNthxR0aY0gGi/VPZ9hM2hQTd4m2U="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingConfig.html",
-          "hash": "bPOB3prgPC1Mhh9nzE7pCuiz9TWZ6nRSFmNAb1IY4Ko="
+          "hash": "gvcFH0x4jfYj6XxT3vGdxB/vuCYlmb/P0QWBO6sgsrQ="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingException.html",
-          "hash": "lH7bWqo6WYBa7XecmfkdU+Lz9LX4exsmZueh+Are6+k="
+          "hash": "/b7/fT9aP/UKMayY7q0V8JMyoki4rXBs3N4NOV3RsFA="
         }
       },
       "is_incremental": false,
@@ -288,7 +288,7 @@
           "hash": "seN+J+H5NCfgGbq0FyNYksTl7DFt6KrZM3OX386qJnA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingObjectBase-1.html",
-          "hash": "KGF/H9bNyUPQvSnF14tHY1flzluN7ZPgW1VQPD78Auo="
+          "hash": "HtigFzuNng4vfTMjFg/JXEI9DCaViH5obXL+WqJ/JNI="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingObjectCastableBase-2.html",
-          "hash": "6qIWGMgjt0k7SnGCjo5qGKNkvBmd5kSwwBxpMy1yO28="
+          "hash": "fvjwuipPbdnPUtmFh00WmvyUgLCjBhyjG6tvDNeJ3gk="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mappings.html",
-          "hash": "jMPzIJgu45OE97kfRmlhikAqJca1FyhYqBb6Gw29HTs="
+          "hash": "wL6SZw2eXGC3vrGxvHPj/2UvT6olKojl9hs8TchiZwE="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.SkipMappingAttribute.html",
-          "hash": "rW76KEyEzLjijTjyqsTxJVeQIZvuhsJFK1lEZZ9jFbk="
+          "hash": "krGDkfAOni5wFHf7tu+i/8m7GjmsT/Uo2qt/ALqAfdQ="
         }
       },
       "is_incremental": false,
@@ -360,7 +360,7 @@
           "hash": "eVkgAq9Hww1PSJDE4Fhix17RGSp/PJ/S+Bx+vx1dKKM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -384,7 +384,7 @@
           "hash": "t1lGCke5RSwVT7GhAiKwzH+KGiJmPydkD1wikyM3xNA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -403,25 +403,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ForceRebuild"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 27,
-          "skipped_file_count": 0
+          "skipped_file_count": 11
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -434,8 +432,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

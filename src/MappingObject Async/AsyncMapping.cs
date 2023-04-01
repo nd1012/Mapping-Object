@@ -1,4 +1,6 @@
-﻿namespace wan24.MappingObject
+﻿using System.Reflection;
+
+namespace wan24.MappingObject
 {
     /// <summary>
     /// Asynchronous property mapping definition
@@ -12,8 +14,17 @@
         /// <param name="sourcePropertyName">Source object property name</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         [Obsolete("Asynchronous mapping doesn't support this constructor", error: true)]
-        public AsyncMapping(string mainPropertyName, string? sourcePropertyName = null, SourceGetter_Delegate? sourceGetter = null, MainGetter_Delegate? mainGetter = null)
+        public AsyncMapping(
+            string mainPropertyName, 
+            string? sourcePropertyName = null, 
+            SourceGetter_Delegate? sourceGetter = null, 
+            MainGetter_Delegate? mainGetter = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null
+            )
             => throw new NotSupportedException("Asynchronous mapping doesn't support this constructor");
 
         /// <summary>
@@ -24,13 +35,17 @@
         /// <param name="mainConverter">Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         [Obsolete("Asynchronous mapping doesn't support this constructor", error: true)]
         public AsyncMapping(
             string mainPropertyName,
             ValueConverter_Delegate sourceConverter,
             ValueConverter_Delegate? mainConverter = null,
             SourceGetter_Delegate? sourceGetter = null,
-            MainGetter_Delegate? mainGetter = null
+            MainGetter_Delegate? mainGetter = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null
             )
             => throw new NotSupportedException("Asynchronous mapping doesn't support this constructor");
 
@@ -43,6 +58,8 @@
         /// <param name="mainConverter">Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         [Obsolete("Asynchronous mapping doesn't support this constructor", error: true)]
         public AsyncMapping(
             string mainPropertyName,
@@ -50,12 +67,14 @@
             ValueConverter_Delegate sourceConverter,
             ValueConverter_Delegate? mainConverter = null,
             SourceGetter_Delegate? sourceGetter = null,
-            MainGetter_Delegate? mainGetter = null
+            MainGetter_Delegate? mainGetter = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null
             )
             => throw new NotSupportedException("Asynchronous mapping doesn't support this constructor");
 
         /// <summary>
-        /// Constructr
+        /// Constructor
         /// </summary>
         /// <param name="id">Mapping ID</param>
         /// <param name="sourceMapper">Maps a source object value to the main object</param>
@@ -71,11 +90,26 @@
         /// <param name="sourcePropertyName">Source object property name</param>
         /// <param name="sourceGetterAsync">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetterAsync">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
-        public AsyncMapping(string mainPropertyName, string? sourcePropertyName, AsyncSourceGetter_Delegate sourceGetterAsync, AsyncMainGetter_Delegate mainGetterAsync)
-            : base(mainPropertyName, sourcePropertyName)
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="asyncSourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="asyncMainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
+        public AsyncMapping(
+            string mainPropertyName, 
+            string? sourcePropertyName, 
+            AsyncSourceGetter_Delegate sourceGetterAsync, 
+            AsyncMainGetter_Delegate mainGetterAsync,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null,
+            AsyncSourceValueInstanceFactory_Delegate? asyncSourceInstanceFactory = null,
+            AsyncMainValueInstanceFactory_Delegate? asyncMainInstanceFactory = null
+            )
+            : base(mainPropertyName, sourcePropertyName, sourceInstanceFactory: sourceInstanceFactory, mainInstanceFactory: mainInstanceFactory)
         {
             AsyncSourceGetter = sourceGetterAsync;
             AsyncMainGetter = mainGetterAsync;
+            AsyncSourceInstanceFactory = asyncSourceInstanceFactory;
+            AsyncMainInstanceFactory = asyncMainInstanceFactory;
         }
 
         /// <summary>
@@ -86,19 +120,29 @@
         /// <param name="mainConverterAsync">Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)</param>
         /// <param name="sourceGetterAsync">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetterAsync">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="asyncSourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="asyncMainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         public AsyncMapping(
             string mainPropertyName,
             AsyncValueConverter_Delegate sourceConverterAsync,
             AsyncValueConverter_Delegate? mainConverterAsync = null,
             AsyncSourceGetter_Delegate? sourceGetterAsync = null,
-            AsyncMainGetter_Delegate? mainGetterAsync = null
+            AsyncMainGetter_Delegate? mainGetterAsync = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null,
+            AsyncSourceValueInstanceFactory_Delegate? asyncSourceInstanceFactory = null,
+            AsyncMainValueInstanceFactory_Delegate? asyncMainInstanceFactory = null
             )
-            : base(mainPropertyName, sourcePropertyName: null)
+            : base(mainPropertyName, sourcePropertyName: null, sourceInstanceFactory: sourceInstanceFactory , mainInstanceFactory: mainInstanceFactory)
         {
             AsyncSourceConverter = sourceConverterAsync;
             AsyncMainConverter = mainConverterAsync;
             AsyncSourceGetter = sourceGetterAsync;
             AsyncMainGetter = mainGetterAsync;
+            AsyncSourceInstanceFactory = asyncSourceInstanceFactory;
+            AsyncMainInstanceFactory = asyncMainInstanceFactory;
         }
 
         /// <summary>
@@ -110,24 +154,34 @@
         /// <param name="mainConverterAsync">Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)</param>
         /// <param name="sourceGetterAsync">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetterAsync">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="asyncSourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="asyncMainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         public AsyncMapping(
             string mainPropertyName,
             string sourcePropertyName,
             AsyncValueConverter_Delegate sourceConverterAsync,
             AsyncValueConverter_Delegate? mainConverterAsync = null,
             AsyncSourceGetter_Delegate? sourceGetterAsync = null,
-            AsyncMainGetter_Delegate? mainGetterAsync = null
+            AsyncMainGetter_Delegate? mainGetterAsync = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null,
+            AsyncSourceValueInstanceFactory_Delegate? asyncSourceInstanceFactory = null,
+            AsyncMainValueInstanceFactory_Delegate? asyncMainInstanceFactory = null
             )
-            : base(mainPropertyName, sourcePropertyName)
+            : base(mainPropertyName, sourcePropertyName, sourceInstanceFactory: sourceInstanceFactory, mainInstanceFactory: mainInstanceFactory)
         {
             AsyncSourceConverter = sourceConverterAsync;
             AsyncMainConverter = mainConverterAsync;
             AsyncSourceGetter = sourceGetterAsync;
             AsyncMainGetter = mainGetterAsync;
+            AsyncSourceInstanceFactory = asyncSourceInstanceFactory;
+            AsyncMainInstanceFactory = asyncMainInstanceFactory;
         }
 
         /// <summary>
-        /// Constructr
+        /// Constructor
         /// </summary>
         /// <param name="id">Mapping ID</param>
         /// <param name="sourceMapperAsync">Maps a source object value to the main object</param>
@@ -168,13 +222,27 @@
         /// </summary>
         public AsyncMainMapper_Delegate? AsyncMainMapper { get; }
 
-        /// <inheritdoc/>
-        [Obsolete($"Use {nameof(MapFromAsync)} instead")]
-        public override void MapFrom(object source, object main) => throw new NotSupportedException($"Use {nameof(MapFromAsync)} instead");
+        /// <summary>
+        /// Source property value instance factory (used for automatic value type conversion with mapping)
+        /// </summary>
+        public AsyncSourceValueInstanceFactory_Delegate? AsyncSourceInstanceFactory { get; }
+
+        /// <summary>
+        /// Main property value instance factory (used for automatic value type conversion with mapping)
+        /// </summary>
+        public AsyncMainValueInstanceFactory_Delegate? AsyncMainInstanceFactory { get; }
 
         /// <inheritdoc/>
+#pragma warning disable CS0809
+        [Obsolete($"Use {nameof(MapFromAsync)} instead")]
+        public override void MapFrom(object source, object main) => throw new NotSupportedException($"Use {nameof(MapFromAsync)} instead");
+#pragma warning restore CS0809
+
+        /// <inheritdoc/>
+#pragma warning disable CS0809
         [Obsolete($"Use {nameof(MapToAsync)} instead")]
         public override void MapTo(object main, object source) => throw new NotSupportedException($"Use {nameof(MapToAsync)} instead");
+#pragma warning restore CS0809
 
         /// <summary>
         /// Map the source object value to the main object property (use the source object value getter and converter, if any)
@@ -195,6 +263,23 @@
                 ? SourceProperty.GetValue(source)
                 : await AsyncSourceGetter(source, main, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
             if (AsyncSourceConverter != null) value = await AsyncSourceConverter(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+            Type mainType = MainProperty.PropertyType;
+            if (
+                value?.GetType() is Type valueType &&
+                !mainType.IsAssignableFrom(valueType) &&
+                !mainType.IsValueType &&
+                (AsyncMainInstanceFactory != null || MainInstanceFactory != null || !mainType.IsInterface) &&
+                !valueType.IsValueType
+                )
+                value = await AsyncMappings.MapFromObjectAsync(
+                    value,
+                    MainProperty.GetValue(main)
+                        ?? (AsyncMainInstanceFactory == null ? null : await AsyncMainInstanceFactory.Invoke(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false))
+                        ?? MainInstanceFactory?.Invoke(value)
+                        ?? Activator.CreateInstance(mainType)
+                        ?? throw new MappingException($"Failed to instance main object property value type {mainType}"),
+                    cancellationToken: cancellationToken
+                    ).ConfigureAwait(continueOnCapturedContext: false);
             MainProperty.SetValue(main, value);
         }
 
@@ -219,11 +304,28 @@
                 ? MainProperty.GetValue(main)
                 : await AsyncMainGetter(main, source, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
             if (AsyncMainConverter != null) value = await AsyncMainConverter(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+            Type sourceType = SourceProperty.PropertyType;
+            if (
+                value?.GetType() is Type valueType &&
+                !sourceType.IsAssignableFrom(valueType) &&
+                !sourceType.IsValueType &&
+                (SourceInstanceFactory != null || !sourceType.IsInterface) &&
+                !valueType.IsValueType
+                )
+                value = await AsyncMappings.MapToObjectAsync(
+                    value,
+                    SourceProperty.GetValue(source)
+                        ?? (AsyncSourceInstanceFactory == null ? null : await AsyncSourceInstanceFactory.Invoke(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false))
+                        ?? SourceInstanceFactory?.Invoke(value)
+                        ?? Activator.CreateInstance(sourceType)
+                        ?? throw new MappingException($"Failed to instance source object property value type {sourceType}"),
+                    cancellationToken: cancellationToken
+                    ).ConfigureAwait(continueOnCapturedContext: false);
             SourceProperty.SetValue(source, value);
         }
 
         /// <summary>
-        /// Delegte for a value converter
+        /// Delegate for a value converter
         /// </summary>
         /// <param name="value">Value to convert</param>
         /// <param name="cancellationToken">Cancellation token</param>
@@ -263,5 +365,21 @@
         /// <param name="source">Source object</param>
         /// <param name="cancellationToken">Cancellation token</param>
         public delegate Task AsyncMainMapper_Delegate(object main, object source, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Delegate for a main object target property value mapping instance factory method (used for automatic value type conversion with mapping)
+        /// </summary>
+        /// <param name="value">Value</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>Instance</returns>
+        public delegate Task<object> AsyncMainValueInstanceFactory_Delegate(object value, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Delegate for a source object target property value mapping instance factory method (used for automatic value type conversion with mapping)
+        /// </summary>
+        /// <param name="value">Value</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>Instance</returns>
+        public delegate Task<object> AsyncSourceValueInstanceFactory_Delegate(object value, CancellationToken cancellationToken);
     }
 }

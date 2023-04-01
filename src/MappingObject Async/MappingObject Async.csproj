@@ -21,6 +21,7 @@
     <PackageTags>object mapping;mapping;dto</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,6 +34,14 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy /Y &quot;$(ProjectDir)..\..\README.md&quot; &quot;$(ProjectDir)README.md&quot;&#xD;&#xA;" />
+  </Target>
 
 </Project>

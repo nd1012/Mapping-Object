@@ -14,11 +14,22 @@ namespace wan24.MappingObject
         /// <param name="sourcePropertyName">Source object property name</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
-        public Mapping(string mainPropertyName, string? sourcePropertyName = null, SourceGetter_Delegate? sourceGetter = null, MainGetter_Delegate? mainGetter = null)
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
+        public Mapping(
+            string mainPropertyName,
+            string? sourcePropertyName = null,
+            SourceGetter_Delegate? sourceGetter = null,
+            MainGetter_Delegate? mainGetter = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null
+            )
             : this(mainPropertyName, sourcePropertyName)
         {
             SourceGetter = sourceGetter;
             MainGetter = mainGetter;
+            SourceInstanceFactory = sourceInstanceFactory;
+            MainInstanceFactory = mainInstanceFactory;
         }
 
         /// <summary>
@@ -29,12 +40,16 @@ namespace wan24.MappingObject
         /// <param name="mainConverter">Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         public Mapping(
             string mainPropertyName,
             ValueConverter_Delegate sourceConverter,
             ValueConverter_Delegate? mainConverter = null,
             SourceGetter_Delegate? sourceGetter = null,
-            MainGetter_Delegate? mainGetter = null
+            MainGetter_Delegate? mainGetter = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null
             )
             : this(mainPropertyName, sourcePropertyName: null)
         {
@@ -42,6 +57,8 @@ namespace wan24.MappingObject
             MainConverter = mainConverter;
             SourceGetter = sourceGetter;
             MainGetter = mainGetter;
+            SourceInstanceFactory = sourceInstanceFactory;
+            MainInstanceFactory = mainInstanceFactory;
         }
 
         /// <summary>
@@ -53,13 +70,17 @@ namespace wan24.MappingObject
         /// <param name="mainConverter">Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)</param>
         /// <param name="sourceGetter">Source object property getter (get the value of the source object for setting the main object property value)</param>
         /// <param name="mainGetter">Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)</param>
+        /// <param name="sourceInstanceFactory">Source property value instance factory (used for automatic value type conversion with mapping)</param>
+        /// <param name="mainInstanceFactory">Main property value instance factory (used for automatic value type conversion with mapping)</param>
         public Mapping(
             string mainPropertyName,
             string? sourcePropertyName,
             ValueConverter_Delegate sourceConverter,
             ValueConverter_Delegate? mainConverter = null,
             SourceGetter_Delegate? sourceGetter = null,
-            MainGetter_Delegate? mainGetter = null
+            MainGetter_Delegate? mainGetter = null,
+            SourceValueInstanceFactory_Delegate? sourceInstanceFactory = null,
+            MainValueInstanceFactory_Delegate? mainInstanceFactory = null
             )
             : this(mainPropertyName, sourcePropertyName)
         {
@@ -67,10 +88,12 @@ namespace wan24.MappingObject
             MainConverter = mainConverter;
             SourceGetter = sourceGetter;
             MainGetter = mainGetter;
+            SourceInstanceFactory = sourceInstanceFactory;
+            MainInstanceFactory = mainInstanceFactory;
         }
 
         /// <summary>
-        /// Constructr
+        /// Constructor
         /// </summary>
         /// <param name="id">Mapping ID</param>
         /// <param name="sourceMapper">Maps a source object value to the main object</param>
@@ -138,6 +161,16 @@ namespace wan24.MappingObject
         public MainMapper_Delegate? MainMapper { get; }
 
         /// <summary>
+        /// Source property value instance factory (used for automatic value type conversion with mapping)
+        /// </summary>
+        public SourceValueInstanceFactory_Delegate? SourceInstanceFactory { get; }
+
+        /// <summary>
+        /// Main property value instance factory (used for automatic value type conversion with mapping)
+        /// </summary>
+        public MainValueInstanceFactory_Delegate? MainInstanceFactory { get; }
+
+        /// <summary>
         /// Map the source object value to the main object property (use the source object value getter and converter, if any)
         /// </summary>
         /// <param name="source">Source object</param>
@@ -152,6 +185,21 @@ namespace wan24.MappingObject
             var (SourceProperty, MainProperty) = GetProperties(source, main);
             object? value = SourceGetter == null ? SourceProperty.GetValue(source) : SourceGetter(source, main);
             if (SourceConverter != null) value = SourceConverter(value);
+            Type mainType = MainProperty.PropertyType;
+            if (
+                value?.GetType() is Type valueType &&
+                !mainType.IsAssignableFrom(valueType) &&
+                !mainType.IsValueType &&
+                (MainInstanceFactory != null || !mainType.IsInterface) &&
+                !valueType.IsValueType
+                )
+                value = Mappings.MapFromObject(
+                    value,
+                    MainProperty.GetValue(main)
+                        ?? MainInstanceFactory?.Invoke(value)
+                        ?? Activator.CreateInstance(mainType)
+                        ?? throw new MappingException($"Failed to instance main object property value type {mainType}")
+                    );
             MainProperty.SetValue(main, value);
         }
 
@@ -172,6 +220,21 @@ namespace wan24.MappingObject
                 throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public setter");
             object? value = MainGetter == null ? MainProperty.GetValue(main) : MainGetter(main, source);
             if (MainConverter != null) value = MainConverter(value);
+            Type sourceType = SourceProperty.PropertyType;
+            if (
+                value?.GetType() is Type valueType &&
+                !sourceType.IsAssignableFrom(valueType) &&
+                !sourceType.IsValueType &&
+                (SourceInstanceFactory != null || !sourceType.IsInterface) &&
+                !valueType.IsValueType
+                )
+                value = Mappings.MapToObject(
+                    value,
+                    SourceProperty.GetValue(source)
+                        ?? SourceInstanceFactory?.Invoke(value)
+                        ?? Activator.CreateInstance(sourceType)
+                        ?? throw new MappingException($"Failed to instance source object property value type {sourceType}")
+                    );
             SourceProperty.SetValue(source, value);
         }
 
@@ -194,7 +257,7 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Delegte for a value converter
+        /// Delegate for a value converter
         /// </summary>
         /// <param name="value">Value to convert</param>
         /// <returns>Converted value</returns>
@@ -229,5 +292,19 @@ namespace wan24.MappingObject
         /// <param name="main">Main object</param>
         /// <param name="source">Source object</param>
         public delegate void MainMapper_Delegate(object main, object source);
+
+        /// <summary>
+        /// Delegate for a main object target property value mapping instance factory method (used for automatic value type conversion with mapping)
+        /// </summary>
+        /// <param name="value">Value</param>
+        /// <returns>Instance</returns>
+        public delegate object MainValueInstanceFactory_Delegate(object value);
+
+        /// <summary>
+        /// Delegate for a source object target property value mapping instance factory method (used for automatic value type conversion with mapping)
+        /// </summary>
+        /// <param name="value">Value</param>
+        /// <returns>Instance</returns>
+        public delegate object SourceValueInstanceFactory_Delegate(object value);
     }
 }

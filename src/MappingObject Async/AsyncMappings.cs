@@ -1,12 +1,36 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace wan24.MappingObject
 {
     /// <summary>
-    /// Automatted asynchronous mappings
+    /// Automated asynchronous mappings
     /// </summary>
     public static class AsyncMappings
     {
+        /// <summary>
+        /// Task result property name
+        /// </summary>
+        private const string RESULT_PROPERTY_NAME = "Result";
+
+        /// <summary>
+        /// <c>MapFromAsync</c> method
+        /// </summary>
+        private static readonly MethodInfo MapFromAsyncMethod;
+        /// <summary>
+        /// <c>MapToAsync</c> method
+        /// </summary>
+        private static readonly MethodInfo MapToAsyncMethod;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        static AsyncMappings()
+        {
+            Type type = typeof(AsyncMappings);
+            MapFromAsyncMethod = type.GetMethod("MapFromAsync", BindingFlags.Public | BindingFlags.Static) ?? throw new TypeLoadException("Failed to reflect the MapFromAsync method");
+            MapToAsyncMethod = type.GetMethod("MapToAsync", BindingFlags.Public | BindingFlags.Static) ?? throw new TypeLoadException("Failed to reflect the MapToAsync method");
+        }
         /// <summary>
         /// Map a source object to a main object instance
         /// </summary>
@@ -76,6 +100,20 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
+        /// Map a source object to a main object instance
+        /// </summary>
+        /// <param name="source">Source object</param>
+        /// <param name="main">Main object</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>Main object</returns>
+        public static async Task<object> MapFromObjectAsync(object source, object main, MappingConfig? config = null, CancellationToken cancellationToken = default)
+        {
+            await (Task)MapFromAsyncMethod.MakeGenericMethod(source.GetType(), main.GetType()).Invoke(obj: null, new object?[] { source, main, config, cancellationToken })!;
+            return main;
+        }
+
+        /// <summary>
         /// Map a main object to a source object instance (apply reverse mapping)
         /// </summary>
         /// <typeparam name="tMain">Main object type</typeparam>
@@ -140,6 +178,20 @@ namespace wan24.MappingObject
             {
                 throw new MappingException(message: null, ex);
             }
+            return source;
+        }
+
+        /// <summary>
+        /// Map a main object to a source object instance (apply reverse mapping)
+        /// </summary>
+        /// <param name="main">Main object</param>
+        /// <param name="source">Source object</param>
+        /// <param name="config">Default mapping configuration to use</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>Source object</returns>
+        public static async Task<object> MapToObjectAsync(object main, object source, MappingConfig? config = null, CancellationToken cancellationToken = default)
+        {
+            await (Task)MapToAsyncMethod.MakeGenericMethod(main.GetType(), source.GetType()).Invoke(obj: null, new object?[] { main, source, config, cancellationToken })!;
             return source;
         }
 
