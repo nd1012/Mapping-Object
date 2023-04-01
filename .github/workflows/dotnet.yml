@@ -21,14 +21,14 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore ./src/Mapping-Object.sln --ignore-failed-sources
+      run: dotnet restore ./src/MappingObject.sln --ignore-failed-sources
     - name: Build lib
-      run: dotnet build ./src/Mapping-Object/Mapping-Object.csproj --no-restore
+      run: dotnet build ./src/MappingObject/MappingObject.csproj --no-restore
     - name: Build lib
-      run: dotnet build "./src/Mapping-Object Async/Mapping-Object Async.csproj" --no-restore
+      run: dotnet build "./src/MappingObject Async/MappingObject Async.csproj" --no-restore
     - name: Build tests
-      run: dotnet build "./src/Mapping-Object Tests/Mapping-Object Tests.csproj" --no-restore
+      run: dotnet build "./src/MappingObject Tests/MappingObject Tests.csproj" --no-restore
     - name: Build tests
-      run: dotnet build "./src/Mapping-Object Async Tests/Mapping-Object Async Tests.csproj" --no-restore
+      run: dotnet build "./src/MappingObject Async Tests/MappingObject Async Tests.csproj" --no-restore
     - name: Test
-      run: dotnet test ./src/Mapping-Object.sln --no-build --verbosity normal
+      run: dotnet test ./src/MappingObject.sln --no-build --verbosity normal
