@@ -21,28 +21,10 @@ in the future.
 
 ## How to get it
 
-### Download the sources
+The libraries are available as NuGet packages:
 
-You may download the sources and compile the projects by yourself. The Mapping 
-Object Async library depends on the Mapping Object library. You may also 
-include the source files into your project and compile them within your app.
-
-### Install the NuGet package
-
-You'll need to create a personal read-only access token for your GitHub 
-account in order to be able to authenticate against the GitHub NuGet package 
-source (add the `read:packages` scope for the token). Then you can execute 
-these commands (replace `USERNAME` and `TOKEN` with your GitHub username and 
-your personal read-only access token):
-
-```bash
-dotnet nuget add source "https://nuget.pkg.github.com/nd1012/index.json" --name "GitHub nd1012" --username "USERNAME" --password "TOKEN"
-dotnet add package Mapping-Object
-dotnet add package Mapping-Object-Async
-```
-
-For more details and help, please refer to the [GitHub documentation for installing a package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package) 
-and the [GitHub documentation for creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+- (Mapping-Object)[https://www.nuget.org/packages/Mapping-Object/]
+- (Mapping-Object-Async)[https://www.nuget.org/packages/Mapping-Object-Async/]
 
 ## Usage
 
