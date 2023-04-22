@@ -23,6 +23,33 @@
         }
 
         /// <summary>
+        /// Get/set a mapping
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>Mapping</returns>
+        public Mapping? this[string id]
+        {
+            get => Mappings.FirstOrDefault(m => m.MainPropertyName == id);
+            set
+            {
+                if (value == null)
+                {
+                    Mappings = Mappings.Where(m => m.MainPropertyName != id).ToArray();
+                }
+                else if (this[id] != null)
+                {
+                    int index = 0;
+                    for (; index < Mappings.Length && Mappings[index].MainPropertyName != id; index++) ;
+                    Mappings[index] = value;
+                }
+                else
+                {
+                    Mappings = Mappings.Concat(new Mapping[] { value }).ToArray();
+                }
+            }
+        }
+
+        /// <summary>
         /// Source object type
         /// </summary>
         public Type SourceType { get; }
@@ -35,7 +62,7 @@
         /// <summary>
         /// Mappings
         /// </summary>
-        public Mapping[] Mappings { get; }
+        public Mapping[] Mappings { get; protected set; }
 
         /// <summary>
         /// Before mapping handler

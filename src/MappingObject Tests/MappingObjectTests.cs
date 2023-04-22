@@ -8,30 +8,25 @@ namespace MappingObject_Tests
         public MappingObjectTests()
         {
             // Force value converter and getter tests
-            Mappings.Add(
-                typeof(TestType2),
-                typeof(TestType1),
-                new Mapping(
-                    nameof(TestType1.Converted), 
-                    (v) => bool.Parse((string)v!), 
-                    (v) => v!.ToString()
-                    ),
-                new Mapping(
-                    nameof(TestType1.Case), 
-                    sourceGetter: (source, main) => ((TestType2)source).Case.ToLower(), 
-                    mainGetter: (main, source) => ((TestType1)main).Case.ToUpper()
-                    )
-                );
+            Mappings.Add(typeof(TestType2), typeof(TestType1))
+                .ConfigureMapping(nameof(TestType1.Converted), (c, m) =>
+                {
+                    m.WithSourceConverter(v => bool.Parse((string)v!))
+                        .WithMainConverter(v => v!.ToString());
+                })
+                .ConfigureMapping(nameof(TestType1.Case), (c, m) =>
+                {
+                    m.WithSourceGetter((source, main) => ((TestType2)source).Case.ToLower())
+                        .WithMainGetter((main, source) => ((TestType1)main).Case.ToUpper());
+                });
             // Force mapper tests
-            Mappings.Add(
-                typeof(TestType2),
-                typeof(TestType3),
-                new Mapping(
-                    nameof(TestType3.Converted), 
-                    (v) => bool.Parse((string)v!), 
-                    (v) => v!.ToString()
-                    ),
-                new Mapping(
+            Mappings.Add(typeof(TestType2), typeof(TestType3))
+                .WithMapping(nameof(TestType3.Converted), sourcePropertyName: null, mapping: (c, m) =>
+                {
+                    m.WithSourceConverter(v => bool.Parse((string)v!))
+                        .WithMainConverter(v => v!.ToString());
+                })
+                .WithMapping(
                     nameof(TestType3.Case),
                     (source, main) =>
                     {
@@ -44,24 +39,19 @@ namespace MappingObject_Tests
                         TestType3 mainType = (TestType3)main;
                         TestType2 sourceType = (TestType2)source;
                         sourceType.Case = mainType.Case.ToUpper();
-                    }
-                    )
-                );
+                    });
             // Force abstract type tests
-            Mappings.Add(
-                typeof(TestType2),
-                typeof(ITestType),
-                new Mapping(
-                    nameof(TestType1.Converted),
-                    (v) => bool.Parse((string)v!),
-                    (v) => v!.ToString()
-                    ),
-                new Mapping(
-                    nameof(TestType1.Case),
-                    sourceGetter: (source, main) => ((TestType2)source).Case.ToUpper(),
-                    mainGetter: (main, source) => ((ITestType)main).Case.ToLower()
-                    )
-                );
+            Mappings.Add(typeof(TestType2), typeof(ITestType))
+                .ConfigureMapping(nameof(TestType1.Converted), (c, m) =>
+                {
+                    m.WithSourceConverter(v => bool.Parse((string)v!))
+                        .WithMainConverter(v => v!.ToString());
+                })
+                .ConfigureMapping(nameof(TestType1.Case), (c, m) =>
+                {
+                    m.WithSourceGetter((source, main) => ((TestType2)source).Case.ToUpper())
+                        .WithMainGetter((main, source) => ((ITestType)main).Case.ToLower());
+                });
         }
 
         [TestMethod]

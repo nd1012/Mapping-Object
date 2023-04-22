@@ -119,6 +119,46 @@ Assert.AreEqual(0, source.NotMappedProperty);
 **NOTE**: In general `Map*From` maps a source type to the main type, while 
 `Map*To` maps a main type to a source type (reverse mapping).
 
+### Fluent API
+
+```cs
+Mappings.Add(typeof(MainType), typeof(SourceType))
+	.ExcludeProperties(nameof(SourceType.ExcludedProperty1), nameof(SourceType.ExcludedProperty2), ...)
+	.ConfigureMapping(nameof(SourceType.Property3), (mappings, mapping) => 
+	{
+		// Mapping detail configuration
+		mapping.WithSourceConverter(value => ...)
+			// ...and the reverse mapping
+			.WithMainConverter(value => ...);
+	})
+	.WithMapping(
+		(source, main) =>
+		{
+			// Fully customized source to main object mapping logic
+		},
+		(main, source) => 
+		{
+			// Fully customized main to source object mapping logic (reverse mapping)
+		}
+		);
+```
+
+There are fluent extensions for the `MappingConfiguration` and 
+`(Async)Mapping` types which allow you to do all configuration using a fluent 
+API.
+
+### Cloning an object
+
+In case you want to clone an object, which isn't cloneable by default (doesn't 
+implement `ICloneable` or any cloning method):
+
+```cs
+AnyType clonedInstance = Mappings.MapFrom(instance, new AnyType());
+```
+
+Of course you can customize the cloning by using custom getter delegates, 
+which will clone property values, too.
+
 ### Use a different source property
 
 The automated mapping uses the same property names for the main and the 
@@ -450,6 +490,35 @@ The asynchronous enumerable mapping extensions have support for `IEnumerable`
 and `IAsyncEnumerable`. Also an asynchronous object factory method may be 
 used, if applicable.
 
+### Mapping to init-only (`required`) properties without a main property
+
+```cs
+// A type with a required (init-only) property
+public class YourType
+{
+	public required string StringProperty { get; set; }
+}
+
+// Mapping configuration
+Mappings.Add(typeof(AnyType), nameof(YourType))
+	.WithMapping(
+		"YourTypeCustomMapping",
+		(source, main) => { },
+		(main, source) => source.StringProperty = "Value"
+		);
+
+// Mapping (which will use the previously created mapping configuration)
+YourType instance = Mappings.MapTo(anyTypeInstance, (YourType)Activator.CreateInstance(typeof(YourType)));
+```
+
+Actually the trick is to use `Activator.CreateInstance` for `YourType`, 'cause 
+this method doesn't require to set the required property values :) Then later 
+the mapping comes in effect to set a property value for the required 
+`StringProperty`.
+
+**NOTE**: This is only required, if `AnyType` doesn't have a `StringProperty`, 
+which would be mapped automatic already.
+
 ## Execute handler after/before mapping
 
 When using the `Mappings.Add` method for a mapping registration, you'll get a 
@@ -522,3 +591,8 @@ type, if the target property has no value yet (optional using a factory method
 **WARNING**: It's possible to nest synchronous mapped objects into an 
 asynchronous mapped object, but not the opposite (the parent object needs to 
 be mapped asynchronous when mixing mapping methods!).
+
+## Missing a validation (feature)?
+
+If you're missing a validation or a feature, please open an 
+[issue](https://github.com/nd1012/ObjectValidation/issues).

@@ -7,10 +7,8 @@ namespace MappingObject_Async_Tests
     {
         public MappingObjectAsyncTests()
         {
-            Mappings.Add(
-                typeof(TestType2),
-                typeof(TestType1),
-                new AsyncMapping(
+            Mappings.Add(typeof(TestType2), typeof(TestType1))
+                .WithAsyncMapping(
                     nameof(TestType1.Mapped),
                     async (source, main, ct) =>
                     {
@@ -25,9 +23,7 @@ namespace MappingObject_Async_Tests
                         TestType1 mainType = (TestType1)main;
                         TestType2 sourceType = (TestType2)source;
                         sourceType.Mapped = mainType.Mapped;
-                    }
-                    )
-                );
+                    });
         }
 
         [TestMethod]

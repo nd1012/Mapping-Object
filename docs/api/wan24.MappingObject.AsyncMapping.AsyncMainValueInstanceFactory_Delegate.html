@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Delegate MappingConfig.Mapping_Delegate
+    <title>Delegate AsyncMapping.AsyncMainValueInstanceFactory_Delegate
    | Mapping-Object </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Delegate MappingConfig.Mapping_Delegate
+    <meta name="title" content="Delegate AsyncMapping.AsyncMainValueInstanceFactory_Delegate
    | Mapping-Object ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,19 +68,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="wan24.MappingObject.MappingConfig.Mapping_Delegate">
+            <article class="content wrap" id="_content" data-uid="wan24.MappingObject.AsyncMapping.AsyncMainValueInstanceFactory_Delegate">
   
   
-  <h1 id="wan24_MappingObject_MappingConfig_Mapping_Delegate" data-uid="wan24.MappingObject.MappingConfig.Mapping_Delegate" class="text-break">Delegate MappingConfig.Mapping_Delegate
+  <h1 id="wan24_MappingObject_AsyncMapping_AsyncMainValueInstanceFactory_Delegate" data-uid="wan24.MappingObject.AsyncMapping.AsyncMainValueInstanceFactory_Delegate" class="text-break">Delegate AsyncMapping.AsyncMainValueInstanceFactory_Delegate
   </h1>
-  <div class="markdown level0 summary"><p>Delegate for a mapping handler</p>
+  <div class="markdown level0 summary"><p>Delegate for a main object target property value mapping instance factory method (used for automatic value type conversion with mapping)</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="wan24.MappingObject.html">wan24.MappingObject</a></h6>
-  <h6><strong>Assembly</strong>: MappingObject.dll</h6>
-  <h5 id="wan24_MappingObject_MappingConfig_Mapping_Delegate_syntax">Syntax</h5>
+  <h6><strong>Assembly</strong>: MappingObjectAsync.dll</h6>
+  <h5 id="wan24_MappingObject_AsyncMapping_AsyncMainValueInstanceFactory_Delegate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void Mapping_Delegate(object source, object main, MappingConfig config);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate Task&lt;object&gt; AsyncMainValueInstanceFactory_Delegate(object value, CancellationToken cancellationToken);</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -94,20 +94,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source object</p>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">main</span></td>
-        <td><p>Main object</p>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token</p>
 </td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Configuration</p>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><p>Instance</p>
 </td>
       </tr>
     </tbody>
@@ -133,10 +143,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingConfig_Mapping_Delegate.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingConfig.Mapping_Delegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_AsyncMapping_AsyncMainValueInstanceFactory_Delegate.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMapping.AsyncMainValueInstanceFactory_Delegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject/MappingConfig.cs/#L102" class="contribution-link">View Source</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/AsyncMapping.cs/#L395" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

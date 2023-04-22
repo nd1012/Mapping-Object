@@ -73,7 +73,7 @@
   
   <h1 id="wan24_MappingObject_AsyncMappings" data-uid="wan24.MappingObject.AsyncMappings" class="text-break">Class AsyncMappings
   </h1>
-  <div class="markdown level0 summary"><p>Automatted asynchronous mappings</p>
+  <div class="markdown level0 summary"><p>Automated asynchronous mappings</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -115,730 +115,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IAsyncEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllFromAsync%60%602(IAsyncEnumerable%7B%60%600%7D%2CSystem.Nullable%7BFunc%7B%60%600%2C%60%601%7D%7D%2CSystem.Nullable%7BFunc%7B%60%600%2CCancellationToken%2CTask%7B%60%601%7D%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapFromAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapFromAsync%60%602(%60%600%2C%60%601%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L192">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllFromAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IAsyncEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IAsyncEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllFromAsync&lt;tSource, tMain&gt;(IAsyncEnumerable&lt;tSource&gt;, Nullable&lt;Func&lt;tSource, tMain&gt;&gt;, Nullable&lt;Func&lt;tSource, CancellationToken, Task&lt;tMain&gt;&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of source objects to a list of main objects</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;tMain&gt; MapAllFromAsync&lt;tSource, tMain&gt;(this IAsyncEnumerable&lt;tSource&gt; sources, Func&lt;tSource, tMain&gt;? mainInstanceFactory = null, Func&lt;tSource, CancellationToken, Task&lt;tMain&gt;&gt;? mainInstanceFactoryAsync = null, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tSource : class where tMain : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;tSource&gt;</td>
-        <td><span class="parametername">sources</span></td>
-        <td><p>Source objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tSource, tMain&gt;&gt;</td>
-        <td><span class="parametername">mainInstanceFactory</span></td>
-        <td><p>Main object instance factory</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tSource, <span class="xref">CancellationToken</span>, <span class="xref">Task</span>&lt;tMain&gt;&gt;&gt;</td>
-        <td><span class="parametername">mainInstanceFactoryAsync</span></td>
-        <td><p>Asynchronous main object instance factory (will be preferred, if given)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;tMain&gt;</td>
-        <td><p>Main objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IAsyncEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllFromAsync%60%602(IAsyncEnumerable%7BKeyValuePair%7B%60%600%2C%60%601%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L320">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllFromAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IAsyncEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IAsyncEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllFromAsync&lt;tSource, tMain&gt;(IAsyncEnumerable&lt;KeyValuePair&lt;tSource, tMain&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of source/main objects</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;KeyValuePair&lt;tSource, tMain&gt;&gt; MapAllFromAsync&lt;tSource, tMain&gt;(this IAsyncEnumerable&lt;KeyValuePair&lt;tSource, tMain&gt;&gt; pairs, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tSource : class where tMain : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tSource, tMain&gt;&gt;</td>
-        <td><span class="parametername">pairs</span></td>
-        <td><p>Source/main objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tSource, tMain&gt;&gt;</td>
-        <td><p>Mapped source/main objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source object type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main object type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllFromAsync%60%602(IEnumerable%7B%60%600%7D%2CSystem.Nullable%7BFunc%7B%60%600%2C%60%601%7D%7D%2CSystem.Nullable%7BFunc%7B%60%600%2CCancellationToken%2CTask%7B%60%601%7D%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L157">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllFromAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllFromAsync&lt;tSource, tMain&gt;(IEnumerable&lt;tSource&gt;, Nullable&lt;Func&lt;tSource, tMain&gt;&gt;, Nullable&lt;Func&lt;tSource, CancellationToken, Task&lt;tMain&gt;&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of source objects to a list of main objects</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;tMain&gt; MapAllFromAsync&lt;tSource, tMain&gt;(this IEnumerable&lt;tSource&gt; sources, Func&lt;tSource, tMain&gt;? mainInstanceFactory = null, Func&lt;tSource, CancellationToken, Task&lt;tMain&gt;&gt;? mainInstanceFactoryAsync = null, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tSource : class where tMain : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;tSource&gt;</td>
-        <td><span class="parametername">sources</span></td>
-        <td><p>Source objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tSource, tMain&gt;&gt;</td>
-        <td><span class="parametername">mainInstanceFactory</span></td>
-        <td><p>Main object instance factory</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tSource, <span class="xref">CancellationToken</span>, <span class="xref">Task</span>&lt;tMain&gt;&gt;&gt;</td>
-        <td><span class="parametername">mainInstanceFactoryAsync</span></td>
-        <td><p>Asynchronous main object instance factory (will be preferred, if given)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;tMain&gt;</td>
-        <td><p>Main objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllFromAsync%60%602(IEnumerable%7BKeyValuePair%7B%60%600%2C%60%601%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L295">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllFromAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllFromAsync__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllFromAsync``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllFromAsync&lt;tSource, tMain&gt;(IEnumerable&lt;KeyValuePair&lt;tSource, tMain&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of source/main objects</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;KeyValuePair&lt;tSource, tMain&gt;&gt; MapAllFromAsync&lt;tSource, tMain&gt;(this IEnumerable&lt;KeyValuePair&lt;tSource, tMain&gt;&gt; pairs, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tSource : class where tMain : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tSource, tMain&gt;&gt;</td>
-        <td><span class="parametername">pairs</span></td>
-        <td><p>Source/main objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tSource, tMain&gt;&gt;</td>
-        <td><p>Mapped source/main objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source object type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main object type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IAsyncEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllToAsync%60%602(IAsyncEnumerable%7B%60%600%7D%2CSystem.Nullable%7BFunc%7B%60%600%2C%60%601%7D%7D%2CSystem.Nullable%7BFunc%7B%60%600%2CCancellationToken%2CTask%7B%60%601%7D%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L262">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllToAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IAsyncEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IAsyncEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllToAsync&lt;tMain, tSource&gt;(IAsyncEnumerable&lt;tMain&gt;, Nullable&lt;Func&lt;tMain, tSource&gt;&gt;, Nullable&lt;Func&lt;tMain, CancellationToken, Task&lt;tSource&gt;&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of main objects to a list of source objects (reverse mapping)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;tSource&gt; MapAllToAsync&lt;tMain, tSource&gt;(this IAsyncEnumerable&lt;tMain&gt; mainObjects, Func&lt;tMain, tSource&gt;? sourceInstanceFactory = null, Func&lt;tMain, CancellationToken, Task&lt;tSource&gt;&gt;? sourceInstanceFactoryAsync = null, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tMain : class where tSource : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;tMain&gt;</td>
-        <td><span class="parametername">mainObjects</span></td>
-        <td><p>Main objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tMain, tSource&gt;&gt;</td>
-        <td><span class="parametername">sourceInstanceFactory</span></td>
-        <td><p>Source object instance factory</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tMain, <span class="xref">CancellationToken</span>, <span class="xref">Task</span>&lt;tSource&gt;&gt;&gt;</td>
-        <td><span class="parametername">sourceInstanceFactoryAsync</span></td>
-        <td><p>Asynchronous source object instance factory (will be preferred, if given)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;tSource&gt;</td>
-        <td><p>Source objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IAsyncEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllToAsync%60%602(IAsyncEnumerable%7BKeyValuePair%7B%60%600%2C%60%601%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L370">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllToAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IAsyncEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IAsyncEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllToAsync&lt;tMain, tSource&gt;(IAsyncEnumerable&lt;KeyValuePair&lt;tMain, tSource&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of main/source objects (reverse mapping)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;KeyValuePair&lt;tMain, tSource&gt;&gt; MapAllToAsync&lt;tMain, tSource&gt;(this IAsyncEnumerable&lt;KeyValuePair&lt;tMain, tSource&gt;&gt; pairs, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tMain : class where tSource : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tMain, tSource&gt;&gt;</td>
-        <td><span class="parametername">pairs</span></td>
-        <td><p>Main/source objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tMain, tSource&gt;&gt;</td>
-        <td><p>Mapped main/source objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main object type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source object type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllToAsync%60%602(IEnumerable%7B%60%600%7D%2CSystem.Nullable%7BFunc%7B%60%600%2C%60%601%7D%7D%2CSystem.Nullable%7BFunc%7B%60%600%2CCancellationToken%2CTask%7B%60%601%7D%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L227">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllToAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IEnumerable___0__System_Nullable_Func___0___1___System_Nullable_Func___0_CancellationToken_Task___1____wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IEnumerable{``0},System.Nullable{Func{``0,``1}},System.Nullable{Func{``0,CancellationToken,Task{``1}}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllToAsync&lt;tMain, tSource&gt;(IEnumerable&lt;tMain&gt;, Nullable&lt;Func&lt;tMain, tSource&gt;&gt;, Nullable&lt;Func&lt;tMain, CancellationToken, Task&lt;tSource&gt;&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of main objects to a list of source objects (reverse mapping)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;tSource&gt; MapAllToAsync&lt;tMain, tSource&gt;(this IEnumerable&lt;tMain&gt; mainObjects, Func&lt;tMain, tSource&gt;? sourceInstanceFactory = null, Func&lt;tMain, CancellationToken, Task&lt;tSource&gt;&gt;? sourceInstanceFactoryAsync = null, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tMain : class where tSource : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;tMain&gt;</td>
-        <td><span class="parametername">mainObjects</span></td>
-        <td><p>Main objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tMain, tSource&gt;&gt;</td>
-        <td><span class="parametername">sourceInstanceFactory</span></td>
-        <td><p>Source object instance factory</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Func</span>&lt;tMain, <span class="xref">CancellationToken</span>, <span class="xref">Task</span>&lt;tSource&gt;&gt;&gt;</td>
-        <td><span class="parametername">sourceInstanceFactoryAsync</span></td>
-        <td><p>Asynchronous source object instance factory (will be preferred, if given)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;tSource&gt;</td>
-        <td><p>Source objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapAllToAsync%60%602(IEnumerable%7BKeyValuePair%7B%60%600%2C%60%601%7D%7D%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L345">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_AsyncMappings_MapAllToAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync*"></a>
-  <h4 id="wan24_MappingObject_AsyncMappings_MapAllToAsync__2_IEnumerable_KeyValuePair___0___1___wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapAllToAsync``2(IEnumerable{KeyValuePair{``0,``1}},wan24.MappingObject.MappingConfig,CancellationToken)">MapAllToAsync&lt;tMain, tSource&gt;(IEnumerable&lt;KeyValuePair&lt;tMain, tSource&gt;&gt;, MappingConfig, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a list of main/source objects (reverse mapping)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async IAsyncEnumerable&lt;KeyValuePair&lt;tMain, tSource&gt;&gt; MapAllToAsync&lt;tMain, tSource&gt;(this IEnumerable&lt;KeyValuePair&lt;tMain, tSource&gt;&gt; pairs, MappingConfig config = null, CancellationToken cancellationToken = null)
-    where tMain : class where tSource : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tMain, tSource&gt;&gt;</td>
-        <td><span class="parametername">pairs</span></td>
-        <td><p>Main/source objects</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Default mapping configuration to use</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;tMain, tSource&gt;&gt;</td>
-        <td><p>Mapped main/source objects</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main object type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source object type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapFromAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapFromAsync%60%602(%60%600%2C%60%601%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L20">View Source</a>
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/AsyncMappings.cs/#L43">View Source</a>
   </span>
   <a id="wan24_MappingObject_AsyncMappings_MapFromAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapFromAsync*"></a>
   <h4 id="wan24_MappingObject_AsyncMappings_MapFromAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapFromAsync``2(``0,``1,wan24.MappingObject.MappingConfig,CancellationToken)">MapFromAsync&lt;tSource, tMain&gt;(tSource, tMain, MappingConfig, CancellationToken)</h4>
@@ -925,10 +205,78 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapToAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapToAsync%60%602(%60%600%2C%60%601%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapFromObjectAsync_System_Object_System_Object_wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapFromObjectAsync(System.Object%2CSystem.Object%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L88">View Source</a>
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/AsyncMappings.cs/#L109">View Source</a>
+  </span>
+  <a id="wan24_MappingObject_AsyncMappings_MapFromObjectAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapFromObjectAsync*"></a>
+  <h4 id="wan24_MappingObject_AsyncMappings_MapFromObjectAsync_System_Object_System_Object_wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapFromObjectAsync(System.Object,System.Object,wan24.MappingObject.MappingConfig,CancellationToken)">MapFromObjectAsync(Object, Object, MappingConfig, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Map a source object to a main object instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static async Task&lt;object&gt; MapFromObjectAsync(object source, object main, MappingConfig config = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">main</span></td>
+        <td><p>Main object</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Default mapping configuration to use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><p>Main object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapToAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapToAsync%60%602(%60%600%2C%60%601%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/AsyncMappings.cs/#L125">View Source</a>
   </span>
   <a id="wan24_MappingObject_AsyncMappings_MapToAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapToAsync*"></a>
   <h4 id="wan24_MappingObject_AsyncMappings_MapToAsync__2___0___1_wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapToAsync``2(``0,``1,wan24.MappingObject.MappingConfig,CancellationToken)">MapToAsync&lt;tMain, tSource&gt;(tMain, tSource, MappingConfig, CancellationToken)</h4>
@@ -1013,6 +361,74 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_AsyncMappings_MapToObjectAsync_System_Object_System_Object_wan24_MappingObject_MappingConfig_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings.MapToObjectAsync(System.Object%2CSystem.Object%2Cwan24.MappingObject.MappingConfig%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/AsyncMappings.cs/#L191">View Source</a>
+  </span>
+  <a id="wan24_MappingObject_AsyncMappings_MapToObjectAsync_" data-uid="wan24.MappingObject.AsyncMappings.MapToObjectAsync*"></a>
+  <h4 id="wan24_MappingObject_AsyncMappings_MapToObjectAsync_System_Object_System_Object_wan24_MappingObject_MappingConfig_CancellationToken_" data-uid="wan24.MappingObject.AsyncMappings.MapToObjectAsync(System.Object,System.Object,wan24.MappingObject.MappingConfig,CancellationToken)">MapToObjectAsync(Object, Object, MappingConfig, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Map a main object to a source object instance (apply reverse mapping)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static async Task&lt;object&gt; MapToObjectAsync(object main, object source, MappingConfig config = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">main</span></td>
+        <td><p>Main object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source object</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Default mapping configuration to use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><p>Source object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -1021,10 +437,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_AsyncMappings.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_AsyncMappings.md&amp;value=---%0Auid%3A%20wan24.MappingObject.AsyncMappings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/AsyncMappings.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/AsyncMappings.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
