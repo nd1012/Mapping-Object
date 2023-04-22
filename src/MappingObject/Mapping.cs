@@ -133,22 +133,22 @@ namespace wan24.MappingObject
         /// <summary>
         /// Source object value converter (convert the value of the source object for setting to the main object property)
         /// </summary>
-        public ValueConverter_Delegate? SourceConverter { get; }
+        public ValueConverter_Delegate? SourceConverter { get; internal set; }
 
         /// <summary>
         /// Main object value converter (convert the value of the main object for setting to the source object property in a reverse mapping)
         /// </summary>
-        public ValueConverter_Delegate? MainConverter { get; }
+        public ValueConverter_Delegate? MainConverter { get; internal set; }
 
         /// <summary>
         /// Source object property getter (get the value of the source object for setting the main object property value)
         /// </summary>
-        public SourceGetter_Delegate? SourceGetter { get; }
+        public SourceGetter_Delegate? SourceGetter { get; internal set; }
 
         /// <summary>
         /// Main object property getter (get the value of the main object for setting the source object property value in a reverse mapping)
         /// </summary>
-        public MainGetter_Delegate? MainGetter { get; }
+        public MainGetter_Delegate? MainGetter { get; internal set; }
 
         /// <summary>
         /// Maps a source object value to the main object
@@ -163,12 +163,12 @@ namespace wan24.MappingObject
         /// <summary>
         /// Source property value instance factory (used for automatic value type conversion with mapping)
         /// </summary>
-        public SourceValueInstanceFactory_Delegate? SourceInstanceFactory { get; }
+        public SourceValueInstanceFactory_Delegate? SourceInstanceFactory { get; internal set; }
 
         /// <summary>
         /// Main property value instance factory (used for automatic value type conversion with mapping)
         /// </summary>
-        public MainValueInstanceFactory_Delegate? MainInstanceFactory { get; }
+        public MainValueInstanceFactory_Delegate? MainInstanceFactory { get; internal set; }
 
         /// <summary>
         /// Map the source object value to the main object property (use the source object value getter and converter, if any)
@@ -177,30 +177,41 @@ namespace wan24.MappingObject
         /// <param name="main">Main object</param>
         public virtual void MapFrom(object source, object main)
         {
-            if (SourceMapper != null)
+            try
             {
-                SourceMapper(source, main);
-                return;
+                if (SourceMapper != null)
+                {
+                    SourceMapper(source, main);
+                    return;
+                }
+                var (SourceProperty, MainProperty) = GetProperties(source, main);
+                object? value = SourceGetter == null ? SourceProperty.GetValue(source) : SourceGetter(source, main);
+                if (SourceConverter != null) value = SourceConverter(value);
+                Type mainType = MainProperty.PropertyType;
+                if (
+                    value?.GetType() is Type valueType &&
+                    !mainType.IsAssignableFrom(valueType) &&
+                    !mainType.IsValueType &&
+                    (MainInstanceFactory != null || !mainType.IsInterface) &&
+                    !valueType.IsValueType
+                    )
+                    value = Mappings.MapFromObject(
+                        value,
+                        MainProperty.GetValue(main)
+                            ?? MainInstanceFactory?.Invoke(value)
+                            ?? Activator.CreateInstance(mainType)
+                            ?? throw new MappingException($"Failed to instance main object property value type {mainType}")
+                        );
+                MainProperty.SetValue(main, value);
             }
-            var (SourceProperty, MainProperty) = GetProperties(source, main);
-            object? value = SourceGetter == null ? SourceProperty.GetValue(source) : SourceGetter(source, main);
-            if (SourceConverter != null) value = SourceConverter(value);
-            Type mainType = MainProperty.PropertyType;
-            if (
-                value?.GetType() is Type valueType &&
-                !mainType.IsAssignableFrom(valueType) &&
-                !mainType.IsValueType &&
-                (MainInstanceFactory != null || !mainType.IsInterface) &&
-                !valueType.IsValueType
-                )
-                value = Mappings.MapFromObject(
-                    value,
-                    MainProperty.GetValue(main)
-                        ?? MainInstanceFactory?.Invoke(value)
-                        ?? Activator.CreateInstance(mainType)
-                        ?? throw new MappingException($"Failed to instance main object property value type {mainType}")
-                    );
-            MainProperty.SetValue(main, value);
+            catch (MappingException)
+            {
+                throw;
+            }
+            catch(Exception ex)
+            {
+                throw new MappingException($"Failed to map {source.GetType()}.{SourcePropertyName} to {main.GetType()}.{MainPropertyName}: {ex.Message}", ex);
+            }
         }
 
         /// <summary>
@@ -210,32 +221,43 @@ namespace wan24.MappingObject
         /// <param name="source">Source object</param>
         public virtual void MapTo(object main, object source)
         {
-            if (MainMapper != null)
+            try
             {
-                MainMapper(main, source);
-                return;
+                if (MainMapper != null)
+                {
+                    MainMapper(main, source);
+                    return;
+                }
+                var (SourceProperty, MainProperty) = GetProperties(source, main);
+                if (!(SourceProperty.SetMethod?.IsPublic ?? false))
+                    throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public setter");
+                object? value = MainGetter == null ? MainProperty.GetValue(main) : MainGetter(main, source);
+                if (MainConverter != null) value = MainConverter(value);
+                Type sourceType = SourceProperty.PropertyType;
+                if (
+                    value?.GetType() is Type valueType &&
+                    !sourceType.IsAssignableFrom(valueType) &&
+                    !sourceType.IsValueType &&
+                    (SourceInstanceFactory != null || !sourceType.IsInterface) &&
+                    !valueType.IsValueType
+                    )
+                    value = Mappings.MapToObject(
+                        value,
+                        SourceProperty.GetValue(source)
+                            ?? SourceInstanceFactory?.Invoke(value)
+                            ?? Activator.CreateInstance(sourceType)
+                            ?? throw new MappingException($"Failed to instance source object property value type {sourceType}")
+                        );
+                SourceProperty.SetValue(source, value);
             }
-            var (SourceProperty, MainProperty) = GetProperties(source, main);
-            if (!(SourceProperty.SetMethod?.IsPublic ?? false))
-                throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public setter");
-            object? value = MainGetter == null ? MainProperty.GetValue(main) : MainGetter(main, source);
-            if (MainConverter != null) value = MainConverter(value);
-            Type sourceType = SourceProperty.PropertyType;
-            if (
-                value?.GetType() is Type valueType &&
-                !sourceType.IsAssignableFrom(valueType) &&
-                !sourceType.IsValueType &&
-                (SourceInstanceFactory != null || !sourceType.IsInterface) &&
-                !valueType.IsValueType
-                )
-                value = Mappings.MapToObject(
-                    value,
-                    SourceProperty.GetValue(source)
-                        ?? SourceInstanceFactory?.Invoke(value)
-                        ?? Activator.CreateInstance(sourceType)
-                        ?? throw new MappingException($"Failed to instance source object property value type {sourceType}")
-                    );
-            SourceProperty.SetValue(source, value);
+            catch (MappingException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new MappingException($"Failed to map {main.GetType()}.{MainPropertyName} to {source.GetType()}.{SourcePropertyName}: {ex.Message}", ex);
+            }
         }
 
         /// <summary>

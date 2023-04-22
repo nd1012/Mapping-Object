@@ -21,28 +21,10 @@ in the future.
 
 ## How to get it
 
-### Download the sources
+The libraries are available as NuGet packages:
 
-You may download the sources and compile the projects by yourself. The Mapping 
-Object Async library depends on the Mapping Object library. You may also 
-include the source files into your project and compile them within your app.
-
-### Install the NuGet package
-
-You'll need to create a personal read-only access token for your GitHub 
-account in order to be able to authenticate against the GitHub NuGet package 
-source (add the `read:packages` scope for the token). Then you can execute 
-these commands (replace `USERNAME` and `TOKEN` with your GitHub username and 
-your personal read-only access token):
-
-```bash
-dotnet nuget add source "https://nuget.pkg.github.com/nd1012/index.json" --name "GitHub nd1012" --username "USERNAME" --password "TOKEN"
-dotnet add package Mapping-Object
-dotnet add package Mapping-Object-Async
-```
-
-For more details and help, please refer to the [GitHub documentation for installing a package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package) 
-and the [GitHub documentation for creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+- (Mapping-Object)[https://www.nuget.org/packages/Mapping-Object/]
+- (Mapping-Object-Async)[https://www.nuget.org/packages/Mapping-Object-Async/]
 
 ## Usage
 
@@ -136,6 +118,46 @@ Assert.AreEqual(0, source.NotMappedProperty);
 
 **NOTE**: In general `Map*From` maps a source type to the main type, while 
 `Map*To` maps a main type to a source type (reverse mapping).
+
+### Fluent API
+
+```cs
+Mappings.Add(typeof(SourceType), typeof(MainType))
+	.ExcludeProperties(nameof(SourceType.ExcludedProperty1), nameof(SourceType.ExcludedProperty2), ...)
+	.ConfigureMapping(nameof(SourceType.Property3), (mappings, mapping) => 
+	{
+		// Mapping detail configuration
+		mapping.WithSourceConverter(value => ...)
+			// ...and the reverse mapping
+			.WithMainConverter(value => ...);
+	})
+	.WithMapping(
+		(source, main) =>
+		{
+			// Fully customized source to main object mapping logic
+		},
+		(main, source) => 
+		{
+			// Fully customized main to source object mapping logic (reverse mapping)
+		}
+		);
+```
+
+There are fluent extensions for the `MappingConfiguration` and 
+`(Async)Mapping` types which allow you to do all configuration using a fluent 
+API.
+
+### Cloning an object
+
+In case you want to clone an object, which isn't cloneable by default (doesn't 
+implement `ICloneable` or any cloning method):
+
+```cs
+AnyType clonedInstance = Mappings.MapFrom(instance, new AnyType());
+```
+
+Of course you can customize the cloning by using custom getter delegates, 
+which will clone property values, too.
 
 ### Use a different source property
 
@@ -468,6 +490,35 @@ The asynchronous enumerable mapping extensions have support for `IEnumerable`
 and `IAsyncEnumerable`. Also an asynchronous object factory method may be 
 used, if applicable.
 
+### Mapping to init-only (`required`) properties without a main property
+
+```cs
+// A type with a required (init-only) property
+public class YourType
+{
+	public required string StringProperty { get; set; }
+}
+
+// Mapping configuration
+Mappings.Add(typeof(AnyType), nameof(YourType))
+	.WithMapping(
+		"YourTypeCustomMapping",
+		(source, main) => { },
+		(main, source) => source.StringProperty = "Value"
+		);
+
+// Mapping (which will use the previously created mapping configuration)
+YourType instance = Mappings.MapTo(anyTypeInstance, (YourType)Activator.CreateInstance(typeof(YourType)));
+```
+
+Actually the trick is to use `Activator.CreateInstance` for `YourType`, 'cause 
+this method doesn't require to set the required property values :) Then later 
+the mapping comes in effect to set a property value for the required 
+`StringProperty`.
+
+**NOTE**: This is only required, if `AnyType` doesn't have a `StringProperty`, 
+which would be mapped automatic already.
+
 ## Execute handler after/before mapping
 
 When using the `Mappings.Add` method for a mapping registration, you'll get a 
@@ -489,3 +540,59 @@ method in an `IMappingObject` you can decide to load and execute possible
 handlers by evaluating the `applyDefaultMappings` parameter: If the value is 
 `false`, handlers will be executed from the `Mappings.Map*` methods. Otherwise 
 you may process as the `MappingObjectBase.Map*` do.
+
+## Nested object mapping
+
+In case
+
+- the value isn't `null`, not a value type and can't be set to the target 
+property and 
+- the target property type isn't a value type and can be instanced (f.e. using 
+a factory method (required for interface types)) and 
+
+it's possible to map deep objects - in the best case without any manual 
+mapping configuration.
+
+Example:
+
+```cs
+public class A
+{
+	public C Value { get; set; } = new();
+}
+
+public class B
+{
+	public D Value { get; set; } = new();
+}
+
+public class C
+{
+	...
+}
+
+public class D
+{
+	...
+}
+```
+
+For mapping `A` <-> `B`, the value of `Value` needs to be converted. If it's 
+possible to map `C` <-> `D` (automatic or using a manual mapping 
+configuration), the `A` <-> `B` mapping can be done automatic: Because the 
+mapper can see that `C` can't be assigned to `D`, it tries automatic type 
+conversion.
+
+For the type conversion, the mapper will instance the required target value 
+type, if the target property has no value yet (optional using a factory method 
+(see `SourceInstanceFactory` and `MainInstanceFactory` properties of a 
+`Mapping`)).
+
+**WARNING**: It's possible to nest synchronous mapped objects into an 
+asynchronous mapped object, but not the opposite (the parent object needs to 
+be mapped asynchronous when mixing mapping methods!).
+
+## Missing a validation (feature)?
+
+If you're missing a validation or a feature, please open an 
+[issue](https://github.com/nd1012/ObjectValidation/issues).

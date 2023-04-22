@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "PchH0xwTUg2Y0NTLAjY9q2wUQlze48vajo1iwZzaw4k="
+          "hash": "jpjp+5Y95BMjVK5JsoMyIFIPJNJ86dr4Amw86DU1ARY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,7 +21,31 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "KoCK3W38ig5MDqlEpUaDEQ5bpkD4uV7ZwhULRfsQfIM="
+          "hash": "CNggf24mT6FHrENzz39k7pjeY+eUonfHylj6hxYLfxI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncFluentExtensions.AsyncMapping_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncFluentExtensions.AsyncMapping_Delegate.html",
+          "hash": "/kjaq4R0HTqAfMmQIJ38qi9hpPZlanKq0FiKRu0KS3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncFluentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncFluentExtensions.html",
+          "hash": "0nqzMQQoxovr4RF775UNXJXsf6+25f6j3jqHqLhuywg="
         }
       },
       "is_incremental": false,
@@ -33,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainGetter_Delegate.html",
-          "hash": "HNa26BWnyFSACc1mX6Rg6/IpJ0jPDEYWypXanSf6/nY="
+          "hash": "5KnqnokkjAEkGLsfwCYZWaIlIFkzVUXMRxsINB/k9hM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +69,22 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainMapper_Delegate.html",
-          "hash": "wUfghLYZ7b8bCFWNcU+WQIoLxkWIOMR0xYgb1I9kZnY="
+          "hash": "XWkuY7lJPkpxqldWueBdhYawqK63cTr0nu7b4WXDzOI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainValueInstanceFactory_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncMainValueInstanceFactory_Delegate.html",
+          "hash": "0F3KhQ4nyXhmnHwZLVmrH88p9eAQ9Zfh0rxztBMLVbc="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceGetter_Delegate.html",
-          "hash": "s65St0FXwcxXNtwQEtu2Sxmgd7Msqe/LA4nxpVz23Ts="
+          "hash": "i1xc8CKeezpkm5gJlSISFt12x0hesV+n0bjOUhIXSlg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +105,22 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceMapper_Delegate.html",
-          "hash": "TUPY8XHBw6KoECmNGStC0lBTWQzHhg81ZUOQXpzS304="
+          "hash": "QjDCW4+e06tjjKl6emzNaMMnHaJdDwxiQKAudty/o3s="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceValueInstanceFactory_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncSourceValueInstanceFactory_Delegate.html",
+          "hash": "ADAMwvXfRS2U5OM1GPWG5/cYDBmKCkAleMCSZunh/50="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMapping.AsyncValueConverter_Delegate.html",
-          "hash": "CY2GVtfLc+6jk8IVt7fkdhnFhe2F46Yi+lDTzrzzlxE="
+          "hash": "18CFbPL++joJSgtx+2lIT2K5buHiFjYEFFBtaOCEZ/s="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,7 +141,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMapping.html",
-          "hash": "VnTzBmeAMEYwgDytau0Iokis0vvow5tyPLOz8uD4mwg="
+          "hash": "WA4MommJ87CAFu9HUfH+1iDxSP20qopRAO5QwCIXmI0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.AsyncMappingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.AsyncMappingExtensions.html",
+          "hash": "5l1L+4el285biOVx560W0oU5XHyCUZxUNF1lO7xvYJg="
         }
       },
       "is_incremental": false,
@@ -105,7 +165,31 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.AsyncMappings.html",
-          "hash": "7eJGnDwa/umTXCHgikS+HoN+PZlzz04UDsU3Oaoxsxg="
+          "hash": "azmcl81Q91CeVMV5AQEtL16drFrTC+n/xPsK7WXVp2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.FluentExtensions.Mapping_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.FluentExtensions.Mapping_Delegate.html",
+          "hash": "ZmqngB4OSaSTbYxnASlxH7w3YA6HC4q9JRE+8lyEFvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.FluentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.FluentExtensions.html",
+          "hash": "ytOOKvGiqMAXzzYULC+9cIlzSzzXPV7Jf04i+rpQaGE="
         }
       },
       "is_incremental": false,
@@ -117,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.IMappingObject-1.html",
-          "hash": "U/WrVWSPHpC316d3921sAWEBap6yWvhkKMna4RiRIC4="
+          "hash": "WoyZuM2noYBKos4iiNpbfe7rttb4BmrJ9nmFT8HzbNQ="
         }
       },
       "is_incremental": false,
@@ -129,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.IMappingObject.html",
-          "hash": "absjQUfngvm5+eVBMEdRG73XkiBWOkJ+bjINVf3X2AE="
+          "hash": "uAQ+T+H9wpHWqfed9HGlgGGRdsxdbGpXRRwPq/ySnmM="
         }
       },
       "is_incremental": false,
@@ -141,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.IMappingObjectAsync-1.html",
-          "hash": "r7U64RMDNQWzXVMiYLrAmVx2KdfvJiwMIqxw3CjWkfY="
+          "hash": "ZDi4WeLC4dlw8OCP9Bh1bShFTTHrNH8rxR9B0HElo/U="
         }
       },
       "is_incremental": false,
@@ -153,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.IMappingObjectAsync.html",
-          "hash": "PJaNQLTKa9GIUX4lWlReJexnryGUCy5/cCRdGumWWA0="
+          "hash": "ckGFzDoVZeJAKVUa4WeVIWCRWYXsIxcbvjr4rMTEqAY="
         }
       },
       "is_incremental": false,
@@ -165,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MapAttribute.html",
-          "hash": "iFv2LeXlAdAh1sycxRSS4kW3/qP+R7kIDMKai+QVG/o="
+          "hash": "C4tBUnyLGhJX/UAL64b23k6IeP5HRA4pMmutg5aV70E="
         }
       },
       "is_incremental": false,
@@ -177,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.MainGetter_Delegate.html",
-          "hash": "u9zxwclZFub5pygoygOpmOHtQHrorxsuQVdqDq3kKg0="
+          "hash": "cQUyUdN3igjgk+iSrTYIwv+hwkviQULaSHMcCs8qAuY="
         }
       },
       "is_incremental": false,
@@ -189,7 +273,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.MainMapper_Delegate.html",
-          "hash": "7kGOtPWIZ83Th4AHlZYP96bf4OjcKlPRU/KANljUueE="
+          "hash": "n6h8yNrk0RBj/RyACx+9MPHqZfoY84kXZ+Cy/JrTbq0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.MainValueInstanceFactory_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.MainValueInstanceFactory_Delegate.html",
+          "hash": "AEkIdGXI2Q+0xtjsocpSb4x/ia428DOY1zqoWihZj/s="
         }
       },
       "is_incremental": false,
@@ -201,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.SourceGetter_Delegate.html",
-          "hash": "epLZZre4je72KPNNfymVqBnYPuQTBb7IeZyNCR2f/t0="
+          "hash": "VnoTOMBm4/d+pMrqULfvj5ggW5APY9KGizIYbuV6bzg="
         }
       },
       "is_incremental": false,
@@ -213,7 +309,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.SourceMapper_Delegate.html",
-          "hash": "jjCH858uorsjlsEucbxEP7WVgw80fhezjRvXmwokSJw="
+          "hash": "qcohN9GSo6Vjcaj9dJnVpW6v1XFYF+TAUdjhr3HSPBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.Mapping.SourceValueInstanceFactory_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.Mapping.SourceValueInstanceFactory_Delegate.html",
+          "hash": "im2vusb6Gzi2nN3xExy+VPdwgZl+/ZMKJJeyHYqyDME="
         }
       },
       "is_incremental": false,
@@ -225,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.ValueConverter_Delegate.html",
-          "hash": "/P8axoFh1yM5137RZzqWrNW14ZkNIUaWVVl7bFnqnP4="
+          "hash": "QtODSB/wFAZDI5Dk/0TREDpw82FnCGXbB3sqYPzA/ss="
         }
       },
       "is_incremental": false,
@@ -237,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mapping.html",
-          "hash": "7TIii6sdbZ3viCgKBzbwscxqetF5La7UYf1WMU/vXzY="
+          "hash": "OXFCbP7c4IS+v4XI5BAI95Q68I1/AO5XRpjm6CZia2c="
         }
       },
       "is_incremental": false,
@@ -249,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingConfig.Mapping_Delegate.html",
-          "hash": "9KF2fBRs6EbisgWNthxR0aY0gGi/VPZ9hM2hQTd4m2U="
+          "hash": "Gis6ksDquUhRFR8UJA2rqmf/U7NhnP/2u/fm6/r09e4="
         }
       },
       "is_incremental": false,
@@ -261,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingConfig.html",
-          "hash": "gvcFH0x4jfYj6XxT3vGdxB/vuCYlmb/P0QWBO6sgsrQ="
+          "hash": "uf5n+ZOSnP3jiGXTeOhKx2g51/7H/h2iy5KKUK/9VcU="
         }
       },
       "is_incremental": false,
@@ -273,7 +381,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingException.html",
-          "hash": "/b7/fT9aP/UKMayY7q0V8JMyoki4rXBs3N4NOV3RsFA="
+          "hash": "sclE8cD5EfSz721L1Q9/rjN4ecFmukf6BlV4fnagOj4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.MappingObject.MappingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.MappingObject.MappingExtensions.html",
+          "hash": "nfHc+9e1J2iT70IXrAoqLGs42eVH8+0sNXqgbwPQnUY="
         }
       },
       "is_incremental": false,
@@ -285,10 +405,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingObjectAsyncBase-1.html",
-          "hash": "seN+J+H5NCfgGbq0FyNYksTl7DFt6KrZM3OX386qJnA="
+          "hash": "O/kH8JxvGi5KUBupZc5FJT7k5vGm5jbtQz5QXOsPnUA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingObjectBase-1.html",
-          "hash": "HtigFzuNng4vfTMjFg/JXEI9DCaViH5obXL+WqJ/JNI="
+          "hash": "AAZhUj5QTTxASWXU5x4APX6bVqF87sK4yCe81ph6zeM="
         }
       },
       "is_incremental": false,
@@ -309,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.MappingObjectCastableBase-2.html",
-          "hash": "fvjwuipPbdnPUtmFh00WmvyUgLCjBhyjG6tvDNeJ3gk="
+          "hash": "IHXI0ITtiIjqyeTyT2zMWt9vmHmLvJRy0FU+Xzt7BRQ="
         }
       },
       "is_incremental": false,
@@ -321,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.Mappings.html",
-          "hash": "wL6SZw2eXGC3vrGxvHPj/2UvT6olKojl9hs8TchiZwE="
+          "hash": "JD2N+apUW5vGYOZEvwqIYmTzXQvcb8EhcSQAuNc1jEs="
         }
       },
       "is_incremental": false,
@@ -333,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.SkipMappingAttribute.html",
-          "hash": "krGDkfAOni5wFHf7tu+i/8m7GjmsT/Uo2qt/ALqAfdQ="
+          "hash": "sklL2MSYvHLj3/TBOZTkmmnyLbVgiqzy9JnFVK5Qccg="
         }
       },
       "is_incremental": false,
@@ -345,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.MappingObject.html",
-          "hash": "NQMr+cpDLmyNNDH9HwtaFCQ0FDG3rdOnZnd/sn0U0fQ="
+          "hash": "5t8mgnG1Gu6ykIHg/A6fZglEmzWXhDcDU0xalRBBbcI="
         }
       },
       "is_incremental": false,
@@ -357,10 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "eVkgAq9Hww1PSJDE4Fhix17RGSp/PJ/S+Bx+vx1dKKM="
+          "hash": "IQM2KgM9XCqI2hphrEFf4nsXp0mwX+Rfu15WUSV+2VM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +501,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "t1lGCke5RSwVT7GhAiKwzH+KGiJmPydkD1wikyM3xNA="
+          "hash": "ureZjsdpU52kG9D4Td8slYPbaHdCoRHFkIc93oeYDaU="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -403,23 +523,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
-          "skipped_file_count": 11
+          "total_file_count": 37,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -432,8 +554,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
