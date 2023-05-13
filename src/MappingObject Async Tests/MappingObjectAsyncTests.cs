@@ -24,6 +24,23 @@ namespace MappingObject_Async_Tests
                         TestType2 sourceType = (TestType2)source;
                         sourceType.Mapped = mainType.Mapped;
                     });
+            Mappings.Add(typeof(TestType2), typeof(TestType3))
+                .WithAsyncMapping(
+                    nameof(TestType3.Mapped),
+                    async (source, main, ct) =>
+                    {
+                        await Task.Yield();
+                        TestType2 sourceType = (TestType2)source;
+                        TestType3 mainType = (TestType3)main;
+                        mainType.Mapped = sourceType.Mapped;
+                    },
+                    async (main, source, ct) =>
+                    {
+                        await Task.Yield();
+                        TestType3 mainType = (TestType3)main;
+                        TestType2 sourceType = (TestType2)source;
+                        sourceType.Mapped = mainType.Mapped;
+                    });
         }
 
         [TestMethod]
@@ -37,6 +54,20 @@ namespace MappingObject_Async_Tests
         public async Task Reverse_Mapping_Test()
         {
             TestType2 source = await AsyncMappings.MapToAsync(new TestType1(), new TestType2());
+            Assert.IsFalse(source.Mapped);
+        }
+
+        [TestMethod]
+        public async Task Adapter_Test()
+        {
+            TestType3 main = await AsyncMappings.MapFromAsync(new TestType2(), new TestType3());
+            Assert.IsTrue(main.Mapped);
+        }
+
+        [TestMethod]
+        public async Task Reverse_Adapter_Test()
+        {
+            TestType2 source = await AsyncMappings.MapToAsync(new TestType3(), new TestType2());
             Assert.IsFalse(source.Mapped);
         }
 

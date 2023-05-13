@@ -769,23 +769,23 @@ references:
   fullName.vb: wan24.MappingObject.IAdapterMappingObjectAsync(Of tSource, tMain).MapFromAsync
   nameWithType: IAdapterMappingObjectAsync<tSource, tMain>.MapFromAsync
   nameWithType.vb: IAdapterMappingObjectAsync(Of tSource, tMain).MapFromAsync
-- uid: wan24.MappingObject.IAdapterMappingObjectAsync`2.MapTo(`0,CancellationToken)
-  name: MapTo(tSource, CancellationToken)
-  href: api/wan24.MappingObject.IAdapterMappingObjectAsync-2.html#wan24_MappingObject_IAdapterMappingObjectAsync_2_MapTo__0_CancellationToken_
-  commentId: M:wan24.MappingObject.IAdapterMappingObjectAsync`2.MapTo(`0,CancellationToken)
-  fullName: wan24.MappingObject.IAdapterMappingObjectAsync<tSource, tMain>.MapTo(tSource, CancellationToken)
-  fullName.vb: wan24.MappingObject.IAdapterMappingObjectAsync(Of tSource, tMain).MapTo(tSource, CancellationToken)
-  nameWithType: IAdapterMappingObjectAsync<tSource, tMain>.MapTo(tSource, CancellationToken)
-  nameWithType.vb: IAdapterMappingObjectAsync(Of tSource, tMain).MapTo(tSource, CancellationToken)
-- uid: wan24.MappingObject.IAdapterMappingObjectAsync`2.MapTo*
-  name: MapTo
-  href: api/wan24.MappingObject.IAdapterMappingObjectAsync-2.html#wan24_MappingObject_IAdapterMappingObjectAsync_2_MapTo_
-  commentId: Overload:wan24.MappingObject.IAdapterMappingObjectAsync`2.MapTo
+- uid: wan24.MappingObject.IAdapterMappingObjectAsync`2.MapToAsync(`0,CancellationToken)
+  name: MapToAsync(tSource, CancellationToken)
+  href: api/wan24.MappingObject.IAdapterMappingObjectAsync-2.html#wan24_MappingObject_IAdapterMappingObjectAsync_2_MapToAsync__0_CancellationToken_
+  commentId: M:wan24.MappingObject.IAdapterMappingObjectAsync`2.MapToAsync(`0,CancellationToken)
+  fullName: wan24.MappingObject.IAdapterMappingObjectAsync<tSource, tMain>.MapToAsync(tSource, CancellationToken)
+  fullName.vb: wan24.MappingObject.IAdapterMappingObjectAsync(Of tSource, tMain).MapToAsync(tSource, CancellationToken)
+  nameWithType: IAdapterMappingObjectAsync<tSource, tMain>.MapToAsync(tSource, CancellationToken)
+  nameWithType.vb: IAdapterMappingObjectAsync(Of tSource, tMain).MapToAsync(tSource, CancellationToken)
+- uid: wan24.MappingObject.IAdapterMappingObjectAsync`2.MapToAsync*
+  name: MapToAsync
+  href: api/wan24.MappingObject.IAdapterMappingObjectAsync-2.html#wan24_MappingObject_IAdapterMappingObjectAsync_2_MapToAsync_
+  commentId: Overload:wan24.MappingObject.IAdapterMappingObjectAsync`2.MapToAsync
   isSpec: "True"
-  fullName: wan24.MappingObject.IAdapterMappingObjectAsync<tSource, tMain>.MapTo
-  fullName.vb: wan24.MappingObject.IAdapterMappingObjectAsync(Of tSource, tMain).MapTo
-  nameWithType: IAdapterMappingObjectAsync<tSource, tMain>.MapTo
-  nameWithType.vb: IAdapterMappingObjectAsync(Of tSource, tMain).MapTo
+  fullName: wan24.MappingObject.IAdapterMappingObjectAsync<tSource, tMain>.MapToAsync
+  fullName.vb: wan24.MappingObject.IAdapterMappingObjectAsync(Of tSource, tMain).MapToAsync
+  nameWithType: IAdapterMappingObjectAsync<tSource, tMain>.MapToAsync
+  nameWithType.vb: IAdapterMappingObjectAsync(Of tSource, tMain).MapToAsync
 - uid: wan24.MappingObject.IMappingObject
   name: IMappingObject
   href: api/wan24.MappingObject.IMappingObject.html

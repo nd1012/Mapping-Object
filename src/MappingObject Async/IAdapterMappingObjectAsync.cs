@@ -20,6 +20,6 @@
         /// </summary>
         /// <param name="source">Source object</param>
         /// <param name="cancellationToken">Cancellation token</param>
-        void MapTo(tSource source, CancellationToken cancellationToken = default);
+        Task MapToAsync(tSource source, CancellationToken cancellationToken = default);
     }
 }

@@ -408,6 +408,9 @@ public sealed class YourTargetType : IAdapterMappingObject<YourSourceType, YourT
 The `YourTargetType` type now has the same mapping capabilities as a type 
 which extends `MappingObjectBase`.
 
+For an asynchronous object mapping adapter use `AdapterMappingObjectBase` and 
+`IAdapterMappingObjectAsync`.
+
 ### Enumerable mapping extensions
 
 You can use the `MapAllFrom` and `MapAllTo` enumerable extension methods for 

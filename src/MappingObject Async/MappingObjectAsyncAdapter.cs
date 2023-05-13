@@ -25,17 +25,17 @@
         {
             await Task.Yield();
             MappingConfig config = Mappings.EnsureMappings(typeof(tSource), Main.GetType());
-            config.BeforeMapping?.Invoke(source, this, config);
+            config.BeforeMapping?.Invoke(source, Main, config);
             foreach (Mapping map in config.Mappings)
                 if (map is AsyncMapping asyncMap)
                 {
-                    await asyncMap.MapFromAsync(source, this, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+                    await asyncMap.MapFromAsync(source, Main, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
                 }
                 else
                 {
-                    map.MapFrom(source, this);
+                    map.MapFrom(source, Main);
                 }
-            config.AfterMapping?.Invoke(source, this, config);
+            config.AfterMapping?.Invoke(source, Main, config);
         }
 
         /// <inheritdoc/>
@@ -43,17 +43,17 @@
         {
             await Task.Yield();
             MappingConfig config = Mappings.EnsureMappings(typeof(tSource), Main.GetType());
-            config.BeforeReverseMapping?.Invoke(source, this, config);
+            config.BeforeReverseMapping?.Invoke(source, Main, config);
             foreach (Mapping map in config.Mappings)
                 if (map is AsyncMapping asyncMap)
                 {
-                    await asyncMap.MapToAsync(this, source, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+                    await asyncMap.MapToAsync(Main, source, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
                 }
                 else
                 {
-                    map.MapTo(this, source);
+                    map.MapTo(Main, source);
                 }
-            config.AfterReverseMapping?.Invoke(source, this, config);
+            config.AfterReverseMapping?.Invoke(source, Main, config);
         }
     }
 }
