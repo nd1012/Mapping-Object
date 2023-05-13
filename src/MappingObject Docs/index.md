@@ -387,6 +387,30 @@ For the implementation and the usage please have a look at the `TestType4.cs`
 code in the tests project. You can use the interface for objects that can't 
 extend the `MappingObjectBase` type.
 
+### The `MappingObjectAdapter`
+
+In case you don't want to extend `MappingObjectBase`, and you don't want to 
+implement `IMappingObject`, you can use a `MappingObjectAdapter`:
+
+```cs
+public sealed class YourTargetType : IAdapterMappingObject<YourSourceType, YourTargetType>
+{
+	private readonly MappingObjectAdapter<YourSourceType, YourTargetType> MappingObjectAdapter;
+
+	public YourTargetType() => MappingObjectAdapter = new(this);
+
+	public void MapFrom(YourSourceType source) => MappingObjectAdapter.MapFrom(source);
+
+	public void MapTo(YourSourceType source) => MappingObjectAdapter.MapTo(source);
+}
+```
+
+The `YourTargetType` type now has the same mapping capabilities as a type 
+which extends `MappingObjectBase`.
+
+For an asynchronous object mapping adapter use `AdapterMappingObjectBase` and 
+`IAdapterMappingObjectAsync`.
+
 ### Enumerable mapping extensions
 
 You can use the `MapAllFrom` and `MapAllTo` enumerable extension methods for 

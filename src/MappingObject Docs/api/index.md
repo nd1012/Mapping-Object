@@ -1,1 +1,3 @@
-# Mapping-Object developer API reference
+# API reference
+
+Choose a type from the left to start browsing.

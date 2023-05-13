@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MappingObjectAsyncBase&lt;T&gt;
+    <title>Class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;
    | Mapping-Object </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MappingObjectAsyncBase&lt;T&gt;
+    <meta name="title" content="Class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;
    | Mapping-Object ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,23 +68,29 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1">
+            <article class="content wrap" id="_content" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2">
   
   
-  <h1 id="wan24_MappingObject_MappingObjectAsyncBase_1" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1" class="text-break">Class MappingObjectAsyncBase&lt;T&gt;
+  <h1 id="wan24_MappingObject_MappingObjectAsyncAdapter_2" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2" class="text-break">Class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Base class for an asynchronous mapping object</p>
+  <div class="markdown level0 summary"><p>Mapping object adapter</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="wan24.MappingObject.MappingObjectBase-1.html">MappingObjectBase</a>&lt;T&gt;</div>
-    <div class="level2"><span class="xref">MappingObjectAsyncBase&lt;T&gt;</span></div>
-      <div class="level3"><a class="xref" href="wan24.MappingObject.MappingObjectAsyncAdapter-2.html">MappingObjectAsyncAdapter&lt;tSource, tMain&gt;</a></div>
+    <div class="level1"><a class="xref" href="wan24.MappingObject.MappingObjectBase-1.html">MappingObjectBase</a>&lt;tSource&gt;</div>
+    <div class="level2"><a class="xref" href="wan24.MappingObject.MappingObjectAsyncBase-1.html">MappingObjectAsyncBase</a>&lt;tSource&gt;</div>
+    <div class="level3"><span class="xref">MappingObjectAsyncAdapter&lt;tSource, tMain&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapFrom__0_">MappingObjectAsyncBase&lt;tSource&gt;.MapFrom(tSource)</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.MappingObject.MappingObjectAsyncBase-1.html#wan24_MappingObject_MappingObjectAsyncBase_1_MapTo__0_">MappingObjectAsyncBase&lt;tSource&gt;.MapTo(tSource)</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -109,9 +115,9 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="wan24.MappingObject.html">wan24.MappingObject</a></h6>
   <h6><strong>Assembly</strong>: MappingObjectAsync.dll</h6>
-  <h5 id="wan24_MappingObject_MappingObjectAsyncBase_1_syntax">Syntax</h5>
+  <h5 id="wan24_MappingObject_MappingObjectAsyncAdapter_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class MappingObjectAsyncBase&lt;T&gt; : MappingObjectBase&lt;T&gt; where T : class</code></pre>
+    <pre><code class="lang-csharp hljs">public class MappingObjectAsyncAdapter&lt;tSource, tMain&gt; : MappingObjectAsyncBase&lt;tSource&gt; where tSource : class where tMain : class</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,8 +129,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Source type (which this type can map from/to)</p>
+        <td><span class="parametername">tSource</span></td>
+        <td><p>Source object type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">tMain</span></td>
+        <td><p>Main object type</p>
 </td>
       </tr>
     </tbody>
@@ -133,35 +144,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1__ctor.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncAdapter_2__ctor__1_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncAdapter%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L13">View Source</a>
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncAdapter.cs/#L16">View Source</a>
   </span>
-  <a id="wan24_MappingObject_MappingObjectAsyncBase_1__ctor_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.#ctor*"></a>
-  <h4 id="wan24_MappingObject_MappingObjectAsyncBase_1__ctor" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.#ctor">MappingObjectAsyncBase()</h4>
+  <a id="wan24_MappingObject_MappingObjectAsyncAdapter_2__ctor_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.#ctor*"></a>
+  <h4 id="wan24_MappingObject_MappingObjectAsyncAdapter_2__ctor__1_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.#ctor(`1)">MappingObjectAsyncAdapter(tMain)</h4>
   <div class="markdown level1 summary"><p>Constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected MappingObjectAsyncBase()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1__ctor__0_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L19">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_MappingObjectAsyncBase_1__ctor_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.#ctor*"></a>
-  <h4 id="wan24_MappingObject_MappingObjectAsyncBase_1__ctor__0_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.#ctor(`0)">MappingObjectAsyncBase(T)</h4>
-  <div class="markdown level1 summary"><p>Constructor</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected MappingObjectAsyncBase(T source)</code></pre>
+    <pre><code class="lang-csharp hljs">public MappingObjectAsyncAdapter(tMain main)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,10 +169,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source object to map to this instance</p>
+        <td><span class="xref">tMain</span></td>
+        <td><span class="parametername">main</span></td>
+        <td><p>Main object</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncAdapter_2_Main.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncAdapter%602.Main%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncAdapter.cs/#L21">View Source</a>
+  </span>
+  <a id="wan24_MappingObject_MappingObjectAsyncAdapter_2_Main_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.Main*"></a>
+  <h4 id="wan24_MappingObject_MappingObjectAsyncAdapter_2_Main" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.Main">Main</h4>
+  <div class="markdown level1 summary"><p>Main object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public tMain Main { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">tMain</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -185,19 +213,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1_MapFrom__0_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601.MapFrom(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncAdapter_2_MapFromAsync__0_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncAdapter%602.MapFromAsync(%600%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L22">View Source</a>
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncAdapter.cs/#L24">View Source</a>
   </span>
-  <a id="wan24_MappingObject_MappingObjectAsyncBase_1_MapFrom_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapFrom*"></a>
-  <h4 id="wan24_MappingObject_MappingObjectAsyncBase_1_MapFrom__0_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapFrom(`0)">MapFrom(T)</h4>
+  <a id="wan24_MappingObject_MappingObjectAsyncAdapter_2_MapFromAsync_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.MapFromAsync*"></a>
+  <h4 id="wan24_MappingObject_MappingObjectAsyncAdapter_2_MapFromAsync__0_CancellationToken_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.MapFromAsync(`0,CancellationToken)">MapFromAsync(tSource, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Map a source object to this instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void MapFrom(T source)</code></pre>
+    <pre><code class="lang-csharp hljs">public override async Task MapFromAsync(tSource source, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,46 +238,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">tSource</span></td>
         <td><span class="parametername">source</span></td>
-        <td><p>Source object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">wan24.MappingObject.MappingObjectBase&lt;T&gt;.MapFrom(T)</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1_MapFromAsync__0_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601.MapFromAsync(%600%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L32">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_MappingObjectAsyncBase_1_MapFromAsync_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapFromAsync*"></a>
-  <h4 id="wan24_MappingObject_MappingObjectAsyncBase_1_MapFromAsync__0_CancellationToken_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapFromAsync(`0,CancellationToken)">MapFromAsync(T, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Map a source object to this instance</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task MapFromAsync(T source, CancellationToken cancellationToken = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source object</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
@@ -274,57 +265,23 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1_MapTo__0_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601.MapTo(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L25">View Source</a>
-  </span>
-  <a id="wan24_MappingObject_MappingObjectAsyncBase_1_MapTo_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapTo*"></a>
-  <h4 id="wan24_MappingObject_MappingObjectAsyncBase_1_MapTo__0_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapTo(`0)">MapTo(T)</h4>
-  <div class="markdown level1 summary"><p>Map this instance to a source object (reverse mapping)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void MapTo(T source)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">wan24.MappingObject.MappingObjectBase&lt;T&gt;.MapTo(T)</span></div>
+  <div><span class="xref">wan24.MappingObject.MappingObjectAsyncBase&lt;tSource&gt;.MapFromAsync(tSource, CancellationToken)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1_MapToAsync__0_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601.MapToAsync(%600%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncAdapter_2_MapToAsync__0_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncAdapter%602.MapToAsync(%600%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L54">View Source</a>
+    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncAdapter.cs/#L42">View Source</a>
   </span>
-  <a id="wan24_MappingObject_MappingObjectAsyncBase_1_MapToAsync_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapToAsync*"></a>
-  <h4 id="wan24_MappingObject_MappingObjectAsyncBase_1_MapToAsync__0_CancellationToken_" data-uid="wan24.MappingObject.MappingObjectAsyncBase`1.MapToAsync(`0,CancellationToken)">MapToAsync(T, CancellationToken)</h4>
+  <a id="wan24_MappingObject_MappingObjectAsyncAdapter_2_MapToAsync_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.MapToAsync*"></a>
+  <h4 id="wan24_MappingObject_MappingObjectAsyncAdapter_2_MapToAsync__0_CancellationToken_" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2.MapToAsync(`0,CancellationToken)">MapToAsync(tSource, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Map this instance to a source object (reverse mapping)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task MapToAsync(T source, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override async Task MapToAsync(tSource source, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,10 +294,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">tSource</span></td>
         <td><span class="parametername">source</span></td>
-        <td><p>Source object</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
@@ -365,6 +321,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">wan24.MappingObject.MappingObjectAsyncBase&lt;tSource&gt;.MapToAsync(tSource, CancellationToken)</span></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="wan24.MappingObject.MappingExtensions.html#wan24_MappingObject_MappingExtensions_MapFrom__2___1___0_wan24_MappingObject_MappingConfig_">MappingExtensions.MapFrom&lt;tSource, tMain&gt;(tMain, tSource, MappingConfig)</a>
@@ -386,10 +344,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncBase_1.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncBase%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/new/dev/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncAdapter_2.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncAdapter%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncBase.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/blob/dev/src/MappingObject Async/MappingObjectAsyncAdapter.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
