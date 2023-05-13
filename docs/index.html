@@ -376,6 +376,24 @@ generic interface, also.</p>
 <p>For the implementation and the usage please have a look at the <code>TestType4.cs</code>
 code in the tests project. You can use the interface for objects that can't
 extend the <code>MappingObjectBase</code> type.</p>
+<h3 id="the-mappingobjectadapter">The <code>MappingObjectAdapter</code></h3>
+<p>In case you don't want to extend <code>MappingObjectBase</code>, and you don't want to
+implement <code>IMappingObject</code>, you can use a <code>MappingObjectAdapter</code>:</p>
+<pre><code class="lang-cs">public sealed class YourTargetType : IAdapterMappingObject&lt;YourSourceType, YourTargetType&gt;
+{
+	private readonly MappingObjectAdapter&lt;YourSourceType, YourTargetType&gt; MappingObjectAdapter;
+
+	public YourTargetType() =&gt; MappingObjectAdapter = new(this);
+
+	public void MapFrom(YourSourceType source) =&gt; MappingObjectAdapter.MapFrom(source);
+
+	public void MapTo(YourSourceType source) =&gt; MappingObjectAdapter.MapTo(source);
+}
+</code></pre>
+<p>The <code>YourTargetType</code> type now has the same mapping capabilities as a type
+which extends <code>MappingObjectBase</code>.</p>
+<p>For an asynchronous object mapping adapter use <code>AdapterMappingObjectBase</code> and
+<code>IAdapterMappingObjectAsync</code>.</p>
 <h3 id="enumerable-mapping-extensions">Enumerable mapping extensions</h3>
 <p>You can use the <code>MapAllFrom</code> and <code>MapAllTo</code> enumerable extension methods for
 mapping a list of main and/or source objects:</p>

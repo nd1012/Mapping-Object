@@ -19,6 +19,17 @@ namespace MappingObject_Tests
                     m.WithSourceGetter((source, main) => ((TestType2)source).Case.ToLower())
                         .WithMainGetter((main, source) => ((TestType1)main).Case.ToUpper());
                 });
+            Mappings.Add(typeof(TestType2), typeof(TestType9))
+                .ConfigureMapping(nameof(TestType1.Converted), (c, m) =>
+                {
+                    m.WithSourceConverter(v => bool.Parse((string)v!))
+                        .WithMainConverter(v => v!.ToString());
+                })
+                .ConfigureMapping(nameof(TestType1.Case), (c, m) =>
+                {
+                    m.WithSourceGetter((source, main) => ((TestType2)source).Case.ToLower())
+                        .WithMainGetter((main, source) => ((TestType9)main).Case.ToUpper());
+                });
             // Force mapper tests
             Mappings.Add(typeof(TestType2), typeof(TestType3))
                 .WithMapping(nameof(TestType3.Converted), sourcePropertyName: null, mapping: (c, m) =>
@@ -263,6 +274,32 @@ namespace MappingObject_Tests
         {
             TestType7 main = Mappings.MapFrom(new TestType8(), new TestType7());
             Assert.IsNotNull(main.Value1);
+        }
+
+        [TestMethod]
+        public void Adapter_Test()
+        {
+            TestType9 main = new();
+            Mappings.MapFrom(new TestType2(), main);
+            Assert.IsTrue(main.Skipped);
+            Assert.IsFalse(main.NotMapped);
+            Assert.IsFalse(main.Mapped);
+            Assert.IsFalse(main.AlsoMapped);
+            Assert.IsTrue(main.Converted);
+            Assert.AreEqual("type2", main.Case);
+        }
+
+        [TestMethod]
+        public void Reverse_Adapter_Test()
+        {
+            TestType2 source = new();
+            Mappings.MapTo(new TestType9(), source);
+            Assert.IsFalse(source.Skipped2);
+            Assert.IsTrue(source.NotMapped);
+            Assert.IsTrue(source.Mapped);
+            Assert.IsTrue(source.AlsoMapped2);
+            Assert.AreEqual(false.ToString(), source.Converted);
+            Assert.AreEqual("TYPE9", source.Case);
         }
     }
 }

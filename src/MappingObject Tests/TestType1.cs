@@ -16,6 +16,6 @@ namespace MappingObject_Tests
 
         public bool Converted { get; set; }
 
-        public string Case { get; set; } = "type1";
+        public virtual string Case { get; set; } = "type1";
     }
 }

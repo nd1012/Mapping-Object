@@ -9,7 +9,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageId>Mapping-Object</PackageId>
     <Title>Mapping-Object</Title>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Authors>nd1012</Authors>
     <Company>Andreas Zimmermann, WAN Solutions</Company>
     <Product>Mapping-Object</Product>
@@ -22,6 +22,8 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
   </PropertyGroup>
 
   <ItemGroup>

@@ -162,6 +162,10 @@ namespace wan24.MappingObject
                 {
                     mappingObject.MapFrom(source);
                 }
+                else if (main is IAdapterMappingObject<tSource, tMain> adapterMappingObject)
+                {
+                    adapterMappingObject.MapFrom(source);
+                }
                 else
                 {
                     config ??= EnsureMappings(source.GetType(), main.GetType());
@@ -218,6 +222,10 @@ namespace wan24.MappingObject
                 if (main is MappingObjectBase<tSource> mappingObject)
                 {
                     mappingObject.MapTo(source);
+                }
+                else if (main is IAdapterMappingObject<tSource, tMain> adapterMappingObject)
+                {
+                    adapterMappingObject.MapTo(source);
                 }
                 else
                 {

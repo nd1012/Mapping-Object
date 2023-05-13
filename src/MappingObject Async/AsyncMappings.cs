@@ -55,6 +55,14 @@ namespace wan24.MappingObject
                 {
                     mappingObject.MapFrom(source);
                 }
+                else if (main is IAdapterMappingObjectAsync<tSource, tMain> adapterMappingObjectAsync)
+                {
+                    await adapterMappingObjectAsync.MapFromAsync(source, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+                }
+                else if (main is IAdapterMappingObject<tSource, tMain> adapterMappingObject)
+                {
+                    adapterMappingObject.MapFrom(source);
+                }
                 else
                 {
                     config ??= Mappings.EnsureMappings(source.GetType(), main.GetType());
@@ -136,6 +144,14 @@ namespace wan24.MappingObject
                 else if (main is MappingObjectBase<tSource> mappingObject)
                 {
                     mappingObject.MapTo(source);
+                }
+                else if (main is IAdapterMappingObjectAsync<tSource, tMain> adapterMappingObjectAsync)
+                {
+                    await adapterMappingObjectAsync.MapToAsync(source, cancellationToken: cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+                }
+                else if (main is IAdapterMappingObject<tSource, tMain> adapterMappingObject)
+                {
+                    adapterMappingObject.MapTo(source);
                 }
                 else
                 {
