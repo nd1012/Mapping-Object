@@ -9,7 +9,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageId>Mapping-Object-Async</PackageId>
     <Title>Mapping-Object-Async</Title>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Authors>nd1012</Authors>
     <Company>Andreas Zimmermann, WAN Solutions</Company>
     <Product>Mapping-Object</Product>
@@ -27,7 +27,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mapping-Object" Version="1.2.0" />
+    <PackageReference Include="Mapping-Object" Version="1.2.0" Condition="'$(Configuration)' != 'Debug'" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MappingObject\MappingObject.csproj" Condition="'$(Configuration)' == 'Debug'" />
   </ItemGroup>
 
   <ItemGroup>

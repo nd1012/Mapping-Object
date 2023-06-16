@@ -8,6 +8,52 @@ namespace wan24.MappingObject
     public class Mapping
     {
         /// <summary>
+        /// CreateGetterDelegate method
+        /// </summary>
+        protected static readonly MethodInfo CreateGetterDelegateMethod;
+        /// <summary>
+        ///CreateSetterDelegate method
+        /// </summary>
+        protected static readonly MethodInfo CreateSetterDelegateMethod;
+
+        /// <summary>
+        /// Source property
+        /// </summary>
+        protected PropertyInfo? SourceProperty = null;
+        /// <summary>
+        /// Source property getter
+        /// </summary>
+        protected Func<object?, object?>? SourcePropertyGetter = null;
+        /// <summary>
+        /// Source property setter
+        /// </summary>
+        protected Action<object?, object?>? SourcePropertySetter = null;
+        /// <summary>
+        /// Main property
+        /// </summary>
+        protected PropertyInfo? MainProperty = null;
+        /// <summary>
+        /// Main property getter
+        /// </summary>
+        protected Func<object?, object?>? MainPropertyGetter = null;
+        /// <summary>
+        /// Main property setter
+        /// </summary>
+        protected Action<object?, object?>? MainPropertySetter = null;
+
+        /// <summary>
+        /// Static constructor
+        /// </summary>
+        static Mapping()
+        {
+            Type type = typeof(Mapping);
+            CreateGetterDelegateMethod = type.GetMethod(nameof(CreateGetterDelegate), BindingFlags.NonPublic | BindingFlags.Static)
+                ?? throw new InvalidProgramException($"Failed to reflect {typeof(Mapping)}.{nameof(CreateGetterDelegate)}");
+            CreateSetterDelegateMethod = type.GetMethod(nameof(CreateSetterDelegate), BindingFlags.NonPublic | BindingFlags.Static)
+                ?? throw new InvalidProgramException($"Failed to reflect {typeof(Mapping)}.{nameof(CreateSetterDelegate)}");
+        }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="mainPropertyName">Main object property name</param>
@@ -184,10 +230,10 @@ namespace wan24.MappingObject
                     SourceMapper(source, main);
                     return;
                 }
-                var (SourceProperty, MainProperty) = GetProperties(source, main);
-                object? value = SourceGetter == null ? SourceProperty.GetValue(source) : SourceGetter(source, main);
+                GetProperties(source, main);
+                object? value = SourceGetter == null ? SourcePropertyGetter!(source) : SourceGetter(source, main);
                 if (SourceConverter != null) value = SourceConverter(value);
-                Type mainType = MainProperty.PropertyType;
+                Type mainType = MainProperty!.PropertyType;
                 if (
                     value?.GetType() is Type valueType &&
                     !mainType.IsAssignableFrom(valueType) &&
@@ -197,18 +243,18 @@ namespace wan24.MappingObject
                     )
                     value = Mappings.MapFromObject(
                         value,
-                        MainProperty.GetValue(main)
+                        MainPropertyGetter!(main)
                             ?? MainInstanceFactory?.Invoke(value)
                             ?? Activator.CreateInstance(mainType)
                             ?? throw new MappingException($"Failed to instance main object property value type {mainType}")
                         );
-                MainProperty.SetValue(main, value);
+                MainPropertySetter!(main, value);
             }
             catch (MappingException)
             {
                 throw;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new MappingException($"Failed to map {source.GetType()}.{SourcePropertyName} to {main.GetType()}.{MainPropertyName}: {ex.Message}", ex);
             }
@@ -228,12 +274,12 @@ namespace wan24.MappingObject
                     MainMapper(main, source);
                     return;
                 }
-                var (SourceProperty, MainProperty) = GetProperties(source, main);
-                if (!(SourceProperty.SetMethod?.IsPublic ?? false))
+                GetProperties(source, main);
+                if (SourcePropertySetter == null)
                     throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public setter");
-                object? value = MainGetter == null ? MainProperty.GetValue(main) : MainGetter(main, source);
+                object? value = MainGetter == null ? MainPropertyGetter!(main) : MainGetter(main, source);
                 if (MainConverter != null) value = MainConverter(value);
-                Type sourceType = SourceProperty.PropertyType;
+                Type sourceType = SourceProperty!.PropertyType;
                 if (
                     value?.GetType() is Type valueType &&
                     !sourceType.IsAssignableFrom(valueType) &&
@@ -243,12 +289,12 @@ namespace wan24.MappingObject
                     )
                     value = Mappings.MapToObject(
                         value,
-                        SourceProperty.GetValue(source)
+                        SourcePropertyGetter!(source)
                             ?? SourceInstanceFactory?.Invoke(value)
                             ?? Activator.CreateInstance(sourceType)
                             ?? throw new MappingException($"Failed to instance source object property value type {sourceType}")
                         );
-                SourceProperty.SetValue(source, value);
+                SourcePropertySetter(source, value);
             }
             catch (MappingException)
             {
@@ -261,21 +307,54 @@ namespace wan24.MappingObject
         }
 
         /// <summary>
-        /// Get source and main properties
+        /// Get source and main properties and their getter/setter
         /// </summary>
         /// <param name="source">Source object</param>
         /// <param name="main">Main object</param>
-        /// <returns>Source and main properties</returns>
-        protected virtual (PropertyInfo SourceProperty, PropertyInfo MainProperty) GetProperties(object source, object main)
+        protected virtual void GetProperties(object source, object main)
         {
-            PropertyInfo spi = source.GetType().GetProperty(SourcePropertyName, BindingFlags.Instance | BindingFlags.Public)
-                ?? throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} not found"),
-                mpi = main.GetType().GetProperty(MainPropertyName, BindingFlags.Instance | BindingFlags.Public)
+            if (SourceProperty != null) return;
+            SourceProperty = source.GetType().GetProperty(SourcePropertyName, BindingFlags.Instance | BindingFlags.Public)
+                ?? throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} not found");
+            MainProperty = main.GetType().GetProperty(MainPropertyName, BindingFlags.Instance | BindingFlags.Public)
                 ?? throw new MappingException($"Target property {main.GetType()}.{MainPropertyName} not found");
-            if (!(spi.GetMethod?.IsPublic ?? false)) throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public getter");
-            if (!(mpi.GetMethod?.IsPublic ?? false)) throw new MappingException($"Main property {main.GetType()}.{MainPropertyName} needs a public getter");
-            if (!(mpi.SetMethod?.IsPublic ?? false)) throw new MappingException($"Main property {main.GetType()}.{MainPropertyName} needs a public setter");
-            return (spi, mpi);
+            if (!(SourceProperty.GetMethod?.IsPublic ?? false)) throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public getter");
+            if (!(MainProperty.GetMethod?.IsPublic ?? false)) throw new MappingException($"Main property {main.GetType()}.{MainPropertyName} needs a public getter");
+            if (!(MainProperty.SetMethod?.IsPublic ?? false)) throw new MappingException($"Main property {main.GetType()}.{MainPropertyName} needs a public setter");
+            SourcePropertyGetter = (Func<object?, object?>)CreateGetterDelegateMethod.MakeGenericMethod(
+                    SourceProperty.DeclaringType!,
+                    SourceProperty.PropertyType
+                    ).Invoke(obj: null, new object[]{ Delegate.CreateDelegate(
+                typeof(Func<,>).MakeGenericType(SourceProperty.DeclaringType!, SourceProperty.PropertyType),
+                firstArgument: null,
+                SourceProperty.GetMethod!
+                ) })!;
+            SourcePropertySetter = SourceProperty.CanWrite
+                ? (Action<object?, object?>)CreateSetterDelegateMethod.MakeGenericMethod(
+                    SourceProperty.DeclaringType!,
+                    SourceProperty.PropertyType
+                    ).Invoke(obj: null, new object[]{ Delegate.CreateDelegate(
+                    typeof(Action<,>).MakeGenericType(SourceProperty.DeclaringType!, SourceProperty.PropertyType),
+                    firstArgument: null,
+                    SourceProperty.SetMethod!
+                    ) })!
+                : null;
+            MainPropertyGetter = (Func<object?, object?>)CreateGetterDelegateMethod.MakeGenericMethod(
+                    MainProperty.DeclaringType!,
+                    MainProperty.PropertyType
+                    ).Invoke(obj: null, new object[]{ Delegate.CreateDelegate(
+                typeof(Func<,>).MakeGenericType(MainProperty.DeclaringType!, MainProperty.PropertyType),
+                firstArgument: null,
+                MainProperty.GetMethod!
+                ) })!;
+            MainPropertySetter = (Action<object?, object?>)CreateSetterDelegateMethod.MakeGenericMethod(
+                MainProperty.DeclaringType!,
+                MainProperty.PropertyType
+                ).Invoke(obj: null, new object[]{ Delegate.CreateDelegate(
+                typeof(Action<,>).MakeGenericType(MainProperty.DeclaringType!, MainProperty.PropertyType),
+                firstArgument: null,
+                MainProperty.SetMethod!
+                ) })!;
         }
 
         /// <summary>
@@ -328,5 +407,23 @@ namespace wan24.MappingObject
         /// <param name="value">Value</param>
         /// <returns>Instance</returns>
         public delegate object SourceValueInstanceFactory_Delegate(object value);
+
+        /// <summary>
+        /// Create a getter delegate
+        /// </summary>
+        /// <typeparam name="tObject">Object type</typeparam>
+        /// <typeparam name="tValue">Value type</typeparam>
+        /// <param name="getter">Getter</param>
+        /// <returns>Getter delegate</returns>
+        protected static Func<object?, object?> CreateGetterDelegate<tObject, tValue>(Func<tObject?, tValue?> getter) => (obj) => getter((tObject)obj!);
+
+        /// <summary>
+        /// Create a setter delegate
+        /// </summary>
+        /// <typeparam name="tObject">Object type</typeparam>
+        /// <typeparam name="tValue">Value type</typeparam>
+        /// <param name="setter">Setter</param>
+        /// <returns>Setter delegate</returns>
+        protected static Action<object?, object?> CreateSetterDelegate<tObject, tValue>(Action<tObject?, tValue?> setter) => (obj, value) => setter((tObject)obj!, (tValue)value!);
     }
 }

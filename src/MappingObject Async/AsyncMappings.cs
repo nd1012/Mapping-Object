@@ -8,11 +8,6 @@ namespace wan24.MappingObject
     public static class AsyncMappings
     {
         /// <summary>
-        /// Task result property name
-        /// </summary>
-        private const string RESULT_PROPERTY_NAME = "Result";
-
-        /// <summary>
         /// <c>MapFromAsync</c> method
         /// </summary>
         private static readonly MethodInfo MapFromAsyncMethod;
