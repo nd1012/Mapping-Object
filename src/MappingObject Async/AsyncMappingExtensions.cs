@@ -17,10 +17,10 @@ namespace wan24.MappingObject
         /// <param name="config">Default mapping configuration to use</param>
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>Main object</returns>
-        public static async Task<tMain> MapFromAsync<tSource, tMain>(this tMain main, tSource source, MappingConfig? config = null, CancellationToken cancellationToken = default)
+        public static Task<tMain> MapFromAsync<tSource, tMain>(this tMain main, tSource source, MappingConfig? config = null, CancellationToken cancellationToken = default)
             where tSource : class
             where tMain : class
-            => await AsyncMappings.MapFromAsync(source, main, config, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+            => AsyncMappings.MapFromAsync(source, main, config, cancellationToken);
 
         /// <summary>
         /// Map a main object to a source object instance (apply reverse mapping)
@@ -32,10 +32,10 @@ namespace wan24.MappingObject
         /// <param name="config">Default mapping configuration to use</param>
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>Source object</returns>
-        public static async Task<tSource> MapToAsync<tMain, tSource>(this tSource source, tMain main, MappingConfig? config = null, CancellationToken cancellationToken = default)
+        public static Task<tSource> MapToAsync<tMain, tSource>(this tSource source, tMain main, MappingConfig? config = null, CancellationToken cancellationToken = default)
             where tMain : class
             where tSource : class
-            => await AsyncMappings.MapToAsync(main, source, config, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
+            => AsyncMappings.MapToAsync(main, source, config, cancellationToken);
 
         /// <summary>
         /// Map a list of source objects to a list of main objects

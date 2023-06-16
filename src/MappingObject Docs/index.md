@@ -23,8 +23,8 @@ in the future.
 
 The libraries are available as NuGet packages:
 
-- (Mapping-Object)[https://www.nuget.org/packages/Mapping-Object/]
-- (Mapping-Object-Async)[https://www.nuget.org/packages/Mapping-Object-Async/]
+- [Mapping-Object](https://www.nuget.org/packages/Mapping-Object/)
+- [Mapping-Object-Async](https://www.nuget.org/packages/Mapping-Object-Async/)
 
 ## Usage
 

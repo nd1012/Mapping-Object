@@ -258,12 +258,12 @@
                     await AsyncSourceMapper(source, main, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
                     return;
                 }
-                var (SourceProperty, MainProperty) = GetProperties(source, main);
+                GetProperties(source, main);
                 object? value = AsyncSourceGetter == null
-                    ? SourceProperty.GetValue(source)
+                    ? SourcePropertyGetter!(source)
                     : await AsyncSourceGetter(source, main, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
                 if (AsyncSourceConverter != null) value = await AsyncSourceConverter(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
-                Type mainType = MainProperty.PropertyType;
+                Type mainType = MainProperty!.PropertyType;
                 if (
                     value?.GetType() is Type valueType &&
                     !mainType.IsAssignableFrom(valueType) &&
@@ -273,14 +273,14 @@
                     )
                     value = await AsyncMappings.MapFromObjectAsync(
                         value,
-                        MainProperty.GetValue(main)
-                            ?? (AsyncMainInstanceFactory == null ? null : await AsyncMainInstanceFactory.Invoke(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false))
+                        MainPropertyGetter!(main)
+                            ?? (AsyncMainInstanceFactory == null ? null : await AsyncMainInstanceFactory(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false))
                             ?? MainInstanceFactory?.Invoke(value)
                             ?? Activator.CreateInstance(mainType)
                             ?? throw new MappingException($"Failed to instance main object property value type {mainType}"),
                         cancellationToken: cancellationToken
                         ).ConfigureAwait(continueOnCapturedContext: false);
-                MainProperty.SetValue(main, value);
+                MainPropertySetter!(main, value);
             }
             catch (MappingException)
             {
@@ -308,14 +308,14 @@
                     await AsyncMainMapper(main, source, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
                     return;
                 }
-                var (SourceProperty, MainProperty) = GetProperties(source, main);
-                if (!(SourceProperty.SetMethod?.IsPublic ?? false))
+                GetProperties(source, main);
+                if (SourcePropertySetter == null)
                     throw new MappingException($"Source property {source.GetType()}.{SourcePropertyName} needs a public setter");
                 object? value = AsyncMainGetter == null
-                    ? MainProperty.GetValue(main)
+                    ? MainPropertyGetter!(main)
                     : await AsyncMainGetter(main, source, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
                 if (AsyncMainConverter != null) value = await AsyncMainConverter(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false);
-                Type sourceType = SourceProperty.PropertyType;
+                Type sourceType = SourceProperty!.PropertyType;
                 if (
                     value?.GetType() is Type valueType &&
                     !sourceType.IsAssignableFrom(valueType) &&
@@ -325,14 +325,14 @@
                     )
                     value = await AsyncMappings.MapToObjectAsync(
                         value,
-                        SourceProperty.GetValue(source)
-                            ?? (AsyncSourceInstanceFactory == null ? null : await AsyncSourceInstanceFactory.Invoke(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false))
+                        SourcePropertyGetter!(source)
+                            ?? (AsyncSourceInstanceFactory == null ? null : await AsyncSourceInstanceFactory(value, cancellationToken).ConfigureAwait(continueOnCapturedContext: false))
                             ?? SourceInstanceFactory?.Invoke(value)
                             ?? Activator.CreateInstance(sourceType)
                             ?? throw new MappingException($"Failed to instance source object property value type {sourceType}"),
                         cancellationToken: cancellationToken
                         ).ConfigureAwait(continueOnCapturedContext: false);
-                SourceProperty.SetValue(source, value);
+                SourcePropertySetter!(source, value);
             }
             catch (MappingException)
             {

@@ -9,7 +9,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageId>Mapping-Object</PackageId>
     <Title>Mapping-Object</Title>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Authors>nd1012</Authors>
     <Company>Andreas Zimmermann, WAN Solutions</Company>
     <Product>Mapping-Object</Product>
