@@ -48,7 +48,7 @@ namespace wan24.MappingObject
             MapAttribute? attr;
             foreach (PropertyInfo mpi in from mpi in main.GetProperties(BindingFlags.Instance | BindingFlags.Public)
                                          where (mpi.GetMethod?.IsPublic ?? false) &&
-                                         (mpi.SetMethod?.IsPublic ?? false) &&
+                                         (mpi.SetMethod?.IsPublic ?? false) && //TODO Support for required init-only properties
                                          mpi.GetCustomAttribute<SkipMappingAttribute>() == null
                                          select mpi)
             {
