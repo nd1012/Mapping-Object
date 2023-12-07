@@ -3,25 +3,18 @@
     /// <summary>
     /// Mapping configuration
     /// </summary>
-    public class MappingConfig : ICloneable
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="source">Source object type</param>
+    /// <param name="main">Main object type</param>
+    /// <param name="mappings">Mappings</param>
+    public class MappingConfig(
+        Type source,
+        Type main,
+        params Mapping[] mappings
+            ) : ICloneable
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="source">Source object type</param>
-        /// <param name="main">Main object type</param>
-        /// <param name="mappings">Mappings</param>
-        public MappingConfig(
-            Type source,
-            Type main,
-            params Mapping[] mappings
-            )
-        {
-            SourceType = source;
-            MainType = main;
-            Mappings = mappings;
-        }
-
         /// <summary>
         /// Get/set a mapping
         /// </summary>
@@ -44,7 +37,7 @@
                 }
                 else
                 {
-                    Mappings = Mappings.Concat(new Mapping[] { value }).ToArray();
+                    Mappings = [.. Mappings, .. new Mapping[] { value }];
                 }
             }
         }
@@ -52,17 +45,17 @@
         /// <summary>
         /// Source object type
         /// </summary>
-        public Type SourceType { get; }
+        public Type SourceType { get; } = source;
 
         /// <summary>
         /// Main object type
         /// </summary>
-        public Type MainType { get; }
+        public Type MainType { get; } = main;
 
         /// <summary>
         /// Mappings
         /// </summary>
-        public Mapping[] Mappings { get; protected set; }
+        public Mapping[] Mappings { get; protected set; } = mappings;
 
         /// <summary>
         /// Before mapping handler

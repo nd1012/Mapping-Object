@@ -324,29 +324,29 @@ namespace wan24.MappingObject
             SourcePropertyGetter = (Func<object?, object?>)CreateGetterDelegateMethod.MakeGenericMethod(
                     SourceProperty.DeclaringType!,
                     SourceProperty.PropertyType
-                    ).Invoke(obj: null, new object[]{ SourceProperty.GetMethod!.CreateDelegate(
+                    ).Invoke(obj: null, [ SourceProperty.GetMethod!.CreateDelegate(
                     typeof(Func<,>).MakeGenericType(SourceProperty.DeclaringType!, SourceProperty.PropertyType)
-                    ) })!;
+                    ) ])!;
             SourcePropertySetter = SourceProperty.CanWrite
                 ? (Action<object?, object?>)CreateSetterDelegateMethod.MakeGenericMethod(
                     SourceProperty.DeclaringType!,
                     SourceProperty.PropertyType
-                    ).Invoke(obj: null, new object[]{ SourceProperty.SetMethod!.CreateDelegate(
+                    ).Invoke(obj: null, [ SourceProperty.SetMethod!.CreateDelegate(
                     typeof(Action<,>).MakeGenericType(SourceProperty.DeclaringType!, SourceProperty.PropertyType)
-                    ) })!
+                    ) ])!
                 : null;
             MainPropertyGetter = (Func<object?, object?>)CreateGetterDelegateMethod.MakeGenericMethod(
                     MainProperty.DeclaringType!,
                     MainProperty.PropertyType
-                    ).Invoke(obj: null, new object[]{ MainProperty.GetMethod!.CreateDelegate(
+                    ).Invoke(obj: null, [ MainProperty.GetMethod!.CreateDelegate(
                     typeof(Func<,>).MakeGenericType(MainProperty.DeclaringType!, MainProperty.PropertyType)
-                    ) })!;
+                    ) ])!;
             MainPropertySetter = (Action<object?, object?>)CreateSetterDelegateMethod.MakeGenericMethod(
                 MainProperty.DeclaringType!,
                 MainProperty.PropertyType
-                ).Invoke(obj: null, new object[]{ MainProperty.SetMethod!.CreateDelegate(
+                ).Invoke(obj: null, [ MainProperty.SetMethod!.CreateDelegate(
                 typeof(Action<,>).MakeGenericType(MainProperty.DeclaringType!, MainProperty.PropertyType)
-                ) })!;
+                ) ])!;
         }
 
         /// <summary>

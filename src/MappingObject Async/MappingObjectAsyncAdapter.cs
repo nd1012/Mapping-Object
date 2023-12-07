@@ -5,20 +5,18 @@
     /// </summary>
     /// <typeparam name="tSource">Source object type</typeparam>
     /// <typeparam name="tMain">Main object type</typeparam>
-    public class MappingObjectAsyncAdapter<tSource, tMain> : MappingObjectAsyncBase<tSource>
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="main">Main object</param>
+    public class MappingObjectAsyncAdapter<tSource, tMain>(tMain main) : MappingObjectAsyncBase<tSource>()
         where tSource : class
         where tMain : class
     {
         /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="main">Main object</param>
-        public MappingObjectAsyncAdapter(tMain main) : base() => Main = main;
-
-        /// <summary>
         /// Main object
         /// </summary>
-        public tMain Main { get; }
+        public tMain Main { get; } = main;
 
         /// <inheritdoc/>
         public override async Task MapFromAsync(tSource source, CancellationToken cancellationToken = default)
