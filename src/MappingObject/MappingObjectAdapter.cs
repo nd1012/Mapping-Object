@@ -5,20 +5,18 @@
     /// </summary>
     /// <typeparam name="tSource">Source object type</typeparam>
     /// <typeparam name="tMain">Main object type</typeparam>
-    public class MappingObjectAdapter<tSource, tMain> : MappingObjectBase<tSource>
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="main">Main object</param>
+    public class MappingObjectAdapter<tSource, tMain>(tMain main) : MappingObjectBase<tSource>()
         where tSource : class
         where tMain : class
     {
         /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="main">Main object</param>
-        public MappingObjectAdapter(tMain main) : base() => Main = main;
-
-        /// <summary>
         /// Main object
         /// </summary>
-        public tMain Main { get; }
+        public tMain Main { get; } = main;
 
         /// <inheritdoc/>
         public override void MapFrom(tSource source)

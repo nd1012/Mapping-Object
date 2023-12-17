@@ -44,11 +44,11 @@ namespace wan24.MappingObject
         /// <returns>Mappings</returns>
         public static Dictionary<string, Mapping> Create(Type source, Type main)
         {
-            Dictionary<string, Mapping> res = new();
+            Dictionary<string, Mapping> res = [];
             MapAttribute? attr;
             foreach (PropertyInfo mpi in from mpi in main.GetProperties(BindingFlags.Instance | BindingFlags.Public)
                                          where (mpi.GetMethod?.IsPublic ?? false) &&
-                                         (mpi.SetMethod?.IsPublic ?? false) &&
+                                         (mpi.SetMethod?.IsPublic ?? false) && //TODO Support for required init-only properties
                                          mpi.GetCustomAttribute<SkipMappingAttribute>() == null
                                          select mpi)
             {
@@ -79,7 +79,7 @@ namespace wan24.MappingObject
         {
             Dictionary<string, Mapping> maps = Create(source, main);
             foreach (Mapping map in mappings) maps[map.MainPropertyName] = map;
-            MappingConfig res = new(source, main, maps.Values.ToArray());
+            MappingConfig res = new(source, main, [.. maps.Values]);
             _Mappings[$"{main} - {source}"] = res;
             return res;
         }
@@ -201,7 +201,7 @@ namespace wan24.MappingObject
         /// <param name="config">Default mapping configuration to use</param>
         /// <returns>Main object</returns>
         public static object MapFromObject(object source, object main, MappingConfig? config = null)
-            => MapFromMethod.MakeGenericMethod(source.GetType(), main.GetType()).Invoke(obj: null, new object?[] { source, main, config })
+            => MapFromMethod.MakeGenericMethod(source.GetType(), main.GetType()).Invoke(obj: null, [source, main, config])
             ?? throw new MappingException("MapFrom returned NULL");
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace wan24.MappingObject
         /// <param name="config">Default mapping configuration to use</param>
         /// <returns>Source object</returns>
         public static object MapToObject(object main, object source, MappingConfig? config = null)
-            => MapToMethod.MakeGenericMethod(main.GetType(), source.GetType()).Invoke(obj: null, new object?[] { main, source, config })
+            => MapToMethod.MakeGenericMethod(main.GetType(), source.GetType()).Invoke(obj: null, [main, source, config])
             ?? throw new MappingException("MapTo returned NULL");
 
         /// <summary>

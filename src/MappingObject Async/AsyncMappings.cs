@@ -111,7 +111,7 @@ namespace wan24.MappingObject
         /// <returns>Main object</returns>
         public static async Task<object> MapFromObjectAsync(object source, object main, MappingConfig? config = null, CancellationToken cancellationToken = default)
         {
-            await (Task)MapFromAsyncMethod.MakeGenericMethod(source.GetType(), main.GetType()).Invoke(obj: null, new object?[] { source, main, config, cancellationToken })!;
+            await (Task)MapFromAsyncMethod.MakeGenericMethod(source.GetType(), main.GetType()).Invoke(obj: null, [source, main, config, cancellationToken])!;
             return main;
         }
 
@@ -201,7 +201,7 @@ namespace wan24.MappingObject
         /// <returns>Source object</returns>
         public static async Task<object> MapToObjectAsync(object main, object source, MappingConfig? config = null, CancellationToken cancellationToken = default)
         {
-            await (Task)MapToAsyncMethod.MakeGenericMethod(main.GetType(), source.GetType()).Invoke(obj: null, new object?[] { main, source, config, cancellationToken })!;
+            await (Task)MapToAsyncMethod.MakeGenericMethod(main.GetType(), source.GetType()).Invoke(obj: null, [main, source, config, cancellationToken])!;
             return source;
         }
     }
