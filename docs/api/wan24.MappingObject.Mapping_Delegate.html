@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;
+    <title>Delegate Mapping_Delegate
    | Mapping-Object </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;
+    <meta name="title" content="Delegate Mapping_Delegate
    | Mapping-Object ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,73 +68,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2">
+            <article class="content wrap" id="_content" data-uid="wan24.MappingObject.Mapping_Delegate">
   
   
-  <h1 id="wan24_MappingObject_MappingObjectAsyncAdapter_2" data-uid="wan24.MappingObject.MappingObjectAsyncAdapter`2" class="text-break">Class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;
+  <h1 id="wan24_MappingObject_Mapping_Delegate" data-uid="wan24.MappingObject.Mapping_Delegate" class="text-break">Delegate Mapping_Delegate
   </h1>
-  <div class="markdown level0 summary"><p>Mapping object adapter</p>
+  <div class="markdown level0 summary"><p>Delegate for a mapping handler</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MappingObjectAsyncAdapter&lt;tSource, tMain&gt;</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="wan24.MappingObject.html">wan24.MappingObject</a></h6>
-  <h6><strong>Assembly</strong>: MappingObjectAsync.dll</h6>
-  <h5 id="wan24_MappingObject_MappingObjectAsyncAdapter_2_syntax">Syntax</h5>
+  <h6><strong>Assembly</strong>: MappingObject.dll</h6>
+  <h5 id="wan24_MappingObject_Mapping_Delegate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MappingObjectAsyncAdapter&lt;tSource, tMain&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate void Mapping_Delegate(object source, object main, MappingConfig config);</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">tSource</span></td>
-        <td><p>Source object type</p>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source object</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">tMain</span></td>
-        <td><p>Main object type</p>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">main</span></td>
+        <td><p>Main object</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="wan24.MappingObject.MappingConfig.html">MappingConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Configuration</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="wan24_MappingObject_MappingObjectAsyncAdapter_2_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Constructor</p>
-</div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="wan24.MappingObject.MappingExtensions.html#wan24_MappingObject_MappingExtensions_MapFrom__2___1___0_wan24_MappingObject_MappingConfig_">MappingExtensions.MapFrom&lt;tSource, tMain&gt;(tMain, tSource, MappingConfig)</a>
@@ -156,10 +133,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_MappingObjectAsyncAdapter_2.md&amp;value=---%0Auid%3A%20wan24.MappingObject.MappingObjectAsyncAdapter%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/new/main/apiSpec/new?filename=wan24_MappingObject_Mapping_Delegate.md&amp;value=---%0Auid%3A%20wan24.MappingObject.Mapping_Delegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject Async/MappingObjectAsyncAdapter.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/nd1012/Mapping-Object/blob/main/src/MappingObject/MappingConfig.cs/#L95" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
