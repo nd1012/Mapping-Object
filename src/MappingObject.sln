@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Async Tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject Docs", "MappingObject Docs\MappingObject Docs.csproj", "{C0575DF2-1D62-4C08-BF70-642F9055FB60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObject", "MappingObject\MappingObject.csproj", "{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObject", "MappingObject\MappingObject.csproj", "{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +32,7 @@ Global
 		{59CB9ECF-72E7-4ABF-982E-827D7B3B2163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CB9ECF-72E7-4ABF-982E-827D7B3B2163}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0575DF2-1D62-4C08-BF70-642F9055FB60}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D857BD1-EFF2-4B72-BB87-2E4163C5DE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
